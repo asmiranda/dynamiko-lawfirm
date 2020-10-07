@@ -1,0 +1,88 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<div class="box box-default">
+    <div class="box-header with-border">
+        <h3 class="box-title">Transaction and GL Entries</h3>
+        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+            <div style="display: flex;">
+                <button class="btn btn-default btnMoreSubRecord" module="GeneralLedgerUI" parentModule="AccountChartUI" style="margin-left: 10px;">
+                    <i class="fa fa-plus"></i> More Records
+                </button>
+                <div style="display: flex; margin-top: 5px; margin-left: 10px;" class="hand btnSubRecordDownloadCSV" module="GeneralLedgerUI" parentModule="AccountChartUI">
+                    <i class="fa fa-fw fa-download" style="margin-top: 5px;"></i> <i>CSV</i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box-body">
+        <div style="display: flex; flex-direction: column;">
+            <div class="hiddenRecordTemplate" module="GeneralLedgerUI" parentModule="AccountChartUI" style="display: none;">
+                <div style="display: flex; margin-top: 10px;" class="subRecord" module="GeneralLedgerUI" rowIndex="----">
+                    <div style="flex: 1; text-align: right;">
+                        <i style="margin-right: 5px;">----</i>
+                    </div>
+                    <div style="flex: 2; margin-left: 10px;">
+                        <a rowIndex="----" name="moduleName" module="GeneralLedgerUI" parentModule="AccountChartUI" type="html"
+                            class="editRecord hand editAcctTransaction" placeholder=""></a>
+                        <input rowIndex="----" name="moduleCode" module="GeneralLedgerUI" parentModule="AccountChartUI" type="hidden"
+                            class="editRecord" placeholder="">
+                    </div>
+                    <div style="flex: 2; text-align: center;">
+                        <i rowIndex="----" name="glPeriod" module="GeneralLedgerUI" parentModule="AccountChartUI" type="html"
+                            class="editRecord" placeholder=""></i>
+                    </div>
+                    <div style="flex: 1; text-align: center;">
+                        <i rowIndex="----" name="transactionDate" module="GeneralLedgerUI" parentModule="AccountChartUI" type="html"
+                            class="editRecord" placeholder=""></i>
+                    </div>
+                    <div style="flex: 1; text-align: right;">
+                        <i rowIndex="----" name="totalAmount" module="GeneralLedgerUI" parentModule="AccountChartUI" type="html"
+                            class="editRecord" placeholder=""></i>
+                    </div>
+                    <div style="flex: 1; text-align: right;">
+                        <i rowIndex="----" name="debit" module="GeneralLedgerUI" parentModule="AccountChartUI" type="html"
+                            class="editRecord" placeholder=""></i>
+                    </div>
+                    <div style="flex: 1; text-align: right;">
+                        <i rowIndex="----" name="credit" module="GeneralLedgerUI" parentModule="AccountChartUI" type="html"
+                            class="editRecord" placeholder=""></i>
+                    </div>
+                    <div style="flex: 1; text-align: left; margin-top: 7px;">
+                        <input rowIndex="----" name="AccountChartCode" module="GeneralLedgerUI" parentModule="AccountChartUI" type="hidden"
+                            class="form-control editRecord subRecordSearchFilter" placeholder=""/>
+                        <input rowIndex="----" name="code" module="GeneralLedgerUI" parentModule="AccountChartUI" type="hidden"
+                            class="form-control editRecord" placeholder=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="titleRecordTemplate">
+                <div style="display: flex; width: 100%;">
+                    <div class="text-center" style="flex: 1;">
+                    </div>
+                    <div class="text-center" style="flex: 2;">
+                        <b>Transaction Type</b>
+                    </div>
+                    <div class="text-center" style="flex: 2;">
+                        <b>GL Period</b>
+                    </div>
+                    <div class="text-center" style="flex: 1;">
+                        <b>Transaction Date</b>
+                    </div>
+                    <div class="text-center" style="flex: 1;">
+                        <b>Trans. Amount</b>
+                    </div>
+                    <div class="text-center" style="flex: 1;">
+                        <b>Debit</b>
+                    </div>
+                    <div class="text-center" style="flex: 1;">
+                        <b>Credit</b>
+                    </div>
+                    <div class="text-center" style="flex: 1;">
+                    </div>
+                </div>
+            </div>
+            <div class="displayRecordTemplate" module="GeneralLedgerUI">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,92 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<div class="box box-warning">
+    <div class="box-header with-border">
+        <h3 class="box-title">Invoice</h3>
+        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+            <button type="button" class="btn btn-default pull-right CommunityTaxCertificateUI_btnNewCommunityTaxCertificate"><i class="fa fa-plus"></i> New CTC</button>
+        </div>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        <form role="form">
+            <input type="text" class="form-control editCtc" module="CommunityTaxCertificateUI" name="CommunityTaxCertificateId" disabled="">
+            <div style="display: flex; flex-wrap: wrap;">
+                <div class="form-group" style="flex: 18%; margin-left: 15px;">
+                    <label>CTC Number</label>
+                    <input type="text" class="form-control editCtc" module="CommunityTaxCertificateUI" name="ctcNumber" disabled="">
+                </div>
+                <div class="form-group" style="flex: 18%; margin-left: 15px;">
+                    <label>Invoiced Number</label>
+                    <input type="text" class="form-control editCtc" module="CommunityTaxCertificateUI" name="invoiceNumber" disabled="">
+                </div>
+                <div class="form-group" style="flex: 18%; margin-left: 15px;">
+                    <label>Issuer</label>
+                    <div>
+                        <input type="text" class="form-control autocomplete displayEdit editCtc" name="issuerCode" placeholder="Issuer" module="CommunityTaxCertificateUI" mainmodule="CommunityTaxCertificateUI" autoname="issuerCode" helptitle="issuerCode" disabled="">
+                        <input class="form-control HiddenAutoComplete" name="issuerCode" type="hidden" module="CommunityTaxCertificateUI" mainmodule="CommunityTaxCertificateUI" autoNameField="issuerCode" value="">
+                        <div class="autocomplete-items" module="CommunityTaxCertificateUI" mainmodule="CommunityTaxCertificateUI" autoname="issuerCode">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" style="flex: 18%; margin-left: 15px;">
+                    <label>Date</label>
+                    <input type="text" class="form-control editCtc" module="CommunityTaxCertificateUI" name="ctcDate" disabled="">
+                </div>
+
+                <div style="flex: 100%; display: flex;">
+                    <div style="flex: 1; display: flex; flex-direction: column;">
+                        <div class="form-group" style="margin-left: 15px;">
+                            <label>Purpose</label>
+                            <select class="form-control editCtc" module="CommunityTaxCertificateUI" name="ctcPurpose">
+                                <option value="Identification Card">Identification Card</option>
+                                <option value="Notary Public Document">Notary Public Document</option>
+                                <option value="Government Employee">Government Employee</option>
+                                <option value="License or Permit">License or Permit</option>
+                                <option value="Payment to Gevernment">Payment to Gevernment</option>
+                                <option value="Receives Money from Public Fund">Receives Money from Public Fund</option>
+                                <option value="Business Transaction">Business Transaction</option>
+                                <option value="Salaries and Wages">Salaries and Wages</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-left: 15px;">
+                            <label>Citizen</label>
+                            <input type="text" class="form-control editCtc" module="CommunityTaxCertificateUI" name="citizen" placeholder="Enter ...">
+                        </div>
+                        <div class="form-group" style="margin-left: 15px;">
+                            <label>Address</label>
+                            <input type="text" class="form-control editCtc" module="CommunityTaxCertificateUI" name="address" placeholder="Enter ...">
+                        </div>
+                    </div>
+                    <div style="flex: 1; display: flex; flex-direction: column;">
+                        <div class="form-group" style="margin-left: 15px;">
+                            <label>Amount A</label>
+                            <input type="text" class="form-control editCtc" module="CommunityTaxCertificateUI" name="amountA" placeholder="Enter ...">
+                        </div>
+                        <div class="form-group" style="margin-left: 15px;">
+                            <label>Amount B1</label>
+                            <input type="text" class="form-control editCtc" module="CommunityTaxCertificateUI" name="amountB1" placeholder="Enter ..."">
+                        </div>
+                        <div class=" form-group" style="margin-left: 15px;">
+                            <label>Amount B2</label>
+                            <input type="text" class="form-control editCtc" module="CommunityTaxCertificateUI" name="amountB2" placeholder="Enter ...">
+                        </div>
+                        <div class="form-group" style="margin-left: 15px;">
+                            <label>Amount B3</label>
+                            <input type="text" class="form-control editCtc" module="CommunityTaxCertificateUI" name="amountB3" placeholder="Enter ...">
+                        </div>
+                        <div class="form-group" style="margin-left: 15px;">
+                            <label>Total Amount</label>
+                            <input type="text" class="form-control editCtc" module="CommunityTaxCertificateUI" name="totalAmount" disabled="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer">
+        <button type="button" class="btn btn-default">Cancel</button>
+        <button type="button" class="btn btn-info pull-right btnSaveCTCForCashier">Save and Submit to Cashier</button>
+    </div>
+</div>

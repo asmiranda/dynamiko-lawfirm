@@ -1,0 +1,9 @@
+ 1. Add video local and remote
+ 2. Room management
+ 3. Do Peer to Peer
+ 
+
+
+ http-server
+ sudo http-server -S -C cert.pem -p443
+ 

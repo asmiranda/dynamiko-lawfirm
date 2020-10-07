@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>My dynamikó | Log in</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/node_modules/icheck/skins/all.css">
+    <link rel="stylesheet" href="/node_modules/jquery-toast-plugin/dist/jquery.toast.min.css">
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="css/jquery-confirm.min.css">
+
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/node_modules/icheck/icheck.min.js"></script>
+    <script src="/node_modules/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
+
+    <script src="js/mainObj.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/others/jquery-confirm.min.js"></script>
+    <script src="js/alertConfirm.js"></script>
+    <script src="js/ajaxCaller.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/storage.js"></script>
+
+    <script>
+        $(function () {
+            loginJS.initialize();
+        });
+        function login() {
+            var vusername = $('#email').val();
+            var vpassword = $('#password').val();
+            loginJS.login(vusername, vpassword);
+        }
+    </script>
+</head>
+
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <div class="login-logo">
+            <a href="#">dyn<b>@</b>mikó</a>
+        </div>
+        <div class="login-box-body">
+            <p class="login-box-msg">Sign in to start your session</p>
+
+            <form class="form-signin" method="POST">
+                <div style="display: flex; flex-direction: column;">
+                    <div style="flex: 1; margin: 5px;">
+                        <input class="form-control logInput" id="email" name="email" th:placeholder="Email"
+                            type="email" />
+                    </div>
+                    <div style="flex: 1; margin: 5px;">
+                        <input class="form-control logInput" id="password" name="password" th:placeholder="Password"
+                            type="password" />
+                    </div>
+                    <div style="flex: 1; margin: 25px;">
+                        <button class="btn btn-lg btn-primary btn-block pull-right" name="btnLogin" id="btnLogin"
+                            text="Login" value="Login" type="button">Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

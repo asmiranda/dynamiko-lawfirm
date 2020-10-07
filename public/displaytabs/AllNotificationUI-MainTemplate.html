@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<section class="content-header">
+    <h1>
+        All Notifications
+    </h1>
+</section>
+<section class="content">
+    <div style="display: flex;">
+        <div id="dynamikoMainContent" style="flex: 70%; padding-right: 10px; margin-left: 0px;" class="row">
+            <div class="nav-tabs-custom" style="margin-top: 5px;">
+                <ul class="nav nav-tabs">
+                    <li class="tab-pane active">
+                        <a href="#Notification" data-toggle="tab" aria-expanded="true">Web Notification</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#Reports" data-toggle="tab" aria-expanded="false">Reports</a>
+                    </li>
+                </ul>
+                <div class="tab-content no-padding"> 
+                    <div class="tab-pane active" id="Notification">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Notification</h3>
+                                        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+                                            <div class="btn-group">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control searchFilter" module="NotificationUI" tabName="_TABNAME_" name="mainFilter" placeholder="Search Notification" rowIndex="0">
+                                                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box-body">
+                                        <div class="DisplayTab" tabName="Notification" module2="AllNotificationUI" tabUrl="NotificationSearch"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabName="Notification" module2="AllNotificationUI" tabUrl="NotificationProfileMain"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Reports">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div class="DisplayTab" tabName="Notification" module2="AllNotificationUI" tabUrl="AllNotificationReport"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

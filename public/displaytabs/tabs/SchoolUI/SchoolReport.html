@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<div class="box box-warning" style="margin: 15px 0px;">
+    <div class="box-header with-border">
+        <h3 class="box-title">Report</h3>
+    </div>
+    <div class="box-body" style="display: flex;">
+        <div style="flex: 1; flex-direction: column;">
+            <div class="form-group" style="margin-left: 15px;">
+                <label>Choose Report</label>
+                <select class="form-control" rowindex="0" module="ReportUI" name="report" size=5>
+                </select>
+            </div>
+            <div style="margin-top: 15px;">
+                <div class="nav-tabs-custom" style="margin-top: 5px;">
+                    <ul class="nav nav-tabs">
+                        <li class="tab-pane active"> 
+                            <a href="#Parameters" data-toggle="tab" aria-expanded="true">Parameters</a>
+                        </li>
+                        <li class="tab-pane">
+                            <a href="#Columns" data-toggle="tab" aria-expanded="false">Columns</a>
+                        </li>
+                        <li class="tab-pane">
+                            <a href="#PageSetup" data-toggle="tab" aria-expanded="false">Page Setup</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content no-padding">
+                        <div class="tab-pane active" id="Parameters">
+                            <div class="box box-default">
+                                <div class="box-header with-border" style="text-align: center;">
+                                    <h3 class="box-title">Parameters</h3>
+                                </div>
+                                <div class="box-body" style="display: flex; flex-direction: column;">
+                                    <div class="reportParameters">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="Columns">
+                            <div class="box box-default">
+                                <div class="box-header with-border" style="text-align: center;">
+                                    <h3 class="box-title">Display Columns</h3>
+                                </div>
+                                <div class="box-body" style="display: flex; flex-direction: column;">
+                                    <div class="reportColumns">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="PageSetup">
+                            <div class="box box-default">
+                                <div class="box-header with-border" style="text-align: center;">
+                                    <h3 class="box-title">Page Setup</h3>
+                                </div>
+                                <div class="box-body" style="display: flex; flex-direction: column;">
+                                    <div class="paperSizes">
+                                        <div class="form-group" style="margin-left: 15px;">
+                                            <label>Choose Paper</label>
+                                            <select paramName="paperSize" class="form-control reportParam" rowindex="0" module="ReportUI" name="paperSize">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group" style="margin-left: 15px;">
+                                            <label>Paper Orientation</label>
+                                            <select paramName="paperOrientation" class="form-control reportParam" rowindex="0" module="ReportUI" name="paperOrientation">
+                                                <option value="Portrait">Portrait</option>
+                                                <option value="Landscape">Landscape</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-footer text-center">
+                    <button type="button" module="ReportUI" class="btn btn-primary btnRunReport">Run Report</button>
+                    <button type="button" module="ReportUI" class="btn btn-primary btnDownloadExcel">Download Excel</button>
+                </div>
+            </div>
+        </div>
+        <div style="flex: 4; margin-left: 15px; min-height: 700px;">
+            <iframe id="reportFrame" module="ReportUI" src="" style="width: 100%; min-height: 700px;" report="AutoReport" webkitAllowFullScreen mozAllowFullScreen allowfullscreen></iframe>
+        </div>
+    </div>
+</div>

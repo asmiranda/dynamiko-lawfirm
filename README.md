@@ -1,1 +1,1 @@
-# dynamiko-lawfirm
+# dynamiko-school

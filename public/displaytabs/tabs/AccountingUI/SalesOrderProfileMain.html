@@ -1,0 +1,42 @@
+<div style="display: flex; flex: 100%;">
+    <input rowIndex="0" type="hidden" class="form-control editRecord mainRecordId" module="SalesOrderUI" name="SalesOrderId">
+    <input rowIndex="0" type="hidden" class="form-control editRecord" module="SalesOrderUI" name="code">
+    <div class="form-group" style="flex: 3; margin-left: 10px;">
+        <label class="control-label">Employee</label>
+        <div class="input-group" style="width: 100%;">
+            <input rowIndex="0" type="text" class="form-control autocomplete" name="employeeCode" placeholder="Payee" module="SalesOrderUI" autoname="employeeCode" helptitle="employeeCode">
+            <input rowIndex="0" class="form-control editRecord HiddenAutoComplete" name="employeeCode" type="hidden" module="SalesOrderUI" autoNameField="employeeCode" value="">
+            <div class="autocomplete-items" rowIndex="0" module="SalesOrderUI" autoname="employeeCode">
+            </div>
+        </div> 
+    </div>
+    <div class="form-group" style="flex: 3; margin-left: 15px;">
+        <label>Customer</label>
+        <div class="input-group" style="width: 100%;">
+            <input rowIndex="0" type="text" class="form-control autocomplete" name="customerCode" placeholder="Payee" module="SalesOrderUI" autoname="customerCode" helptitle="customerCode">
+            <input rowIndex="0" class="form-control editRecord HiddenAutoComplete" name="customerCode" type="hidden" module="SalesOrderUI" autoNameField="customerCode" value="">
+            <div class="autocomplete-items" rowIndex="0" module="SalesOrderUI" autoname="customerCode">
+            </div>
+        </div> 
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Type</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="SalesOrderUI"
+            name="documentType" tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 2; margin-left: 15px;">
+        <label>Contact</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="SalesOrderUI"
+            name="contactPerson" tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Payment Date</label>
+        <input type="text" rowIndex="0" class="form-control calendar editRecord" module="SalesOrderUI"
+            name="paymentDate" tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Overall Amount</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="SalesOrderUI"
+            name="overallAmount" tabName="_TABNAME_">
+    </div>
+</div>

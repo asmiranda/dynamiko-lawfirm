@@ -1,0 +1,120 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<div class="box box-default myChildTab" style="background: #ecf0f5;">
+    <div style="display: flex; flex-direction: column;">
+        <div style="flex: 1;">
+            <div style="display: flex;">
+                <div style="flex: 15%;">
+                    <div class="box box-default">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">I. Choose Payroll <span class="chosenPayroll text-center" style="color: blue;"></span></h3>
+                        </div>
+                        <div class="box-body" style="overflow-y: auto; overflow-x: hidden; height: 500px;">
+                            <div class="PayrollScheduleUI-ChoosePayrollList2" style="display: flex; flex-direction: column; overflow-y: auto;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="flex: 25%; margin: 0px 5px;">
+                    <div class="box box-default">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">II. Validate <span class="chosenEmployeePayroll" style="color: blue;"></span></h3>
+                        </div>
+                        <div class="box-body" style="overflow-y: auto; overflow-x: hidden; height: 500px;">
+                            <div class="PayrollScheduleUI-ListEmployeeForUpdate"></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="flex: 60%; margin: 0px 5px;">
+                    <div class="nav-tabs-custom" style="margin-top: 5px;">
+                        <ul class="nav nav-tabs">
+                            <li class="tab-pane disabled">
+                                <a href="#EmployeeTab" data-toggle="tab" aria-expanded="false"><span class="chosenEmployeePayroll" style="color: blue;">#Employee#</span></a>
+                            </li>
+                            <li class="tab-pane active">
+                                <a href="#WorkHours" data-toggle="tab" aria-expanded="false">III. Work Hours</a>
+                            </li>
+                            <li class="tab-pane">
+                                <a href="#Details" data-toggle="tab" aria-expanded="true">IV. Details</a>
+                            </li>
+                            <li class="tab-pane">
+                                <a href="#Payslip" data-toggle="tab" aria-expanded="true">V. Payslip</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content no-padding">
+                            <div class="tab-pane active" id="WorkHours">
+                                <div class="PayrollScheduleUI-ListEmployeePayrollDetail" style="display: flex; flex-wrap: wrap;"></div>
+                            </div>
+                            <div class="tab-pane" id="Details">
+
+
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Employee Payroll Detail</h3>
+                                        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+                                            <button type="button" class="btn btn-default pull-right EmployeePayrollUI_btnNewCommunityTaxCertificate"><i class="fa fa-plus"></i> New CTC</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <form role="form">
+                                            <input type="hidden" class="form-control editEmployeePayrollDetail" module="EmployeePayrollUI" name="employeePayrollId">
+                                            <div style="display: flex;">
+                                                <div class="form-group" style="flex: 30%; margin-left: 15px;">
+                                                    <label>Basic Pay</label>
+                                                    <input type="text" class="form-control editEmployeePayrollDetail" module="EmployeePayrollUI" name="basicPay">
+                                                </div>
+                                                <div class="form-group" style="flex: 30%; margin-left: 15px;">
+                                                    <label>Tax</label>
+                                                    <input type="text" class="form-control editEmployeePayrollDetail" module="EmployeePayrollUI" name="totalTaxAmount">
+                                                </div>
+                                                <div class="form-group" style="flex: 30%; margin-left: 15px;">
+                                                    <label>Adjustment</label>
+                                                    <input type="text" class="form-control editEmployeePayrollDetail" module="EmployeePayrollUI" name="totalAdjustmentAmount">
+                                                </div>
+                                            </div>
+                                            <div style="display: flex;">
+                                                <div class="form-group" style="flex: 30%; margin-left: 15px;">
+                                                    <label>OT Pay</label>
+                                                    <input type="text" class="form-control editEmployeePayrollDetail" module="EmployeePayrollUI" name="totalOtAmount">
+                                                </div>
+                                                <div class="form-group" style="flex: 30%; margin-left: 15px;">
+                                                    <label>SSS</label>
+                                                    <input type="text" class="form-control editEmployeePayrollDetail" module="EmployeePayrollUI" name="totalSSSAmount">
+                                                </div>
+                                                <div class="form-group" style="flex: 30%; margin-left: 15px;">
+                                                </div>
+                                            </div>
+                                            <div style="display: flex;">
+                                                <div class="form-group" style="flex: 30%; margin-left: 15px;">
+                                                    <label>Gross</label>
+                                                    <input type="text" class="form-control editEmployeePayrollDetail" module="EmployeePayrollUI" name="totalGrossAmount" disabled="">
+                                                </div>
+                                                <div class="form-group" style="flex: 30%; margin-left: 15px;">
+                                                    <label>Total Deductions + Adjustment</label>
+                                                    <input type="text" class="form-control editEmployeePayrollDetail" module="EmployeePayrollUI" name="totalDeductionAmount" disabled="">
+                                                </div>
+                                                <div class="form-group" style="flex: 30%; margin-left: 15px;">
+                                                    <label>Net Pay</label>
+                                                    <input type="text" class="form-control editEmployeePayrollDetail" module="EmployeePayrollUI" name="totalNetAmount" disabled="">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- /.box-body -->
+                                    <div class="box-footer">
+                                        <button type="button" class="btn btn-info pull-right btnSaveEmployeePayrollDetail">Save Employee Payroll Detail</button>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="tab-pane" id="Payslip">
+                                <iframe class="customReportViewerFrame" style="width: 100%; height:700px;" report="EmployeePayslipPreview" webkitAllowFullScreen mozAllowFullScreen allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

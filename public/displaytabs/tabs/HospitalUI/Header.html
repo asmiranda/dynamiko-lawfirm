@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<h1>
+    Hospital 360
+</h1>
+<ol class="breadcrumb">
+    <li>
+        <a href="#" class="pull-right btn-box-tool toggle-box" toggletarget=".HospitalUI_Header">Toggle</a>
+    </li>
+</ol>
+<div class="row HospitalUI_Header" style="display: flex; margin-top: 15px;">
+    <div style="flex: 1; margin: 0 15px;">
+        <div class="info-box">
+            <span class="info-box-icon bg-aqua"><i class="fa fa-fw fa-user"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">In Patient</span>
+                <span class="info-box-number HrRequisitionUI_CandidateCount">100</span>
+            </div>
+        </div>
+    </div>
+    <div style="flex: 1; margin: 0 15px;">
+        <div class="info-box">
+            <span class="info-box-icon bg-red"><i class="fa fa-fw fa-phone"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">Out Patient</span>
+                <span class="info-box-number HrRequisitionUI_TotalForInterview">98</span>
+            </div>
+        </div>
+    </div>
+    <div style="flex: 1; margin: 0 15px;">
+        <div class="info-box">
+            <span class="info-box-icon bg-yellow"><i class="fa fa-fw fa-gear"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">Emergency</span>
+                <span class="info-box-number HrRequisitionUI_OpenJobsCount">4</span>
+            </div>
+        </div>
+    </div>
+    <div style="flex: 1; margin: 0 15px;">
+        <div class="info-box">
+            <span class="info-box-icon bg-blue"><i class="fa fa-fw fa-calendar"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">Laboratory</span>
+                <span class="info-box-number HrRequisitionUI_ScheduleThisWeek">2</span>
+            </div>
+        </div>
+    </div>
+    <div style="flex: 1; margin: 0 15px;">
+        <div class="info-box">
+            <span class="info-box-icon bg-green"><i class="fa fa-fw fa-money"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">Radiology</span>
+                <span class="info-box-number HrRequisitionUI_TotalForOffer">0</span>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" name="HrRequisitionId" placeholder="0" class="no-border mainId" module="HrRequisitionUI">
+</div>

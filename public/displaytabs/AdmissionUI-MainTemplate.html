@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<section class="content-header">
+    <h1>
+        School Admission
+    </h1>
+</section>
+<section class="content">
+    <div style="display: flex;">
+        <div id="dynamikoMainContent" style="flex: 70%; padding-right: 10px; margin-left: 0px;" class="row">
+            <div class="nav-tabs-custom" style="margin-top: 5px;">
+                <ul class="nav nav-tabs">
+                    <li class="tab-pane active">
+                        <a href="#Admission" data-toggle="tab" aria-expanded="true">Admission</a>
+                    </li>
+                    <li class="tab-pane" style="display: none;">
+                        <a href="#Reports" data-toggle="tab" aria-expanded="false">Reports</a>
+                    </li>
+                </ul>
+                <div class="tab-content no-padding">
+                    <div class="tab-pane active" id="Admission">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Admission</h3>
+                                        <div class="box-tools pull-right" data-toggle="tooltip" title=""
+                                            data-original-title="Status">
+                                            <button type="button" class="btn btn-success btnSaveRecord"
+                                                module="AdmissionUI">Save Admission</button>
+                                            <button type="button" class="btn btn-info btnNewRecord"
+                                                module="AdmissionUI">
+                                                <i class="fa fa-plus"></i> New Admission</button>
+                                            <button type="button" class="btn btn-info btnReport" MainMenu="SchoolUI"
+                                                module="AdmissionUI" style="margin-left: 10px; display: none;">
+                                                <i class="fa fa-file-text-o"></i> Report</button>
+                                        </div>
+                                    </div>
+                                    <div class="box-body">
+                                        <div class="DisplayTab" tabName="Admission" module2="SchoolUI"
+                                            tabUrl="AdmissionProfileMain"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabName="Admission" module2="SchoolUI" tabUrl="AdmissionSearch">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Reports">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div class="DisplayTab" tabName="Admission" module2="SchoolUI" tabUrl="SchoolReport"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,326 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<div class="box box-default">
+    <div class="box-header with-border">
+        <h3 class="box-title">Real Estate Tax</h3>
+        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+            <button type="button" class="btn btn-info btnSaveRealEstateTax">Save Real Estate Tax</button>
+            <button type="button" class="btn btn-default RealEstateTaxUI_btnNewRealEstate"><i
+                    class="fa fa-plus"></i> New Property Tax</button>
+        </div>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        <form role="form"> 
+            <input rowIndex="0" type="hidden" class="form-control editRealEstateTax" module="RealEstateTaxUI" name="RealEstateTaxId">
+            <input rowIndex="0" type="hidden" class="form-control editRealEstateTax" module="RealEstateTaxUI" name="code">
+            <div style="display: flex; flex-direction: column;">
+                <div style="flex: 1; display: flex; flex-wrap: wrap;">
+                    <div class="form-group" style="flex: 10%; margin-left: 10px;">
+                        <label class="control-label">Real Estate</label>
+                        <div class="input-group">
+                            <input rowIndex="0" type="text" style="width: 200px;" class="form-control autocomplete displayEdit" name="realEstateCode" placeholder="Real Estate" module="RealEstateTaxUI" mainmodule="RealEstateTaxUI" autoname="realEstateCode" helptitle="realEstateCode">
+                            <input rowIndex="0" class="form-control editRealEstateTax HiddenAutoComplete" name="realEstateCode" type="hidden" module="RealEstateTaxUI" mainmodule="RealEstateTaxUI" autoNameField="realEstateCode" value="">
+                            <div class="autocomplete-items" module="RealEstateTaxUI" mainmodule="RealEstateTaxUI" autoname="realEstateCode">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" style="flex: 10%; margin-left: 10px;">
+                        <label>Payer</label>
+                        <input rowIndex="0" type="text" class="form-control editRealEstateTax" module="RealEstateTaxUI"
+                            name="citizenName">
+                    </div>
+                    <div class="form-group" style="flex: 5%; margin-left: 10px;">
+                        <label>Assessed Amount</label>
+                        <input rowIndex="0" type="text" class="form-control editRealEstateTax" module="RealEstateTaxUI"
+                            name="assessedAmount">
+                    </div>
+                    <div class="form-group" style="flex: 5%; margin-left: 10px;">
+                        <label>Ad Valorem</label>
+                        <input rowIndex="0" type="text" class="form-control editRealEstateTax" module="RealEstateTaxUI"
+                            name="adValoremTaxOnIdleLand">
+                    </div>
+                    <div class="form-group" style="flex: 8%; margin-left: 10px;">
+                        <label>Years:</label>
+                        <div style="display: flex;">
+                            <div style="flex: 1">
+                                <input rowIndex="0" type="text" class="form-control calendarYear editRealEstateTax" module="RealEstateTaxUI"
+                                name="startYear">
+                            </div>
+                            <div style="flex: 1; margin-left: 5px;">
+                                <input rowIndex="0" type="text" class="form-control calendarYear editRealEstateTax" module="RealEstateTaxUI"
+                                name="endYear">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" style="flex: 10%; margin-left: 10px;">
+                        <label class="control-label">Issuer</label>
+                        <div class="input-group">
+                            <input rowIndex="0" type="text" style="width: 200px;" class="form-control autocomplete displayEdit" name="issuerCode" placeholder="Issuer" module="RealEstateTaxUI" mainmodule="RealEstateTaxUI" autoname="issuerCode" helptitle="issuerCode" disabled="">
+                            <input rowIndex="0" class="form-control editRealEstateTax HiddenAutoComplete" name="issuerCode" type="hidden" module="RealEstateTaxUI" mainmodule="RealEstateTaxUI" autoNameField="issuerCode" value="">
+                            <div class="autocomplete-items" module="RealEstateTaxUI" mainmodule="RealEstateTaxUI" autoname="issuerCode">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" style="flex: 4%; margin-left: 10px; margin-right: 10px;">
+                        <label>Payment Date</label>
+                        <input rowIndex="0" type="text" class="form-control calendar editRealEstateTax" module="RealEstateTaxUI"
+                            name="paymentDate" disabled="">
+                    </div>
+                </div>
+                <div class="box box-info">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Years</h3>
+                    </div>
+                    <div class="box-body">
+                        <div style="display: flex; flex-direction: column;">
+                            <div style="display: flex;" class="RealEstateTaxItemRecord">
+                                <div class="text-center" style="flex: 10%; margin-left: 10px;">
+                                    <b>Year</b>
+                                </div>
+                                <div class="text-center" style="flex: 10%; margin-left: 10px;">
+                                    <b>Amount</b>
+                                </div>
+                                <div class="text-center" style="flex: 10%; margin-left: 10px;">
+                                    <b>SEF Tax</b>
+                                </div>
+                                <div class="text-center" style="flex: 10%; margin-left: 10px;">
+                                    <b>Discount</b>
+                                </div>
+                                <div class="text-center" style="flex: 10%; margin-left: 10px;">
+                                    <b>Interest</b>
+                                </div>
+                                <div class="text-center" style="flex: 20%; margin-left: 10px;">
+                                    <b>Total</b>
+                                </div>
+                            </div>
+                            <div style="display: flex;" class="RealEstateTaxItemRecord">
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input disabled="" rowIndex="1" name="taxYear" module="RealEstateTaxItemUI" type="text" class="form-control calendarYear editRealEstateTax" placeholder="Year">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="1" name="basicAmount" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Basic Amount">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="1" name="sefTax" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Self Tax">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="1" name="discount" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Discount">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="1" name="interest" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Interest">
+                                </div>
+                                <div style="flex: 20%; margin-left: 10px;">
+                                    <input rowIndex="1" name="totalAmount" module="RealEstateTaxItemUI" style="width: 200px;" type="text" class="form-control editRealEstateTax" placeholder="Total" disabled="">
+                                </div>
+                            </div>
+                            <div style="display: flex;" class="RealEstateTaxItemRecord">
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input disabled="" rowIndex="2" name="taxYear" module="RealEstateTaxItemUI" type="text" class="form-control calendarYear editRealEstateTax" placeholder="Year">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="2" name="basicAmount" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Basic Amount">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="2" name="sefTax" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Self Tax">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="2" name="discount" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Discount">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="2" name="interest" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Interest">
+                                </div>
+                                <div style="flex: 20%; margin-left: 10px;">
+                                    <input rowIndex="2" name="totalAmount" module="RealEstateTaxItemUI" style="width: 200px;" type="text" class="form-control editRealEstateTax" placeholder="Total" disabled="">
+                                </div>
+                            </div>
+                            <div style="display: flex;" class="RealEstateTaxItemRecord">
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input disabled="" rowIndex="3" name="taxYear" module="RealEstateTaxItemUI" type="text" class="form-control calendarYear editRealEstateTax" placeholder="Year">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="3" name="basicAmount" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Basic Amount">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="3" name="sefTax" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Self Tax">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="3" name="discount" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Discount">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="3" name="interest" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Interest">
+                                </div>
+                                <div style="flex: 20%; margin-left: 10px;">
+                                    <input rowIndex="3" name="totalAmount" module="RealEstateTaxItemUI" style="width: 200px;" type="text" class="form-control editRealEstateTax" placeholder="Total" disabled="">
+                                </div>
+                            </div>
+                            <div style="display: flex;" class="RealEstateTaxItemRecord">
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input disabled="" rowIndex="4" name="taxYear" module="RealEstateTaxItemUI" type="text" class="form-control calendarYear editRealEstateTax" placeholder="Year">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="4" name="basicAmount" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Basic Amount">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="4" name="sefTax" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Self Tax">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="4" name="discount" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Discount">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="4" name="interest" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Interest">
+                                </div>
+                                <div style="flex: 20%; margin-left: 10px;">
+                                    <input rowIndex="4" name="totalAmount" module="RealEstateTaxItemUI" style="width: 200px;" type="text" class="form-control editRealEstateTax" placeholder="Total" disabled="">
+                                </div>
+                            </div>
+                            <div style="display: flex;" class="RealEstateTaxItemRecord">
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input disabled="" rowIndex="5" name="taxYear" module="RealEstateTaxItemUI" type="text" class="form-control calendarYear editRealEstateTax" placeholder="Year">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="5" name="basicAmount" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Basic Amount">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="5" name="sefTax" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Self Tax">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="5" name="discount" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Discount">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="5" name="interest" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Interest">
+                                </div>
+                                <div style="flex: 20%; margin-left: 10px;">
+                                    <input rowIndex="5" name="totalAmount" module="RealEstateTaxItemUI" style="width: 200px;" type="text" class="form-control editRealEstateTax" placeholder="Total" disabled="">
+                                </div>
+                            </div>
+                            <div style="display: flex;" class="RealEstateTaxItemRecord">
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input disabled="" rowIndex="6" name="taxYear" module="RealEstateTaxItemUI" type="text" class="form-control calendarYear editRealEstateTax" placeholder="Year">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="6" name="basicAmount" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Basic Amount">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="6" name="sefTax" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Self Tax">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="6" name="discount" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Discount">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="6" name="interest" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Interest">
+                                </div>
+                                <div style="flex: 20%; margin-left: 10px;">
+                                    <input rowIndex="6" name="totalAmount" module="RealEstateTaxItemUI" style="width: 200px;" type="text" class="form-control editRealEstateTax" placeholder="Total" disabled="">
+                                </div>
+                            </div>
+                            <div style="display: flex;" class="RealEstateTaxItemRecord">
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input disabled="" rowIndex="7" name="taxYear" module="RealEstateTaxItemUI" type="text" class="form-control calendarYear editRealEstateTax" placeholder="Year">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="7" name="basicAmount" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Basic Amount">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="7" name="sefTax" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Self Tax">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="7" name="discount" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Discount">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="7" name="interest" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Interest">
+                                </div>
+                                <div style="flex: 20%; margin-left: 10px;">
+                                    <input rowIndex="7" name="totalAmount" module="RealEstateTaxItemUI" style="width: 200px;" type="text" class="form-control editRealEstateTax" placeholder="Total" disabled="">
+                                </div>
+                            </div>
+                            <div style="display: flex;" class="RealEstateTaxItemRecord">
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input disabled="" rowIndex="8" name="taxYear" module="RealEstateTaxItemUI" type="text" class="form-control calendarYear editRealEstateTax" placeholder="Year">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="8" name="basicAmount" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Basic Amount">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="8" name="sefTax" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Self Tax">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="8" name="discount" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Discount">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="8" name="interest" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Interest">
+                                </div>
+                                <div style="flex: 20%; margin-left: 10px;">
+                                    <input rowIndex="8" name="totalAmount" module="RealEstateTaxItemUI" style="width: 200px;" type="text" class="form-control editRealEstateTax" placeholder="Total" disabled="">
+                                </div>
+                            </div>
+                            <div style="display: flex;" class="RealEstateTaxItemRecord">
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input disabled="" rowIndex="9" name="taxYear" module="RealEstateTaxItemUI" type="text" class="form-control calendarYear editRealEstateTax" placeholder="Year">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="9" name="basicAmount" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Basic Amount">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="9" name="sefTax" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Self Tax">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="9" name="discount" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Discount">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="9" name="interest" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Interest">
+                                </div>
+                                <div style="flex: 20%; margin-left: 10px;">
+                                    <input rowIndex="9" name="totalAmount" module="RealEstateTaxItemUI" style="width: 200px;" type="text" class="form-control editRealEstateTax" placeholder="Total" disabled="">
+                                </div>
+                            </div>
+                            <div style="display: flex;" class="RealEstateTaxItemRecord">
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input disabled="" rowIndex="10" name="taxYear" module="RealEstateTaxItemUI" type="text" class="form-control calendarYear editRealEstateTax" placeholder="Year">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="10" name="basicAmount" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Basic Amount">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="10" name="sefTax" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Self Tax">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="10" name="discount" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Discount">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <input rowIndex="10" name="interest" module="RealEstateTaxItemUI" type="text" class="form-control editRealEstateTax" placeholder="Interest">
+                                </div>
+                                <div style="flex: 20%; margin-left: 10px;">
+                                    <input rowIndex="10" name="totalAmount" module="RealEstateTaxItemUI" style="width: 200px;" type="text" class="form-control editRealEstateTax" placeholder="Total" disabled="">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; margin-top: 10px;">
+                            <div style="display: flex; margin-top: 10px;">
+                                <div style="flex: 10%; margin-left: 10px;">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                </div>
+                                <div style="flex: 10%; margin-left: 10px;">
+                                    <label>Overall Total</label>
+                                </div>
+                                <div style="flex: 20%; margin-left: 10px;">
+                                    <input rowIndex="0" name="totalAmount" module="RealEstateTaxUI" style="width: 200px;" type="text" class="form-control editRealEstateTax" placeholder="Total" disabled="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer">
+        <button type="button" class="btn btn-default">Cancel</button>
+        <button type="button" class="btn btn-info pull-right btnSaveRealEstateTax">Save Real Estate Tax</button>
+    </div>
+</div>

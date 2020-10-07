@@ -1,0 +1,66 @@
+<div style="display: flex; flex: 100%; flex-wrap: wrap;">
+    <input rowIndex="0" type="hidden" class="form-control editRecord mainRecordId" module="GradesPerSectionUI" name="AdmissionId">
+    <input rowIndex="0" type="hidden" class="form-control editRecord" module="GradesPerSectionUI" name="code">
+
+    <div class="form-group" style="display: flex; flex: 90%; margin: 0 50px;">
+        <label class="control-label text-right" style="flex: 2; margin-right: 10px; margin-top: 7px;">1. Choose Schedule</label>
+        <div class="input-group" style="width: 100%; flex: 5;">
+            <input rowIndex="0" type="text" class="form-control autocomplete" name="scheduleCode" placeholder="Schedule" module="GradesPerSectionUI" autoname="scheduleCode" helptitle="scheduleCode">
+            <input rowIndex="0" class="form-control editRecord HiddenAutoComplete" name="scheduleCode" type="hidden" module="GradesPerSectionUI" autoNameField="scheduleCode" value="">
+            <div class="autocomplete-items" rowIndex="0" module="GradesPerSectionUI" autoname="scheduleCode">
+            </div>
+        </div> 
+    </div>
+    <div class="flex-break"></div>
+    <div class="box box-default" style="margin: 15px;">
+        <div class="box-header with-border">
+            <label class="control-label">2. Student List</label>
+        </div>
+        <div class="box-body">
+            <div id="gradePerSectionStudentListTemplate" style="display: none;">
+                <div style="margin: 1px 1px; flex: 1; display: flex;">
+                    <label rowIndex="--" class="editRecord" name="studentName" module="GradesPerSectionUI" style="flex: 50%; margin-left: 10px; min-width: 200px;">Student 1</label>
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeQ1" type="text" module="GradesPerSectionUI" studentCode="" scheduleCode="" style="flex: 8%; margin: 1px; min-width: 50px;">
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeQ2" type="text" module="GradesPerSectionUI" studentCode="" scheduleCode="" style="flex: 8%; margin: 1px; min-width: 50px;">
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeQ3" type="text" module="GradesPerSectionUI" studentCode="" scheduleCode="" style="flex: 8%; margin: 1px; min-width: 50px;">
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeQ4" type="text" module="GradesPerSectionUI" studentCode="" scheduleCode="" style="flex: 8%; margin: 1px; min-width: 50px;">
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeFinal" type="text" module="GradesPerSectionUI" studentCode="" scheduleCode="" style="flex: 8%; margin: 1px; min-width: 50px;">
+                </div> 
+            </div>
+            <div style="display: flex; flex-wrap: wrap;" id="gradePerSectionStudentList">
+                <div style="margin: 1px 1px; flex: 1; display: flex;">
+                    <label rowIndex="--" class="editRecord" name="studentName" module="GradesPerSectionUI" style="flex: 50%; margin-left: 10px; min-width: 200px;">Student 1</label>
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeQ1" type="text" module="GradesPerSectionUI" style="flex: 8%; margin: 1px; min-width: 50px;">
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeQ2" type="text" module="GradesPerSectionUI" style="flex: 8%; margin: 1px; min-width: 50px;">
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeQ3" type="text" module="GradesPerSectionUI" style="flex: 8%; margin: 1px; min-width: 50px;">
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeQ4" type="text" module="GradesPerSectionUI" style="flex: 8%; margin: 1px; min-width: 50px;">
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeFinal" type="text" module="GradesPerSectionUI" style="flex: 8%; margin: 1px; min-width: 50px;">
+                </div> 
+                <div style="margin: 1px 1px; flex: 1; display: flex;">
+                    <label rowIndex="--" class="editRecord" name="studentName" module="GradesPerSectionUI" style="flex: 50%; margin-left: 10px; min-width: 200px;">Student 1</label>
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeQ1" type="text" module="GradesPerSectionUI" style="flex: 8%; margin: 1px; min-width: 50px;">
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeQ2" type="text" module="GradesPerSectionUI" style="flex: 8%; margin: 1px; min-width: 50px;">
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeQ3" type="text" module="GradesPerSectionUI" style="flex: 8%; margin: 1px; min-width: 50px;">
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeQ4" type="text" module="GradesPerSectionUI" style="flex: 8%; margin: 1px; min-width: 50px;">
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeFinal" type="text" module="GradesPerSectionUI" style="flex: 8%; margin: 1px; min-width: 50px;">
+                </div> 
+                <div style="margin: 1px 1px; flex: 1; display: flex;">
+                    <label rowIndex="--" class="editRecord" name="studentName" module="GradesPerSectionUI" style="flex: 50%; margin-left: 10px; min-width: 200px;">Student 1</label>
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeQ1" type="text" module="GradesPerSectionUI" style="flex: 8%; margin: 1px; min-width: 50px;">
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeQ2" type="text" module="GradesPerSectionUI" style="flex: 8%; margin: 1px; min-width: 50px;">
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeQ3" type="text" module="GradesPerSectionUI" style="flex: 8%; margin: 1px; min-width: 50px;">
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeQ4" type="text" module="GradesPerSectionUI" style="flex: 8%; margin: 1px; min-width: 50px;">
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeFinal" type="text" module="GradesPerSectionUI" style="flex: 8%; margin: 1px; min-width: 50px;">
+                </div> 
+                <div style="margin: 1px 1px; flex: 1; display: flex;">
+                    <label rowIndex="--" class="editRecord" name="studentName" module="GradesPerSectionUI" style="flex: 50%; margin-left: 10px; min-width: 200px;">Student 1</label>
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeQ1" type="text" module="GradesPerSectionUI" style="flex: 8%; margin: 1px; min-width: 50px;">
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeQ2" type="text" module="GradesPerSectionUI" style="flex: 8%; margin: 1px; min-width: 50px;">
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeQ3" type="text" module="GradesPerSectionUI" style="flex: 8%; margin: 1px; min-width: 50px;">
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeQ4" type="text" module="GradesPerSectionUI" style="flex: 8%; margin: 1px; min-width: 50px;">
+                    <input rowIndex="--" class="form-control editRecord" name="studentGradeFinal" type="text" module="GradesPerSectionUI" style="flex: 8%; margin: 1px; min-width: 50px;">
+                </div> 
+            </div>
+        </div>
+      </div>
+</div>

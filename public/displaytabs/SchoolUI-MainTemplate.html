@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<section class="content-header">
+    <div class="DisplayTab" tabUrl="Header"></div>
+</section>
+<section class="content">
+    <div style="display: flex;">
+        <div id="dynamikoMainContent" style="flex: 70%; padding-right: 10px; margin-left: 0px;" class="row">
+            <div class="nav-tabs-custom" style="margin-top: 5px;">
+                <ul class="nav nav-tabs">
+                    <li class="tab-pane active">
+                        <a href="#Admission" data-toggle="tab" aria-expanded="true">Admission</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#Enrollment" data-toggle="tab" aria-expanded="false">Enrollment</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#Cashier" data-toggle="tab" aria-expanded="false">Cashier</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#Grades" data-toggle="tab" aria-expanded="false">Grades</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#Reports" data-toggle="tab" aria-expanded="false">Reports</a>
+                    </li>
+                    <li class="tab-pane"> 
+                        <a href="#ConferenceRoom" data-toggle="tab" aria-expanded="false">Meeting Room</a>
+                    </li>
+                </ul>
+                <div class="tab-content no-padding"> 
+                    <div class="tab-pane active" id="Admission">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Admission</h3>
+                                        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+                                            <button type="button" class="btn btn-success btnSaveRecord" module="AdmissionUI">Save Admission</button>
+                                            <button type="button" class="btn btn-info btnNewRecord" module="AdmissionUI">
+                                                <i class="fa fa-plus"></i> New Admission</button>
+                                            <button type="button" class="btn btn-info btnReport" MainMenu="SchoolUI" module="AdmissionUI" style="margin-left: 10px;">
+                                                <i class="fa fa-file-text-o"></i> Report</button>
+                                        </div>
+                                    </div>
+                                    <div class="box-body">
+                                        <div class="DisplayTab" tabName="Admission" tabUrl="AdmissionProfileMain"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabName="Admission" tabUrl="AdmissionSearch"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Enrollment">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Enrollment</h3>
+                                        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+                                            <button type="button" class="btn btn-success btnSaveRecord" module="EnrollmentUI">Save Enrollment</button>
+                                            <button type="button" class="btn btn-info btnNewRecord" module="EnrollmentUI">
+                                                <i class="fa fa-plus"></i> New Enrollment</button>
+                                            <button type="button" class="btn btn-info btnReport" MainMenu="SchoolUI" module="EnrollmentUI" style="margin-left: 10px;">
+                                                <i class="fa fa-file-text-o"></i> Report</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="DisplayTab" tabName="Enrollment" tabUrl="EnrollmentProfileMain"></div>
+                                        <div class="nav-tabs-custom" style="margin-top: 5px;">
+                                            <ul class="nav nav-tabs">
+                                                <li class="tab-pane active">
+                                                    <a href="#EnrollmentTenants" data-toggle="tab" aria-expanded="false">Room Tenants</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content no-padding">
+                                                <div class="tab-pane active" id="EnrollmentTenants">
+                                                    <div class="DisplayTab" tabName="Enrollment" tabUrl="EnrollmentTenants"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabName="Enrollment" tabUrl="EnrollmentSearch"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Cashier">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Cashier</h3>
+                                        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+                                            <button type="button" class="btn btn-success btnSaveRecord" module="CashierUI">Save Payment</button>
+                                            <button type="button" class="btn btn-info btnNewRecord" module="CashierUI">
+                                                <i class="fa fa-plus"></i> New Payment</button>
+                                            <button type="button" class="btn btn-info btnReport" MainMenu="SchoolUI" module="CashierUI" style="margin-left: 10px;">
+                                                <i class="fa fa-file-text-o"></i> Report</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="DisplayTab" tabName="Cashier" tabUrl="CashierProfileMain"></div>
+                                        <div class="nav-tabs-custom" style="margin-top: 5px;">
+                                            <ul class="nav nav-tabs">
+                                                <li class="tab-pane active">
+                                                    <a href="#CashierTenants" data-toggle="tab" aria-expanded="false">Room Tenants</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content no-padding">
+                                                <div class="tab-pane active" id="CashierTenants">
+                                                    <div class="DisplayTab" tabName="Cashier" tabUrl="CashierTenants"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabName="Cashier" tabUrl="CashierSearch"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Grades">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Grades</h3>
+                                        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+                                            <button type="button" class="btn btn-success btnSaveRecord" module="GradesUI">Save Grades</button>
+                                            <button type="button" class="btn btn-info btnNewRecord" module="GradesUI">
+                                                <i class="fa fa-plus"></i> New Grades</button>
+                                            <button type="button" class="btn btn-info btnReport" MainMenu="SchoolUI" module="GradesUI" style="margin-left: 10px;">
+                                                <i class="fa fa-file-text-o"></i> Report</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="DisplayTab" tabName="Grades" tabUrl="GradesProfileMain"></div>
+                                        <div class="nav-tabs-custom" style="margin-top: 5px;">
+                                            <ul class="nav nav-tabs">
+                                                <li class="tab-pane active">
+                                                    <a href="#GradesTenants" data-toggle="tab" aria-expanded="false">Room Tenants</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content no-padding">
+                                                <div class="tab-pane active" id="GradesTenants">
+                                                    <div class="DisplayTab" tabName="Grades" tabUrl="GradesTenants"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabName="Grades" tabUrl="GradesSearch"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="ConferenceRoom">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Meeting Room</h3>
+                                        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+                                            <button type="button" class="btn btn-success btnSaveRecord" module="ConferenceRoomUI">Save Meeting Room</button>
+                                            <button type="button" class="btn btn-info btnNewRecord" module="ConferenceRoomUI">
+                                                <i class="fa fa-plus"></i> New Meeting Room</button>
+                                            <button type="button" class="btn btn-info btnReport" MainMenu="SchoolUI" module="ConferenceRoomUI" style="margin-left: 10px;">
+                                                <i class="fa fa-file-text-o"></i> Report</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="DisplayTab" tabName="ConferenceRoom" tabUrl="ConferenceRoomProfileMain"></div>
+                                        <div class="nav-tabs-custom" style="margin-top: 5px;">
+                                            <ul class="nav nav-tabs">
+                                                <li class="tab-pane active">
+                                                    <a href="#ConferenceRoomTenants" data-toggle="tab" aria-expanded="false">Room Tenants</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content no-padding">
+                                                <div class="tab-pane active" id="ConferenceRoomTenants">
+                                                    <div class="DisplayTab" tabName="ConferenceRoom" tabUrl="ConferenceRoomTenants"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabName="ConferenceRoom" tabUrl="ConferenceRoomSearch"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,42 @@
+<div style="display: flex; flex: 100%;">
+    <input rowIndex="0" type="hidden" class="form-control editRecord mainRecordId" module="ReceivableUI" name="ReceivableId">
+    <input rowIndex="0" type="hidden" class="form-control editRecord" module="ReceivableUI" name="code">
+    <div class="form-group" style="flex: 3; margin-left: 15px;">
+        <label>Receivable From</label>
+        <div class="input-group" style="width: 100%;">
+            <input rowIndex="0" type="text" class="form-control autocomplete" name="receivableFromCode" placeholder="Receivable From" module="ReceivableUI" autoname="receivableFromCode" helptitle="receivableFromCode">
+            <input rowIndex="0" class="form-control editRecord HiddenAutoComplete" name="receivableFromCode" type="hidden" module="ReceivableUI" autoNameField="receivableFromCode" value="">
+            <div class="autocomplete-items" rowIndex="0" module="ReceivableUI" autoname="receivableFromCode">
+            </div>
+        </div> 
+    </div>
+    <div class="form-group" style="flex: 3; margin-left: 15px;">
+        <label>Account Name</label>
+        <div class="input-group" style="width: 100%;">
+            <input rowIndex="0" type="text" class="form-control autocomplete" name="accountChartCode" placeholder="Account Name" module="ReceivableUI" autoname="accountChartCode" helptitle="accountChartCode">
+            <input rowIndex="0" class="form-control editRecord HiddenAutoComplete" name="accountChartCode" type="hidden" module="ReceivableUI" autoNameField="accountChartCode" value="">
+            <div class="autocomplete-items" rowIndex="0" module="ReceivableUI" autoname="accountChartCode">
+            </div>
+        </div> 
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Type</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="ReceivableUI"
+            name="receivableType" tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 2; margin-left: 15px;">
+        <label>Reference Number</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="ReceivableUI"
+            name="referenceNumber" tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Transaction&nbsp;Date</label>
+        <input type="text" rowIndex="0" class="form-control calendar editRecord" module="ReceivableUI"
+            name="transactionDate" tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Total Amount</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="ReceivableUI"
+            name="totalAmount" tabName="_TABNAME_">
+    </div>
+</div>

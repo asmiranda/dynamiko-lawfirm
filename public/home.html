@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Dynamiko</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/node_modules/chart.js/dist/Chart.min.css">
+  <link rel="stylesheet" href="/node_modules/bootstrap-daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="/node_modules/jquery-confirm/dist/jquery-confirm.min.css">
+
+
+  <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css">
+  <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="/node_modules/@icon/ionicons/ionicons.css">
+
+
+  <link rel="stylesheet" href="plugins/printjs/print.min.css">
+  <link rel="stylesheet" href="plugins/spinner/jquery-spinner.css" />
+
+  <link rel="stylesheet" href="dist/css/AdminLTE.css">
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+
+  <link rel="stylesheet" href="css/google.fonts.css">
+  <link rel="stylesheet" href="css/slim-scroll.css">
+
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/home.responsive.css">
+  <link rel="stylesheet" href="css/autocomplete.css">
+  <link rel="stylesheet" href="css/wordpress-hook.css">
+
+  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="/node_modules/jquery-ui/build/release.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/node_modules/fastclick/lib/fastclick.js"></script>
+
+  <script src="/node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
+  <script src="/node_modules/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="/node_modules/moment/dist/moment.js"></script>
+  <script src="/node_modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script src="/node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+  <script src="/node_modules/icheck/icheck.min.js"></script>
+  <script src="/node_modules/chart.js/dist/Chart.min.js"></script>
+  <script src="/node_modules/jquery-confirm/dist/jquery-confirm.min.js"></script>
+
+  <script src="plugins/input-mask/jquery.inputmask.js"></script>
+  <script src="plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+  <script src="plugins/input-mask/jquery.inputmask.extensions.js"></script>
+  <script src="plugins/printjs/print.min.js"></script>
+  <script src="plugins/spinner/jquery-spinner.js"></script>
+
+  <script src="dist/js/adminlte.min.js"></script>
+
+  <script src="js/others/dropzone.js"></script>
+  <script src="js/others/jquery.fullscreen.js"></script>
+  <script src="js/others/localforage.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/dynamiko-fullscreen.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/alertConfirm.js"></script>
+  <script src="js/ajaxCaller.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/constructForm.js"></script>
+  <script src="js/constructReport.js"></script>
+  <script src="js/childTab.js"></script>
+  <script src="js/childTabs.js"></script>
+  <script src="js/fieldConstructor.js"></script>
+  <script src="js/childFieldConstructor.js"></script>
+  <script src="js/leftMenu.js"></script>
+  <script src="js/uiService.js"></script>
+  <script src="js/register.js"></script>
+  <script src="js/mainObj.js"></script>
+  <script src="js/form-linker.js"></script>
+  <script src="js/autocomplete.js"></script>
+  <script src="js/buttonAction.js"></script>
+  <script src="js/custom-report.js"></script>
+
+  <script src="js/chart-utils.js"></script>
+  <script src="js/dashboard.js"></script>
+
+  <script src="js/reports/invoice.js"></script>
+  <script src="js/inbox.js"></script>
+  <script src="js/dynamiko-chart.js"></script>
+  <script src="js/data-visualizer.js"></script>
+  <script src="js/myreport-viewer.js"></script>
+  <script src="js/dynamiko-widget-chart.js"></script>
+  <script src="js/reportLoader.js"></script>
+  <script src="js/upload-data-file.js"></script>
+  <script src="js/quick-updater.js"></script>
+  <script src="js/quick-searcher.js"></script>
+  <script src="js/dynamiko-cache.js"></script>
+
+  <script src="js/widgets/tasks-widget.js"></script>
+  <script src="js/widgets/ticket-chart-widget.js"></script>
+  <script src="js/widgets/sales-chart-widget.js"></script>
+  <script src="js/widgets/procurement-chart-widget.js"></script>
+  <script src="js/widgets/hrforms-widget.js"></script>
+  <script src="js/widgets/hrevents-widget.js"></script>
+  <script src="js/widgets/hrnews-widget.js"></script>
+  <script src="js/widgets/hrdocuments-widget.js"></script>
+  <script src="js/widgets/mylinks-widget.js"></script>
+  <script src="js/widgets/chat-widget.js"></script>
+
+  <script src="js/mainJS.js"></script>
+  <script src="js/storage.js"></script>
+
+  <script src="js/modules/AbstractUI.js"></script>
+  <script src="js/modules/AbstractSubUI.js"></script>
+
+  <script src="js/modules/submodules/AccountChartUI.js"></script>
+  <script src="js/modules/submodules/AccountingDashboardUI.js"></script>
+  <script src="js/modules/submodules/AccountingReportUI.js"></script>
+  <script src="js/modules/submodules/BankingUI.js"></script>
+  <script src="js/modules/submodules/BusinessPermitUI.js"></script>
+  <script src="js/modules/submodules/CitizenUI.js"></script>
+  <script src="js/modules/submodules/CommunityTaxCertificateUI.js"></script>
+  <script src="js/modules/submodules/EmployeeTeamMemberUI.js"></script>
+  <script src="js/modules/submodules/EmployeeTimeSheetUI.js"></script>
+  <script src="js/modules/submodules/ExpenseUI.js"></script>
+  <script src="js/modules/submodules/GovernmentAccountingUI.js"></script>
+  <script src="js/modules/submodules/GovernmentCashierUI.js"></script>
+  <script src="js/modules/submodules/GovernmentPrintingUI.js"></script>
+  <script src="js/modules/submodules/GovernmentReportsUI.js"></script>
+  <script src="js/modules/submodules/HrRequisitionUI.js"></script>
+  <script src="js/modules/submodules/ManualEntryUI.js"></script>
+  <script src="js/modules/submodules/PayableUI.js"></script>
+  <script src="js/modules/submodules/PayrollScheduleUI.js"></script>
+  <script src="js/modules/submodules/PersonTaskUI.js"></script>
+  <script src="js/modules/submodules/PersonUI.js"></script>
+  <script src="js/modules/submodules/ProductRequestUI.js"></script>
+  <script src="js/modules/submodules/ProductUI.js"></script>
+  <script src="js/modules/submodules/PurchaseOrderUI.js"></script>
+  <script src="js/modules/submodules/RealEstateBuildingPermitUI.js"></script>
+  <script src="js/modules/submodules/RealEstateElectricalPermitUI.js"></script>
+  <script src="js/modules/submodules/RealEstatePlumbingPermitUI.js"></script>
+  <script src="js/modules/submodules/RealEstateTaxUI.js"></script>
+  <script src="js/modules/submodules/RealEstateTransferUI.js"></script>
+  <script src="js/modules/submodules/RealEstateUI.js"></script>
+  <script src="js/modules/submodules/ReceivableUI.js"></script>
+  <script src="js/modules/submodules/ReconcileUI.js"></script>
+  <script src="js/modules/submodules/SalesOrderUI.js"></script>
+  <script src="js/modules/submodules/SupplierUI.js"></script>
+  <script src="js/modules/submodules/TaxPeriodUI.js"></script>
+  <script src="js/modules/submodules/UserUI.js"></script>
+  <script src="js/modules/submodules/ConferenceRoomUI.js"></script>
+  <script src="js/modules/submodules/AdmissionUI.js"></script>
+  <script src="js/modules/submodules/EnrollmentUI.js"></script>
+  <script src="js/modules/submodules/SchoolCashierUI.js"></script>
+  <script src="js/modules/submodules/NotificationUI.js"></script>
+  <script src="js/modules/submodules/FacultyUI.js"></script>
+  <script src="js/modules/submodules/StudentUI.js"></script>
+  <script src="js/modules/submodules/SchoolScheduleUI.js"></script>
+
+  <script src="js/modules/FacultyScheduleUI.js"></script>
+  <script src="js/modules/StudentScheduleUI.js"></script>
+  <script src="js/modules/PersonalDashboardUI.js"></script>
+  <script src="js/modules/RecruitmentUI.js"></script>
+  <script src="js/modules/EmployeeUI.js"></script>
+  <script src="js/modules/PayrollUI.js"></script>
+  <script src="js/modules/InventoryUI.js"></script>
+  <script src="js/modules/HospitalUI.js"></script>
+  <script src="js/modules/GovernmentUI.js"></script>
+  <script src="js/modules/SchoolUI.js"></script>
+  <script src="js/modules/ReviewCenterUI.js"></script>
+  <script src="js/modules/AccountingUI.js"></script>
+  <script src="js/modules/ReferenceUI.js"></script>
+  <script src="js/modules/ReportUI.js"></script>
+  <script src="js/modules/ConferenceUI.js"></script>
+  <script src="js/modules/AllNotificationUI.js"></script>
+  <script src="js/modules/FacultyDashboardUI.js"></script>
+  <script src="js/modules/StudentDashboardUI.js"></script>
+
+  <script src="js/meetingui/GenericMeetingUI.js"></script>
+  <script src="js/meetingui/FacultyMeetingUI.js"></script>
+
+  <script src="js/events/global-events-others.js"></script>
+  <script src="js/events/global-events-hr.js"></script>
+  <script src="js/events/global-events-accounting.js"></script>
+  <script src="js/events/global-events-government.js"></script>
+  <script src="js/events/global-events.js"></script>
+
+  <script src="js/main-initializer.js"></script>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+
+    <header class="main-header">
+
+      <a href="#" class="logo">
+        <span class="logo-mini"><b>D</b></span>
+        <span class="logo-lg"><b>Dynamiko</b></span>
+      </a>
+      <nav class="navbar navbar-static-top">
+        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button" style="padding: 0;">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <a href="#" class="selectedModule" style="float: left; padding: 10px 10px;">
+          <span style="color: aliceblue; font-size: 18px;"></span>
+        </a>
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav" style="flex-direction: row;">
+            <li class="dropdown waiting-menu">
+              <div id="waitingContainer" style="margin-top: 5px; display: none;">
+                <i style="color: aliceblue;">Loading</i> <img src="images/ajax-loader.gif" />
+              </div>
+            </li>
+            <li class="dropdown user user-menu">
+              <div style="color: #ffffff; margin-right: 10px; margin-left: 10px;"
+                class="btnShowMainMonitoring pull-right"><i class="fa fa-eye"></i></div>
+              <div style="color: #ffffff; margin-right: 10px; margin-left: 10px; display: none;"
+                class="btnHideMainMonitoring pull-right"><i class="fas fa-eye-slash"></i></div>
+            </li>
+            <li class="dropdown user user-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="dist/img/user2-160x160.jpg" class="user-image userProfile" alt="User Image">
+              </a>
+              <ul class="dropdown-menu">
+                <li class="user-header">
+                  <img src="dist/img/user2-160x160.jpg" class="img-circle userProfile" alt="User Image">
+                  <p class="hidden-xs profileName">User</p>
+                </li>
+                <li class="user-footer">
+                  <div class="pull-left">
+                    <button href="#" class="btn btn-block btn-success btnUploadProfilePic">Upload Profile Pic</button>
+                  </div>
+                  <div class="pull-right">
+                    <button href="#" class="btn btn-block btn-danger btnLogout">Sign out</button>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <aside class="main-sidebar">
+      <section class="sidebar">
+        <ul class="sidebar-menu">
+          <li class="header">MAIN NAVIGATION</li>
+          <ul class="sidebar-menu mysidemenu" data-widget="tree" style="max-height:700px; overflow-y:auto;">
+          </ul>
+        </ul>
+      </section>
+    </aside>
+    <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+      <div style="flex: 1;" class="content-wrapper" id="content-main">
+      </div>
+      <div style="flex: 1; display: none;" class="content-wrapper" id="main-monitoring">
+        <iframe src="schoolstaff-home.html" style="height: 100%; overflow: hidden; border: none;"></iframe>
+      </div>
+    </div>
+    <footer class="main-footer">
+    </footer>
+    <aside class="control-sidebar control-sidebar-dark">
+      <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane" id="control-sidebar-home-tab">
+        </div>
+      </div>
+    </aside>
+    <div class="control-sidebar-bg"></div>
+
+    <div class="allModal" style="display: none;">
+      <div class="modal" tabindex="-1" id="AutoReport" role="dialog" aria-labelledby="AutoReportLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                  aria-hidden="true">&times;</span></button>
+              <h3 class="modal-title autoModalReportTitle">Report Viewer</h3>
+            </div>
+            <div class="modal-body">
+              <div class="box box-primary">
+                <div class="box-header with-border">
+                  <a href="#" class="pull-right btn-box-tool btnCustomReportFullScreen" report="AutoReport">Full
+                    Screen</a>
+                </div>
+                <div class="box-body">
+                  <div class="row">
+                    <iframe class="customReportViewerFrame" src="" style="width: 100%; height:500px;"
+                      report="AutoReport" webkitAllowFullScreen mozAllowFullScreen allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="box-footer text-center">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="calendarQuickUpdater">
+        <div class="input-group date">
+          <input quickUpdaterId="##QUICKUPDATERID##" module="##MODULE##" recordId="##RECORDID##"
+            fieldName="##FIELDNAME##" name="##FIELDNAME##" type="text"
+            class="form-control calendar displayEdit calendarQuickUpdaterInput" style="width: 100px;"
+            callback="##CALLBACK##">
+          <div class="input-group-addon displayEdit">
+            <i class="fa fa-calendar"></i>
+          </div>
+        </div>
+      </div>
+      <div id="textQuickUpdater">
+        <input quickUpdaterId="##QUICKUPDATERID##" module="##MODULE##" recordId="##RECORDID##" fieldName="##FIELDNAME##"
+          name="##FIELDNAME##" type="text" class="form-control displayEdit textQuickUpdaterInput" style="width: 250px;"
+          callback="##CALLBACK##">
+      </div>
+      <div id="autoCompleteQuickUpdater">
+        <div class="input-group">
+          <input quickUpdaterId="##QUICKUPDATERID##" module="##MODULE##" recordId="##RECORDID##"
+            fieldName="##FIELDNAME##" name="##FIELDNAME##" autoName="##FIELDNAME##" type="text"
+            class="form-control autocomplete displayEdit autoCompleteQuickUpdaterInput" style="width: 250px;"
+            callback="##CALLBACK##">
+          <span class="input-group-addon displayEdit"><i class="fa fa-search"></i></span>
+        </div>
+        <div class="input-group">
+          <select quickUpdaterId="##QUICKUPDATERID##" module="##MODULE##" recordId="##RECORDID##"
+            fieldName="##FIELDNAME##" autoName="##FIELDNAME##" size="3"
+            class="form-control autoCompleteQuickUpdaterSelect" style="width: 250px;" callback="##CALLBACK##">
+          </select>
+        </div>
+        <input class="form-control HiddenAutoComplete" name="##FIELDNAME##" type="hidden" module="##MODULE##"
+          mainmodule="##MODULE##" autoNameField="##FIELDNAME##">
+      </div>
+      <div id="quickMainSearcher">
+        <div class="input-group" style="min-width: 350px;">
+          <input module="##MODULE##" type="text" placeholder="Please type for search"
+            class="form-control displayEdit quickMainSearcherInput">
+          <span class="input-group-addon displayEdit"><i class="fa fa-search"></i></span>
+        </div>
+        <div class="box-body">
+          <div module="##MODULE##" class="quickMainSearcherResult" style="max-height: 700px; overflow-y: auto;">
+          </div>
+        </div>
+      </div>
+      <div id="profileDropZoneModal" title="Upload/Capture Profile Pic">
+        <div id="profileDropZone"
+          style="height: 200px; width: 100%; border-style: dotted; background-color: lightgray; vertical-align: middle;">
+          Click or Drag pics here!
+        </div>
+      </div>
+      <div id="uploadFileDropZoneModal" title="Upload File">
+        <div id="uploadFileDropZone"
+          style="height: 200px; width: 100%; border-style: dotted; background-color: lightgray; vertical-align: middle;">
+          Click or Drag file here!
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

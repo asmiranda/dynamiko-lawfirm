@@ -1,0 +1,23 @@
+delete from Enrollment where  id > 0;
+delete from EnrollmentSchedule where  id > 0;
+delete from FileUpload where  id > 0;
+delete from Person where  id > 0;
+delete from Role where  id > 0;
+delete from UserRole where  id > 0;
+delete from User where  id > 0;
+delete from SchoolSchedule where  id > 0;
+delete from SchoolScheduleTask where  id > 0;
+delete from Section where  id > 0;
+delete from Subject where  id > 0;
+
+ALTER TABLE Enrollment CHANGE COLUMN `id` `id` BIGINT NOT NULL AUTO_INCREMENT ;
+ALTER TABLE EnrollmentSchedule CHANGE COLUMN `id` `id` BIGINT NOT NULL AUTO_INCREMENT ;
+ALTER TABLE FileUpload CHANGE COLUMN `id` `id` BIGINT NOT NULL AUTO_INCREMENT ;
+ALTER TABLE Person CHANGE COLUMN `id` `id` BIGINT NOT NULL AUTO_INCREMENT ;
+ALTER TABLE Role CHANGE COLUMN `id` `id` BIGINT NOT NULL AUTO_INCREMENT ;
+ALTER TABLE UserRole CHANGE COLUMN `id` `id` BIGINT NOT NULL AUTO_INCREMENT ;
+ALTER TABLE User CHANGE COLUMN `id` `id` BIGINT NOT NULL AUTO_INCREMENT ;
+ALTER TABLE SchoolSchedule CHANGE COLUMN `id` `id` BIGINT NOT NULL AUTO_INCREMENT ;
+ALTER TABLE SchoolScheduleTask CHANGE COLUMN `id` `id` BIGINT NOT NULL AUTO_INCREMENT ;
+ALTER TABLE Section CHANGE COLUMN `id` `id` BIGINT NOT NULL AUTO_INCREMENT ;
+ALTER TABLE Subject CHANGE COLUMN `id` `id` BIGINT NOT NULL AUTO_INCREMENT ;

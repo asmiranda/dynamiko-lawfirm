@@ -1,0 +1,33 @@
+<div style="display: flex; flex: 100%; flex-wrap: wrap;">
+    <input rowIndex="0" type="hidden" class="form-control editRecord mainRecordId" module="StudentUI"
+        name="NotificationId">
+    <input rowIndex="0" type="hidden" class="form-control editRecord" module="StudentUI" name="code">
+
+    <div class="form-group" style="flex: 3; margin-left: 15px;">
+        <label class="control-label">Faculty</label>
+        <div class="input-group" style="width: 100%;">
+            <input rowIndex="0" type="text" class="form-control autocomplete" name="facultyEmail" placeholder="Faculty"
+                module="SchoolScheduleUI" autoname="facultyEmail" helptitle="facultyEmail">
+            <input rowIndex="0" class="form-control editRecord HiddenAutoComplete" name="facultyEmail" type="hidden"
+                module="SchoolScheduleUI" autoNameField="facultyEmail" value="">
+            <div class="autocomplete-items" rowIndex="0" module="SchoolScheduleUI" autoname="facultyEmail">
+            </div>
+        </div>
+    </div>
+    <div class="flex-break"></div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Section</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="SchoolScheduleUI" name="section"
+            tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Subject</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="SchoolScheduleUI" name="subject"
+            tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Time</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="SchoolScheduleUI" name="time"
+            tabName="_TABNAME_">
+    </div>
+</div>

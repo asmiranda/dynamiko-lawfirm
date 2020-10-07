@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<section class="content-header">
+    <div class="DisplayTab" tabUrl="Header"></div>
+</section>
+<section class="content">
+    <div style="display: flex;">
+        <div id="dynamikoMainContent" style="flex: 70%; padding-right: 10px; margin-left: 0px;" class="row">
+            <div class="nav-tabs-custom" style="margin-top: 5px;">
+                <ul class="nav nav-tabs">
+                    <li class="tab-pane active">
+                        <a href="#Dashboard" data-toggle="tab" aria-expanded="true">Dashboard</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#JobListing" data-toggle="tab" aria-expanded="false">Job Listing</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#Applicants" data-toggle="tab" aria-expanded="false">Applicants</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#RecruitersAndManagers" data-toggle="tab" aria-expanded="false">Recruiters And Managers</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#Fulfilled" data-toggle="tab" aria-expanded="false">Fulfilled</a>
+                    </li>
+                </ul>
+                <div class="tab-content no-padding">
+                    <div class="tab-pane active" id="Dashboard">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 30%; margin: 15px 0px;">
+                                <div class="DisplayTabCommon" tabUrl="ToDoList"></div>
+                                <div class="DisplayTab" tabUrl="Stages"></div> 
+                            </div>
+                            <div style="flex: 50%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabUrl="ForInterview"></div>
+                                <div class="DisplayTab" tabUrl="ForOffer"></div>
+                            </div>
+                            <div style="flex: 20%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabUrl="NewApplicant"></div>
+                                <div class="DisplayTab" tabUrl="NewJob"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="JobListing">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 80%; margin: 15px 0px;">
+                                <div style="display: flex; flex-direction: column;">
+                                    <div style="flex: 1;">
+                                        <div class="DisplayTab" tabUrl="JobInfo"></div>
+                                    </div>
+
+                                    <div style="flex: 1; display: flex; flex-direction: column;">
+                                        <div style="flex: 1;"> 
+                                            <div class="nav-tabs-custom" style="margin-top: 5px;">
+                                                <ul class="nav nav-tabs">
+                                                    <li class="tab-pane active">
+                                                        <a href="#TabMoreJobInfo" data-toggle="tab" aria-expanded="false">More Job Info</a>
+                                                    </li>
+                                                    <li class="tab-pane">
+                                                        <a href="#ActivitiesAndApplicants" data-toggle="tab" aria-expanded="true">Activities and Applicants</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="tab-content no-padding">
+                                                    <div class="tab-pane active" id="TabMoreJobInfo">
+                                                        <div class="box box-warning myChildTab myAddInfo" module="HrRequisitionUI">
+                                                            <div class="box-header with-border">
+                                                                <h3 class="box-title">More Job Information</h3>
+                                                            </div>
+                                                            <div class="box-body displayTabHtml" module="HrRequisitionUI">
+                                                                <div style="flex: 1;">
+                                                                    <div class="DisplayTab" tabUrl="Info1"></div>
+                                                                </div>
+                                                                <div style="display: flex; flex: 1;">
+                                                                    <div style="flex: 33%">
+                                                                        <div class="DisplayTab" tabUrl="Justification"></div>
+                                                                    </div>
+                                                                    <div style="flex: 33%; margin: 0px 10px;">
+                                                                        <div class="DisplayTab" tabUrl="Internal"></div>
+                                                                    </div>
+                                                                    <div style="flex: 33%">
+                                                                        <div class="DisplayTab" tabUrl="External"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="ActivitiesAndApplicants">
+                                                        <div class="DisplayTab" tabUrl="ApplicantUI"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 20%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTabCommon" tabName="JobListing" tabUrl="SearchJob"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Applicants">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 30%; margin: 15px 0px;">
+                                <div class="DisplayTab" tabUrl="ApplicantProfile"></div>
+                                <div class="DisplayTab" tabUrl="ApplicantReference"></div>
+                                <div class="DisplayTab" tabName="Applicants" tabUrl="PersonSchedule"></div>
+                            </div>
+                            <div style="flex: 50%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabUrl="ApplicantExperience"></div>
+                            </div>
+                            <div style="flex: 20%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabName="Applicants" tabUrl="SearchApplicant"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="RecruitersAndManagers">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 30%; margin: 15px 0px;">
+                                <div class="DisplayTabCommon" tabName="RecruitersAndManagers" tabUrl="EmployeeProfile"></div>
+                                <div class="DisplayTab" tabName="RecruitersAndManagers" tabUrl="EmployeeRequisition"></div>
+                            </div>
+                            <div style="flex: 50%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabName="RecruitersAndManagers" tabUrl="PersonSchedule"></div>
+                            </div>
+                            <div style="flex: 20%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTabCommon" tabName="RecruitersAndManagers" tabUrl="SearchEmployee"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Fulfilled">
+                        <div class="DisplayTab" tabUrl="Fulfilled"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

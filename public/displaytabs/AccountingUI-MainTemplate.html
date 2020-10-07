@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<section class="content-header">
+    <div class="DisplayTab" tabUrl="Header"></div>
+</section>
+<section class="content">
+    <div style="display: flex;">
+        <div id="dynamikoMainContent" style="flex: 70%; padding-right: 10px; margin-left: 0px;" class="row">
+            <div class="nav-tabs-custom" style="margin-top: 5px;">
+                <ul class="nav nav-tabs">
+                    <li class="tab-pane active"> 
+                        <a href="#Dashboard" data-toggle="tab" aria-expanded="true">Dashboard</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#Banking" data-toggle="tab" aria-expanded="false">Banking</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#Sales" data-toggle="tab" aria-expanded="false">Sales</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#Expenses" data-toggle="tab" aria-expanded="false">Expenses</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#Receivables" data-toggle="tab" aria-expanded="false">Receivables</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#Payables" data-toggle="tab" aria-expanded="false">Payables</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#ManualEntry" data-toggle="tab" aria-expanded="false">Manual Entry</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#Taxes" data-toggle="tab" aria-expanded="false">Taxes</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#ChartOfAccounts" data-toggle="tab" aria-expanded="false">Chart of Accounts</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#GLSummary" data-toggle="tab" aria-expanded="false">GL Summary</a>
+                    </li>
+                </ul>
+                <div class="tab-content no-padding"> 
+                    <div class="tab-pane active" id="Dashboard">
+                        <pre>
+                            Charts and Others
+                            -- Invoices
+                            -- Expenses
+                            -- Profit and Loss
+                            -- Bank Accounts
+                            -- Sales
+                            <a href="https://www.youtube.com/watch?v=yOa8dYEjcJQ&feature=youtu.be" target="_blank">Video</a>                            
+                        </pre>
+                    </div>
+                    <div class="tab-pane" id="Banking">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Bank Account</h3>
+                                        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+                                            <button type="button" class="btn btn-success btnSaveRecord" module="BankingUI">Save Bank Account</button>
+                                            <button type="button" class="btn btn-info btnNewRecord" module="BankingUI">
+                                                <i class="fa fa-plus"></i> New Bank Account</button>
+                                            <button type="button" class="btn btn-info btnReport" MainMenu="AccountingUI" module="BankingUI" style="margin-left: 10px;">
+                                                <i class="fa fa-file-text-o"></i> Report</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="DisplayTab" tabName="Banking" tabUrl="BankingProfileMain"></div>
+                                        <div class="nav-tabs-custom" style="margin-top: 5px;">
+                                            <ul class="nav nav-tabs">
+                                                <li class="tab-pane active">
+                                                    <a href="#BankingTransactions" data-toggle="tab" aria-expanded="false">Transactions</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content no-padding">
+                                                <div class="tab-pane active" id="BankingTransactions">
+                                                    <div class="DisplayTab" tabName="Banking" tabUrl="BankingTransactions"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabName="Banking" tabUrl="BankingSearch"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Sales">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Sales Order</h3>
+                                        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+                                            <button type="button" class="btn btn-success btnSaveRecord" module="SalesOrderUI">Save Sales Order</button>
+                                            <button type="button" class="btn btn-info btnNewRecord" module="SalesOrderUI">
+                                                <i class="fa fa-plus"></i> New Sales Order</button>
+                                            <button type="button" class="btn btn-info btnReport" MainMenu="AccountingUI" module="SalesOrderUI" style="margin-left: 10px;">
+                                                <i class="fa fa-file-text-o"></i> Report</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="DisplayTab" tabName="SalesOrder" tabUrl="SalesOrderProfileMain"></div>
+                                        <div class="nav-tabs-custom" style="margin-top: 5px;">
+                                            <ul class="nav nav-tabs">
+                                                <li class="tab-pane active">
+                                                    <a href="#SalesOrderItems" data-toggle="tab" aria-expanded="false">Items</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content no-padding">
+                                                <div class="tab-pane active" id="SalesOrderItems">
+                                                    <div class="DisplayTab" tabName="SalesOrder" tabUrl="SalesOrderItems"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabName="SalesOrder" tabUrl="SalesOrderSearch"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Expenses">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Expenses</h3>
+                                        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+                                            <button type="button" class="btn btn-success btnSaveRecord" module="ExpenseUI">Save Expense</button>
+                                            <button type="button" class="btn btn-info btnNewRecord" module="ExpenseUI">
+                                                <i class="fa fa-plus"></i> New Expense</button>
+                                            <button type="button" class="btn btn-info btnReport" MainMenu="AccountingUI" module="ExpenseUI" style="margin-left: 10px;">
+                                                <i class="fa fa-file-text-o"></i> Report</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="DisplayTab" tabName="Expense" tabUrl="ExpenseProfileMain"></div>
+                                        <div class="nav-tabs-custom" style="margin-top: 5px;">
+                                            <ul class="nav nav-tabs">
+                                                <li class="tab-pane active">
+                                                    <a href="#ExpenseCategoryItems" data-toggle="tab" aria-expanded="false">Expense Category</a>
+                                                </li>
+                                                <li class="tab-pane">
+                                                    <a href="#ExpenseItems" data-toggle="tab" aria-expanded="true">Items</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content no-padding">
+                                                <div class="tab-pane active" id="ExpenseCategoryItems">
+                                                    <div class="DisplayTab" tabName="Expense" tabUrl="ExpenseCategoryItems"></div>
+                                                </div>
+                                                <div class="tab-pane" id="ExpenseItems">
+                                                    <div class="DisplayTab" tabName="Expense" tabUrl="ExpenseItems"></div>
+                                                </div>
+                                                <div class="tab-pane" id="ExpenseReport">
+                                                    <div class="DisplayTab" tabName="Expense" tabUrl="ExpenseReport"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabName="Expense" tabUrl="ExpenseSearch"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Receivables">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Receivables</h3>
+                                        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+                                            <button type="button" class="btn btn-success btnSaveRecord" module="ReceivableUI">Save Receivable</button>
+                                            <button type="button" class="btn btn-info btnNewRecord" module="ReceivableUI">
+                                                <i class="fa fa-plus"></i> New Expense</button>
+                                            <button type="button" class="btn btn-info btnReport" MainMenu="AccountingUI" module="ReceivableUI" style="margin-left: 10px;">
+                                                <i class="fa fa-file-text-o"></i> Report</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="DisplayTab" tabName="Receivable" tabUrl="ReceivableProfileMain"></div>
+                                        <div class="nav-tabs-custom" style="margin-top: 5px;">
+                                            <ul class="nav nav-tabs">
+                                                <li class="tab-pane active">
+                                                    <a href="#ReceivableItems" data-toggle="tab" aria-expanded="false">Items</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content no-padding">
+                                                <div class="tab-pane active" id="ReceivableItems">
+                                                    <div class="DisplayTab" tabName="Receivable" tabUrl="ReceivableItems"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabName="Receivable" tabUrl="ReceivableSearch"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Payables">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Payables</h3>
+                                        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+                                            <button type="button" class="btn btn-success btnSaveRecord" module="PayableUI">Save Payable</button>
+                                            <button type="button" class="btn btn-info btnNewRecord" module="PayableUI">
+                                                <i class="fa fa-plus"></i> New Expense</button>
+                                            <button type="button" class="btn btn-info btnReport" MainMenu="AccountingUI" module="PayableUI" style="margin-left: 10px;">
+                                                <i class="fa fa-file-text-o"></i> Report</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="DisplayTab" tabName="Payable" tabUrl="PayableProfileMain"></div>
+                                        <div class="nav-tabs-custom" style="margin-top: 5px;">
+                                            <ul class="nav nav-tabs">
+                                                <li class="tab-pane active">
+                                                    <a href="#PayableItems" data-toggle="tab" aria-expanded="false">Items</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content no-padding">
+                                                <div class="tab-pane active" id="PayableItems">
+                                                    <div class="DisplayTab" tabName="Payable" tabUrl="PayableItems"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabName="Payable" tabUrl="PayableSearch"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="ManualEntry">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Manual Entry</h3>
+                                        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+                                            <button type="button" class="btn btn-success btnSaveRecord" module="ManualEntryUI">Save Manual Entry</button>
+                                            <button type="button" class="btn btn-info btnNewRecord" module="ManualEntryUI">
+                                                <i class="fa fa-plus"></i> New Manual Entry</button>
+                                            <button type="button" class="btn btn-info btnReport" MainMenu="AccountingUI" module="ManualEntryUI" style="margin-left: 10px;">
+                                                <i class="fa fa-file-text-o"></i> Report</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="DisplayTab" tabName="ManualEntry" tabUrl="ManualEntryProfileMain"></div>
+                                        <div class="nav-tabs-custom" style="margin-top: 5px;">
+                                            <ul class="nav nav-tabs">
+                                                <li class="tab-pane active">
+                                                    <a href="#ManualEntryItems" data-toggle="tab" aria-expanded="false">Items</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content no-padding">
+                                                <div class="tab-pane active" id="ManualEntryItems">
+                                                    <div class="DisplayTab" tabName="ManualEntry" tabUrl="ManualEntryItems"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabName="ManualEntry" tabUrl="ManualEntrySearch"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Taxes">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Tax Period</h3>
+                                        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+                                            <button type="button" class="btn btn-success btnSaveRecord" module="TaxPeriodUI">Save Tax Period</button>
+                                            <button type="button" class="btn btn-info btnNewRecord" module="TaxPeriodUI">
+                                                <i class="fa fa-plus"></i> New Tax Period</button>
+                                            <button type="button" class="btn btn-info btnReport" MainMenu="AccountingUI" module="TaxPeriodUI" style="margin-left: 10px;">
+                                                <i class="fa fa-file-text-o"></i> Report</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="DisplayTab" tabName="TaxPeriod" tabUrl="TaxPeriodProfileMain"></div>
+                                        <div class="nav-tabs-custom" style="margin-top: 5px;">
+                                            <ul class="nav nav-tabs">
+                                                <li class="tab-pane active">
+                                                    <a href="#TaxPeriodTransactions" data-toggle="tab" aria-expanded="false">Tax Transactions</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content no-padding">
+                                                <div class="tab-pane active" id="TaxPeriodTransactions">
+                                                    <div class="DisplayTab" tabName="TaxPeriod" tabUrl="TaxPeriodTransaction"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabName="TaxPeriod" tabUrl="TaxPeriodSearch"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="ChartOfAccounts">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Chart of Accounts</h3>
+                                        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+                                            <button type="button" class="btn btn-success btnSaveRecord" module="AccountChartUI">Save Account</button>
+                                            <button type="button" class="btn btn-info btnNewRecord" module="AccountChartUI">
+                                                <i class="fa fa-plus"></i> New Account</button>
+                                            <button type="button" class="btn btn-info btnReport" MainMenu="AccountingUI" module="AccountChartUI" style="margin-left: 10px;">
+                                                <i class="fa fa-file-text-o"></i> Report</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="DisplayTab" tabName="AccountChart" tabUrl="AccountChartProfileMain"></div>
+                                        <div class="nav-tabs-custom" style="margin-top: 5px;">
+                                            <ul class="nav nav-tabs">
+                                                <li class="tab-pane active">
+                                                    <a href="#GeneralLedgers" data-toggle="tab" aria-expanded="false">GL Entries</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content no-padding">
+                                                <div class="tab-pane active" id="GeneralLedgers">
+                                                    <div class="DisplayTab" tabName="AccountChart" tabUrl="AccountChartTransaction"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabName="AccountChart" tabUrl="AccountChartSearch"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="GLSummary">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Chart of Accounts</h3>
+                                        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+                                            <button type="button" class="btn btn-success btnSaveRecord" module="AccountChartUI">Save Account</button>
+                                            <button type="button" class="btn btn-info btnNewRecord" module="AccountChartUI">
+                                                <i class="fa fa-plus"></i> New Account</button>
+                                            <button type="button" class="btn btn-info btnReport" MainMenu="AccountingUI" module="AccountChartUI" style="margin-left: 10px;">
+                                                <i class="fa fa-file-text-o"></i> Report</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="DisplayTab" tabName="AccountChart" tabUrl="AccountChartProfileMain"></div>
+                                        <div class="nav-tabs-custom" style="margin-top: 5px;">
+                                            <ul class="nav nav-tabs">
+                                                <li class="tab-pane active">
+                                                    <a href="#GeneralLedgers" data-toggle="tab" aria-expanded="false">GL Entries</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content no-padding">
+                                                <div class="tab-pane active" id="GeneralLedgers">
+                                                    <div class="DisplayTab" tabName="AccountChart" tabUrl="AccountChartTransaction"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabName="AccountChart" tabUrl="AccountChartSearch"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

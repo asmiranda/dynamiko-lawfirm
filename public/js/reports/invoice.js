@@ -1,0 +1,4 @@
+class InvoiceReport {
+    loadReport() {
+    }
+}

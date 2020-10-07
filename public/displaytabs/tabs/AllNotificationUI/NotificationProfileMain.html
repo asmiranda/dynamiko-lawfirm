@@ -1,0 +1,30 @@
+<div class="box box-warning direct-chat direct-chat-warning">
+    <input rowIndex="0" type="hidden" class="form-control editRecord mainRecordId" module="NotificationUI"
+        name="NotificationId">
+    <input rowIndex="0" type="hidden" class="form-control editRecord" module="NotificationUI" name="code">
+    <div class="box-header with-border">
+        <h3 class="box-title">Message Detail</h3>
+    </div>
+    <div class="box-body">
+        <div class="direct-chat-msg" style="margin: 15px;">
+            <div class="direct-chat-info clearfix">
+                <span class="direct-chat-name pull-left editRecord" 
+                    type="html" rowIndex="0" module="NotificationUI" name="fromEmail" tabName="_TABNAME_">--</span>
+                <span class="direct-chat-timestamp pull-right editRecord" 
+                    type="html" rowIndex="0" module="NotificationUI" name="receivedDate" tabName="_TABNAME_">--</span>
+            </div>
+            <i type="html" rowIndex="0" class="editRecord" module="NotificationUI" name="message"
+            tabName="_TABNAME_"></i>
+        </div>
+        <div class="flex-break"></div>
+        <div style="flex: 1; font-weight: bold;" class="text-center">Message Thread</div>
+        <div class="flex-break"></div>
+        <div class="direct-chat-messages" style="min-height: 500px; max-height: 700px; overflow-y: auto;" id="messageThread">
+        </div>
+    </div>
+    <div class="box-footer text-center">
+        <textarea name="replyMessage" placeholder="Type Message ..." class="form-control"></textarea>
+        <button type="button" class="btn btn-warning btn-flat text-center btnReplyToNotification" recordId=""
+            style="width:80%">Reply</button>
+    </div>
+</div>

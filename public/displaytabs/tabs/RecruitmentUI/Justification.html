@@ -1,0 +1,52 @@
+<div class="box box-default myChildTab myAddInfo" module="HrRequisitionUI">
+    <div class="box-header with-border">
+        <h3 class="box-title">Justification</h3>
+        <a href="#" module="HrRequisitionUI" addInfo="justification" data-target="#myModalHrRequisitionUIjustification" data-toggle="modal" class="btnUpdateAddInfo pull-right">Update</a>
+    </div>
+    <div class="box-body displayTabHtml" module="HrRequisitionUI">
+        <form role="form-horizontal" module="HrRequisitionUI" submodule="HrRequisitionUI" addInfo="justification" class="addInfo">
+            <div style="display: flex; flex-wrap: wrap;">
+                <div style="flex: 88%">
+                    <field module="HrRequisitionUI" editable="false" name="replaceEmployeeId" label="Replacing Employee" type="AutoCompleteGen"></field>
+                </div>
+                <div style="flex: 88%">
+                    <field module="HrRequisitionUI" editable="false" name="replaceEmployeeSalary" label="Replacing Employee Salary" type="DoubleGen"></field>
+                </div>
+                <div style="flex: 88%">
+                    <field module="HrRequisitionUI" editable="false" name="positionJustificationTitle" label="Justification Title" type="TextFieldGen"></field>
+                </div>
+                <div style="flex: 88%">
+                    <field module="HrRequisitionUI" editable="false" name="positionJustificationDescription" label="Justification Description" type="TextAreaGen"></field>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade" id="myModalHrRequisitionUIjustification" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <form role="form-horizontal" module="HrRequisitionUI" submodule="HrRequisitionUI" addInfo="justification" class="addInfo">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title">Justification</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="box-body" style="height:400px; overflow-y: auto; overflow-x: hidden;">
+                        <field module="HrRequisitionUI" editable="true" name="replaceEmployeeId" label="Replacing Employee" type="AutoCompleteGen"></field>
+                        <field module="HrRequisitionUI" editable="true" name="replaceEmployeeSalary" label="Replacing Employee Salary" type="DoubleGen"></field>
+                        <field module="HrRequisitionUI" editable="true" name="positionJustificationTitle" label="Justification Title" type="TextFieldGen"></field>
+                        <field module="HrRequisitionUI" editable="true" name="positionJustificationDescription" label="Justification Description" type="TextAreaGen"></field>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <span>
+                        <input module="HrRequisitionUI" submodule="HrRequisitionUI" addInfo="justification" type="hidden" class="form-control" name="HrRequisitionUIId" style="width:50px;"></input>
+                        <button module="HrRequisitionUI" submodule="HrRequisitionUI" addInfo="justification" type="button" class="btn btn-default btnAddInfoCancel" data-dismiss="modal">Close</button>
+                        <button module="HrRequisitionUI" submodule="HrRequisitionUI" addInfo="justification" type="button" class="btn btn-primary btnAddInfoSave">Save Changes</button>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="box box-default myChildTab myAddInfo" module="HrRequisitionUI">
+    <div class="box-header with-border">
+        <h3 class="box-title">Job Information</h3>
+        <a href="#" module="HrRequisitionUI" addInfo="JobInfo" data-target="#myModalHrRequisitionUIJobInfo" data-toggle="modal" class="btnUpdateAddInfo pull-right">Update</a>
+    </div>
+
+    <div class="box-body displayTabHtml" module="HrRequisitionUI">
+        <form role="form-horizontal" module="HrRequisitionUI" submodule="HrRequisitionUI" addInfo="JobInfo" class="addInfo">
+            <div style="display: flex; flex-wrap: wrap;">
+                <div style="flex: 33%">
+                    <field module="HrRequisitionUI" editable="false" name="requisitionTitle" label="Title" type="TextFieldGen"></field>
+                </div>
+                <div style="flex: 33%">
+                    <field module="HrRequisitionUI" editable="false" name="recruiterCode" label="Recruiter" type="AutoCompleteGen" linktoBean="EmployeeUI"></field>
+                </div>
+                <div style="flex: 33%">
+                    <field module="HrRequisitionUI" editable="false" name="managerCode" label="Manager" type="AutoCompleteGen" linktoBean="EmployeeUI"></field>
+                </div>
+                <div style="flex: 33%">
+                    <field module="HrRequisitionUI" editable="false" name="projectCode" label="Project" type="AutoCompleteGen" linktoBean="ProjectUI"></field>
+                </div>
+                <div style="flex: 33%">
+                    <field module="HrRequisitionUI" editable="false" name="status" label="Status" type="ComboGen" modelCombo="OPEN,IN PROGRESS,COMPLETED,CLOSED,CANCELLED"></field>
+                </div>
+                <div style="flex: 33%">
+                    <field module="HrRequisitionUI" editable="false" name="numberOfOpening" label="# Of Opening" type="IntegerGen"></field>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade" id="myModalHrRequisitionUIJobInfo" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <form role="form-horizontal" module="HrRequisitionUI" submodule="HrRequisitionUI" addInfo="JobInfo" class="addInfo">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title">Job Information</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="box-body" style="height:400px; overflow-y: auto; overflow-x: hidden;">
+                        <field module="HrRequisitionUI" editable="true" name="requisitionTitle" label="Title" type="TextFieldGen"></field>
+                        <field module="HrRequisitionUI" editable="true" name="recruiterCode" label="Recruiter" type="AutoCompleteGen" linktoBean="EmployeeUI"></field>
+                        <field module="HrRequisitionUI" editable="true" name="managerCode" label="Manager" type="AutoCompleteGen" linktoBean="EmployeeUI"></field>
+                        <field module="HrRequisitionUI" editable="true" name="projectCode" label="Project" type="AutoCompleteGen" linktoBean="ProjectUI"></field>
+                        <field module="HrRequisitionUI" editable="true" name="status" label="Status" type="ComboGen" modelCombo="OPEN,IN PROGRESS,COMPLETED,CLOSED,CANCELLED"></field>
+                        <field module="HrRequisitionUI" editable="true" name="numberOfOpening" label="# Of Opening" type="IntegerGen""></field>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <span>
+                        <input module="HrRequisitionUI" submodule="HrRequisitionUI" addInfo="JobInfo" type="hidden" class="form-control" name="HrRequisitionUIId" style="width:50px;"></input>
+                        <button module="HrRequisitionUI" submodule="HrRequisitionUI" addInfo="JobInfo" type="button" class="btn btn-default btnAddInfoCancel" data-dismiss="modal">Close</button>
+                        <button module="HrRequisitionUI" submodule="HrRequisitionUI" addInfo="JobInfo" type="button" class="btn btn-primary btnAddInfoSave">Save Changes</button>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

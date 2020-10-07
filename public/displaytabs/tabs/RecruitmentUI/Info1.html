@@ -1,0 +1,86 @@
+<div class="box box-default myChildTab myAddInfo" module="HrRequisitionUI">
+    <div class="box-header with-border">
+        <h3 class="box-title">Additional Information</h3>
+        <a href="#" module="HrRequisitionUI" addInfo="Info1" data-target="#myModalHrRequisitionUIInfo1" data-toggle="modal" class="btnUpdateAddInfo pull-right">Update</a>
+    </div>
+
+    <div class="box-body displayTabHtml" module="HrRequisitionUI">
+        <form role="form-horizontal" module="HrRequisitionUI" submodule="HrRequisitionUI" addInfo="Info1"
+            class="addInfo"> 
+            <div style="display: flex; flex-wrap: wrap;">
+                <div style="flex: 33%">
+                    <field module="HrRequisitionUI" editable="false" name="divisionCode" label="Division" type="AutoCompleteGen"></field>
+                </div>
+                <div style="flex: 33%">
+                    <field module="HrRequisitionUI" editable="false" name="locationCode" label="Location" type="AutoCompleteGen"></field>
+                </div>
+                <div style="flex: 33%">
+                    <field module="HrRequisitionUI" editable="false" name="titleByManager" label="Title By Manager" type="TextFieldGen"></field>
+                </div>
+                <div style="flex: 33%">
+                    <field module="HrRequisitionUI" editable="false" name="shift" label="Shift" type="SqlComboGen"></field>
+                </div>
+                <div style="flex: 33%">
+                    <field module="HrRequisitionUI" editable="false" name="targetStartDate" label="Target Start Date" type="CalendarGen"></field>
+                </div>
+                <div style="flex: 33%">
+                    <field module="HrRequisitionUI" editable="false" name="gradeLevel" label="Grade Level" type="SqlComboGen"></field>
+                </div>
+                <div style="flex: 33%">
+                    <field module="HrRequisitionUI" editable="false" name="overtimeStatus" label="Overtime Status" type="SqlComboGen"></field>
+                </div>
+                <div style="flex: 33%">
+                    <field module="HrRequisitionUI" editable="false" name="currencyCode" label="Currency" type="AutoCompleteGen"></field>
+                </div>
+                <div style="flex: 33%">
+                    <field module="HrRequisitionUI" editable="false" name="targetSalary" label="Target Salary" type="DoubleGen"></field>
+                </div>
+                <div style="flex: 33%">
+                    <field module="HrRequisitionUI" editable="false" name="incentiveType" label="Incentive Type" type="SqlComboGen"></field>
+                </div>
+                <div style="flex: 33%">
+                    <field module="HrRequisitionUI" editable="false" name="withRelocation" label="With Relocation" type="CheckBoxGen"></field>
+                </div>
+                <div style="flex: 33%">
+                    <field module="HrRequisitionUI" editable="false" name="withDirectReports" label="With Direct Reports" type="CheckBoxGen"></field>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade" id="myModalHrRequisitionUIInfo1" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <form role="form-horizontal" module="HrRequisitionUI" submodule="HrRequisitionUI" addInfo="Info1" class="addInfo">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title">Additional Information</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="box-body" style="height:400px; overflow-y: auto; overflow-x: hidden;">
+                        <field module="HrRequisitionUI" editable="true" name="divisionCode" label="Division" type="AutoCompleteGen"></field>
+                        <field module="HrRequisitionUI" editable="true" name="locationCode" label="Location" type="AutoCompleteGen"></field>
+                        <field module="HrRequisitionUI" editable="true" name="titleByManager" label="Title By Manager" type="TextFieldGen"></field>
+                        <field module="HrRequisitionUI" editable="true" name="shift" label="Shift" type="SqlComboGen"></field>
+                        <field module="HrRequisitionUI" editable="true" name="targetStartDate" label="Target Start Date" type="CalendarGen"></field>
+                        <field module="HrRequisitionUI" editable="true" name="gradeLevel" label="Grade Level" type="SqlComboGen"></field>
+                        <field module="HrRequisitionUI" editable="true" name="overtimeStatus" label="Overtime Status" type="SqlComboGen"></field>
+                        <field module="HrRequisitionUI" editable="true" name="currencyCode" label="Currency" type="AutoCompleteGen"></field>
+                        <field module="HrRequisitionUI" editable="true" name="targetSalary" label="Target Salary" type="DoubleGen"></field>
+                        <field module="HrRequisitionUI" editable="true" name="incentiveType" label="Incentive Type" type="SqlComboGen"></field>
+                        <field module="HrRequisitionUI" editable="true" name="withRelocation" label="With Relocation" type="CheckBoxGen"></field>
+                        <field module="HrRequisitionUI" editable="true" name="withDirectReports" label="With Direct Reports" type="CheckBoxGen"></field>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <span>
+                        <input module="HrRequisitionUI" submodule="HrRequisitionUI" addInfo="Info1" type="hidden" class="form-control" name="HrRequisitionUIId" style="width:50px;"></input>
+                        <button module="HrRequisitionUI" submodule="HrRequisitionUI" addInfo="Info1" type="button" class="btn btn-default btnAddInfoCancel" data-dismiss="modal">Close</button>
+                        <button module="HrRequisitionUI" submodule="HrRequisitionUI" addInfo="Info1" type="button" class="btn btn-primary btnAddInfoSave">Save Changes</button>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,129 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<div class="box box-default">
+    <div class="box-header with-border">
+        <h3 class="box-title">Transaction Details</h3>
+        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+            <div style="display: flex;">
+                <div class="checkbox" style="margin: 5px; margin-right: 10px;">
+                    <label>
+                      <input type="checkbox" name="showUnspecifiedOnly" parentModule="BankingUI" module="BankingTransactionUI" 
+                      class="subRecordSearchFilter" rowIndex="0" value="true"> Show&nbsp;Unmatched&nbsp;Only
+                    </label>
+                </div>
+                <i style="margin: 5px; margin-right: 10px;">Filter&nbsp;Date </i>
+                <input name="bankingTransactionDate" parentModule="BankingUI" module="BankingTransactionUI" type="text" 
+                    class="form-control subRecordSearchFilter calendar" rowIndex="0" placeholder="Filter Date"/>
+                <button class="btn btn-default btnMoreSubRecord" module="BankingTransactionUI" parentModule="BankingUI" style="margin-left: 10px;">
+                    <i class="fa fa-plus"></i> More Records
+                </button>
+                <div style="display: flex; margin-top: 5px; margin-left: 10px;" class="hand btnSubRecordDownloadCSV" module="BankingTransactionUI" parentModule="BankingUI">
+                    <i class="fa fa-fw fa-download" style="margin-top: 5px;"></i> <i>CSV</i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box-body">
+        <div style="display: flex; flex-direction: column;">
+            <div class="hiddenRecordTemplate" module="BankingTransactionUI" parentModule="BankingUI" style="display: none;">
+                <div style="display: flex; width: 100%;" class="subRecord" module="BankingTransactionUI" rowIndex="----">
+                    <div style="flex: 1; text-align: right;">
+                        <i style="margin-right: 5px;">----</i>
+                    </div>
+                    <div style="flex: 2;">
+                        <input rowIndex="----" name="transactionDate" module="BankingTransactionUI" parentModule="BankingUI" type="text"
+                            class="form-control editRecord calendar autoSaveSubRecord" placeholder="" disabled/>
+                    </div>
+                    <div style="flex: 4;">
+                        <input rowIndex="----" name="description" module="BankingTransactionUI" parentModule="BankingUI" type="text"
+                            class="form-control editRecord autoSaveSubRecord" placeholder="">
+                    </div>
+                    <div style="flex: 4;">
+                        <input rowIndex="----" name="payee" module="BankingTransactionUI" parentModule="BankingUI" type="text"
+                            class="form-control editRecord autoSaveSubRecord" placeholder="">
+                    </div>
+                    <div style="flex: 2;">
+                        <input rowIndex="----" name="tax" module="BankingTransactionUI" parentModule="BankingUI" type="text"
+                            class="form-control editRecord autoSaveSubRecord" placeholder="" disabled>
+                    </div>
+                    <div style="flex: 2;">
+                        <input rowIndex="----" name="spent" module="BankingTransactionUI" parentModule="BankingUI" type="text"
+                            class="form-control editRecord autoSaveSubRecord" placeholder="" disabled>
+                    </div>
+                    <div style="flex: 2;">
+                        <input rowIndex="----" name="received" module="BankingTransactionUI" parentModule="BankingUI" type="text"
+                            class="form-control editRecord autoSaveSubRecord" placeholder="" disabled>
+                    </div>
+                    <div style="flex: 2;">
+                        <input rowIndex="----" name="balance" module="BankingTransactionUI" parentModule="BankingUI" type="text"
+                            class="form-control editRecord autoSaveSubRecord" placeholder="" disabled>
+                    </div>
+                    <div style="flex: 4;">
+                        <div class="input-group" style="width: 100%;">
+                            <input rowIndex="----" type="text" class="form-control autocomplete editRecordAutoComplete" name="matchAccountCode"
+                                placeholder="" module="BankingTransactionUI" parentModule="BankingUI"
+                                autoname="matchAccountCode" helptitle="matchAccountCode"/>
+                            <span rowindex="----" autoname="matchAccountCode" module="BankingTransactionUI" parentModule="BankingUI" 
+                                class="btnAutoClearSelected input-group-addon" title="Clear Selected">
+                                <i class="fa fa-remove"></i></span>
+                            <div class="autocomplete-items" rowIndex="----" parentModule="BankingUI"
+                                module="BankingTransactionUI" autoname="matchAccountCode">
+                            </div>
+                        </div>
+                        <input rowIndex="----" class="form-control editRecord autoSaveSubRecord HiddenAutoComplete"
+                            name="matchAccountCode" type="hidden" parentModule="BankingUI"
+                            module="BankingTransactionUI" autoNameField="matchAccountCode" value=""/>
+                    </div>
+                    <div style="flex: 1; text-align: left; margin-top: 7px;">
+                        <input rowIndex="----" name="bankingCode" module="BankingTransactionUI" parentModule="BankingUI" type="hidden"
+                            class="form-control editRecord subRecordSearchFilter" placeholder=""/>
+                        <input rowIndex="----" name="code" module="BankingTransactionUI" parentModule="BankingUI" type="hidden"
+                            class="form-control editRecord" placeholder=""/>
+                        <a href="#" class="btnSaveSubRecord" rowIndex="----" module="BankingTransactionUI" parentModule="BankingUI" title="Save #----">
+                            <i class="fa fa-save" style="margin-left: 5px;"></i>
+                        </a>
+                        <a href="#" class="btnDeleteSubRecord" rowIndex="----" module="BankingTransactionUI" parentModule="BankingUI" title="Remove #----">
+                            <i class="fa fa-remove" style="margin-left: 5px;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="titleRecordTemplate">
+                <div style="display: flex; width: 100%;">
+                    <div class="text-center" style="flex: 1;">
+                        <b></b>
+                    </div>
+                    <div class="text-center" style="flex: 2;">
+                        <b>Date</b>
+                    </div>
+                    <div class="text-center" style="flex: 4;">
+                        <b>Description</b>
+                    </div>
+                    <div class="text-center" style="flex: 4;">
+                        <b>Payee</b>
+                    </div>
+                    <div class="text-center" style="flex: 2;">
+                        <b>Tax</b>
+                    </div>
+                    <div class="text-center" style="flex: 2;">
+                        <b>Spent</b>
+                    </div>
+                    <div class="text-center" style="flex: 2;">
+                        <b>Received</b>
+                    </div>
+                    <div class="text-center" style="flex: 2;">
+                        <b>Balance</b>
+                    </div>
+                    <div class="text-center" style="flex: 4;">
+                        <b>Matched Account</b>
+                    </div>
+                    <div style="flex: 1;">
+                        <b></b>
+                    </div>
+                </div>
+            </div>
+            <div class="displayRecordTemplate" module="BankingTransactionUI">
+            </div>
+        </div>
+    </div>
+</div>

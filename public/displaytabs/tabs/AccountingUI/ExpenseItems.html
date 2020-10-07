@@ -1,0 +1,98 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<div class="box box-default">
+    <div class="box-header with-border">
+        <h3 class="box-title">Item Details</h3>
+        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+            <div style="display: flex;">
+                <button class="btn btn-default btnMoreSubRecord" module="ExpenseItemUI" parentModule="ExpenseUI" style="margin-left: 10px;">
+                    <i class="fa fa-plus"></i> More Records
+                </button>
+                <div style="display: flex; margin-top: 5px; margin-left: 10px;" class="hand btnSubRecordDownloadCSV" module="ExpenseItemUI" parentModule="ExpenseUI">
+                    <i class="fa fa-fw fa-download" style="margin-top: 5px;"></i> <i>CSV</i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-body">
+        <div style="display: flex; flex-direction: column;">
+            <div class="hiddenRecordTemplate" module="ExpenseItemUI" parentModule="ExpenseUI" style="display: none;">
+                <div style="display: flex;" class="subRecord" module="ExpenseItemUI" rowIndex="----">
+                    <div style="flex: 1; text-align: right;">
+                        <i style="margin-right: 5px;">----</i>
+                    </div>
+                    <div style="flex: 4;">
+                        <div class="input-group" style="width: 100%;">
+                            <input rowIndex="----" type="text" class="form-control autocomplete editRecordAutoComplete" name="productCode"
+                                placeholder="" module="ExpenseItemUI" parentModule="ExpenseUI"
+                                autoname="productCode" helptitle="productCode"/>
+                            <span rowindex="----" autoname="productCode" module="ExpenseItemUI" parentModule="ExpenseUI" 
+                                class="btnAutoClearSelected input-group-addon" title="Clear Selected">
+                                <i class="fa fa-remove"></i></span>
+                            <div class="autocomplete-items" rowIndex="----" parentModule="ExpenseUI"
+                                module="ExpenseItemUI" autoname="productCode">
+                            </div>
+                            <input rowIndex="----" class="form-control editRecord autoSaveSubRecord HiddenAutoComplete"
+                                name="productCode" type="hidden" parentModule="ExpenseUI"
+                                module="ExpenseItemUI" autoNameField="productCode" value=""/>
+                        </div>
+                    </div>
+                    <div style="flex: 8;">
+                        <input rowIndex="----" name="description" module="ExpenseItemUI" parentModule="ExpenseUI" type="text"
+                            class="form-control editRecord autoSaveSubRecord" placeholder="">
+                    </div>
+                    <div style="flex: 2;">
+                        <input rowIndex="----" name="quantity" module="ExpenseItemUI" parentModule="ExpenseUI" type="text"
+                            class="form-control editRecord autoSaveSubRecord" placeholder="">
+                    </div>
+                    <div style="flex: 2;">
+                        <input rowIndex="----" name="unitPrice" module="ExpenseItemUI" parentModule="ExpenseUI" type="text"
+                            class="form-control editRecord autoSaveSubRecord" placeholder="">
+                    </div>
+                    <div style="flex: 3;">
+                        <input rowIndex="----" name="totalAmount" module="ExpenseItemUI" parentModule="ExpenseUI" type="text"
+                            class="form-control editRecord autoSaveSubRecord" placeholder="">
+                    </div>
+                    <div style="flex: 1; text-align: left; margin-top: 7px;">
+                        <input rowIndex="----" name="expenseCode" module="ExpenseItemUI" parentModule="ExpenseUI" type="hidden"
+                            class="form-control editRecord subRecordSearchFilter" placeholder=""/>
+                        <input rowIndex="----" name="code" module="ExpenseItemUI" parentModule="ExpenseUI" type="hidden"
+                            class="form-control editRecord" placeholder=""/>
+                        <a href="#" class="btnSaveSubRecord" rowIndex="----" module="ExpenseItemUI" parentModule="ExpenseUI" title="Save #----">
+                            <i class="fa fa-save" style="margin-left: 5px;"></i>
+                        </a>
+                        <a href="#" class="btnDeleteSubRecord" rowIndex="----" module="ExpenseItemUI" parentModule="ExpenseUI" title="Remove #----">
+                            <i class="fa fa-remove" style="margin-left: 5px;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="titleRecordTemplate">
+                <div style="display: flex; width: 100%;">
+                    <div class="text-center" style="flex: 1;">
+                    </div>
+                    <div class="text-center" style="flex: 4;">
+                        <b>Product/Service</b>
+                    </div>
+                    <div class="text-center" style="flex: 8;">
+                        <b>Description</b>
+                    </div>
+                    <div class="text-center" style="flex: 2;">
+                        <b>Quantity</b>
+                    </div>
+                    <div class="text-center" style="flex: 2;">
+                        <b>Unit Price</b>
+                    </div>
+                    <div class="text-center" style="flex: 3;">
+                        <b>Amount</b>
+                    </div>
+                    <div class="text-center" style="flex: 1;">
+                    </div>
+                </div>
+            </div>
+            <div class="displayRecordTemplate" module="ExpenseItemUI">
+            </div>
+        </div>
+    </div>
+</div>

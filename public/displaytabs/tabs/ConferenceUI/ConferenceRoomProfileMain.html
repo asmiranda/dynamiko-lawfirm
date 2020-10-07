@@ -1,0 +1,30 @@
+<div style="display: flex; flex: 100%;">
+    <input rowIndex="0" type="hidden" class="form-control editRecord mainRecordId" module="ConferenceRoomUI" name="ConferenceRoomId">
+    <input rowIndex="0" type="hidden" class="form-control editRecord" module="ConferenceRoomUI" name="code">
+    <input rowIndex="0" type="hidden" class="form-control editRecord" module="ConferenceRoomUI" name="assignedConferenceCompany">
+    <input rowIndex="0" type="hidden" class="form-control editRecord" module="ConferenceRoomUI" name="assignedConferenceRoom">
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Room Name</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="ConferenceRoomUI"
+            name="name" tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 3; margin-left: 10px;">
+        <label class="control-label">Host</label>
+        <div class="input-group" style="width: 100%;">
+            <input rowIndex="0" type="text" class="form-control autocomplete" name="userHostCode" placeholder="Payee" module="ConferenceRoomUI" autoname="userHostCode" helptitle="userHostCode">
+            <input rowIndex="0" class="form-control editRecord HiddenAutoComplete" name="userHostCode" type="hidden" module="ConferenceRoomUI" autoNameField="userHostCode" value="">
+            <div class="autocomplete-items" rowIndex="0" module="ConferenceRoomUI" autoname="userHostCode">
+            </div>
+        </div> 
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Schedule</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="ConferenceRoomUI"
+            name="schedule" tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Description</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="ConferenceRoomUI"
+            name="description" tabName="_TABNAME_">
+    </div>
+</div>

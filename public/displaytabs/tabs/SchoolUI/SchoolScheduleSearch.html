@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<div class="box box-default">
+    <div class="box-header ui-sortable-handle">
+        <i class="fa fa-users"></i>
+        <h3 class="box-title">Search</h3>
+        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status"
+            style="display: none;">
+            <div style="display: flex;">
+                <div style="display: flex; margin-top: 5px; margin-left: 10px;" class="hand btnRecordDownloadCSV"
+                    module="SchoolScheduleUI">
+                    <i class="fa fa-fw fa-download" style="margin-top: 5px;"></i> <i>CSV</i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box-body">
+        <div class="form-group">
+            <input type="text" class="form-control searchFilter" module="SchoolScheduleUI" tabName="_TABNAME_"
+                name="mainFilter" placeholder="Search Schedule" rowIndex="0">
+        </div>
+    </div>
+
+    <div class="box-body searchRecords" module="SchoolScheduleUI" tabName="_TABNAME_">
+    </div>
+</div>

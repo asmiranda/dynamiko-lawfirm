@@ -1,0 +1,6 @@
+docker image build -t niq77avie/dynamiko-node-service .
+docker run -p 8777:8777 niq77avie/dynamiko-node-service
+
+docker run -p 8777:8777 -e DB_HOST=dynamikosoft.com -e DB_USER=epltrc niq77avie/dynamiko-node-service
+
+docker run -p 8777:8777 -e DB_HOST=dynamikosoft.com -e DB_USER=epltrc -v /etc/letsencrypt/live/dynamikosoft.com:/certs niq77avie/dynamiko-node-service

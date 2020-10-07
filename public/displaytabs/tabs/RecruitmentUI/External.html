@@ -1,0 +1,53 @@
+<div class="box box-default myChildTab myAddInfo" module="HrRequisitionUI">
+    <div class="box-header with-border">
+        <h3 class="box-title">External Qualifications</h3>
+        <a href="#" module="HrRequisitionUI" addInfo="external" data-target="#myModalHrRequisitionUIexternal" data-toggle="modal" class="btnUpdateAddInfo pull-right">Update</a>
+    </div>
+
+    <div class="box-body displayTabHtml" module="HrRequisitionUI">
+        <form role="form-horizontal" module="HrRequisitionUI" submodule="HrRequisitionUI" addInfo="external" class="addInfo">
+            <div style="display: flex; flex-wrap: wrap;">
+                <div style="flex: 88%">
+                    <field module="HrRequisitionUI" editable="false" name="externalDescription" label="Description" type="TextAreaGen"></field>
+                </div>
+                <div style="flex: 88%">
+                    <field module="HrRequisitionUI" editable="false" name="externalPrimaryResponsibilities" label="Primary Responsibilities" type="TextAreaGen"></field>
+                </div>
+                <div style="flex: 88%">
+                    <field module="HrRequisitionUI" editable="false" name="externalQualifications" label="Qualifications" type="TextAreaGen"></field>
+                </div>
+                <div style="flex: 88%">
+                    <field module="HrRequisitionUI" editable="false" name="externalPreferredQualifications" label="Preferred Qualifications" type="TextAreaGen"></field>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade" id="myModalHrRequisitionUIexternal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <form role="form-horizontal" module="HrRequisitionUI" submodule="HrRequisitionUI" addInfo="external" class="addInfo">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title">External Qualifications</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="box-body" style="height:400px; overflow-y: auto; overflow-x: hidden;">
+                        <field module="HrRequisitionUI" editable="true" name="externalDescription" label="Description" type="TextAreaGen"></field>
+                        <field module="HrRequisitionUI" editable="true" name="externalPrimaryResponsibilities" label="Primary Responsibilities" type="TextAreaGen"></field>
+                        <field module="HrRequisitionUI" editable="true" name="externalQualifications" label="Qualifications" type="TextAreaGen"></field>
+                        <field module="HrRequisitionUI" editable="true" name="externalPreferredQualifications" label="Preferred Qualifications" type="TextAreaGen"></field>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <span>
+                        <input module="HrRequisitionUI" submodule="HrRequisitionUI" addInfo="external" type="hidden" class="form-control" name="HrRequisitionUIId" style="width:50px;"></input>
+                        <button module="HrRequisitionUI" submodule="HrRequisitionUI" addInfo="external" type="button" class="btn btn-default btnAddInfoCancel" data-dismiss="modal">Close</button>
+                        <button module="HrRequisitionUI" submodule="HrRequisitionUI" addInfo="external" type="button" class="btn btn-primary btnAddInfoSave">Save Changes</button>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

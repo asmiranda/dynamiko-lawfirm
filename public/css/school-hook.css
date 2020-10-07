@@ -1,0 +1,18 @@
+.miniVideoStream {
+}
+
+#activeVideo {
+    width: 100%; 
+    background-color: gray;
+}
+
+.videoBoxList {
+    display: flex; 
+    flex-wrap: nowrap; 
+    /* overflow-x: auto; */
+    justify-content: space-evenly;
+}
+
+div.inner {
+    padding: 5px;
+}

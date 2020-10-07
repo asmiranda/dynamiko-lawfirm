@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<section class="content-header">
+    <div class="DisplayTab" tabUrl="Header"></div>
+</section>
+<section class="content">
+    <div style="display: flex;">
+        <div id="dynamikoMainContent" style="flex: 70%; padding-right: 10px; margin-left: 0px;" class="row">
+            <div class="nav-tabs-custom" style="margin-top: 5px;">
+                <ul class="nav nav-tabs">
+                    <li class="tab-pane active">
+                        <a href="#RealEstate" data-toggle="tab" aria-expanded="true">Real Estate</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#RealEstateTax" data-toggle="tab" aria-expanded="false">Real Estate Tax</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#BuildingPermit" data-toggle="tab" aria-expanded="false">Building Permit</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#ElectricalPermit" data-toggle="tab" aria-expanded="false">Electrical Permit</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#PlumbingPermit" data-toggle="tab" aria-expanded="false">Plumbing Permit</a>
+                    </li>
+                    <!-- <li class="tab-pane">
+                        <a href="#TransferTax" data-toggle="tab" aria-expanded="false">Transfer Tax</a>
+                    </li> -->
+                    <li class="tab-pane">
+                        <a href="#CommunityTaxCertificate" data-toggle="tab" aria-expanded="false">Community Tax</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#BusinessPermit" data-toggle="tab" aria-expanded="false">Business Permit</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#GovernmentCashier" data-toggle="tab" aria-expanded="false">Cashier</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#GovernmentPrinting" data-toggle="tab" aria-expanded="false">Printing</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#GovernmentReports" data-toggle="tab" aria-expanded="false">Reports</a>
+                    </li>
+                </ul>
+                <div class="tab-content no-padding">
+                    <div class="tab-pane active" id="RealEstate">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div style="display: flex; flex-direction: column;">
+                                    <div class="DisplayTabCommon" tabName="dashboard" tabUrl="RealEstateProfile"></div>
+                                    <div class="nav-tabs-custom" style="margin-top: 5px;">
+                                        <ul class="nav nav-tabs">
+                                            <li class="tab-pane active">
+                                                <a href="#DashboardMap" data-toggle="tab" aria-expanded="false">Map</a>
+                                            </li>
+                                            <li class="tab-pane">
+                                                <a href="#DashboardAssessment" data-toggle="tab" aria-expanded="true">Assessment</a>
+                                            </li>
+                                            <li class="tab-pane">
+                                                <a href="#DashboardBuildingPermit" data-toggle="tab" aria-expanded="true">Building Permit</a>
+                                            </li>
+                                            <li class="tab-pane">
+                                                <a href="#DashboardFieldInspection" data-toggle="tab" aria-expanded="true">Field Inspection</a>
+                                            </li>
+                                            <li class="tab-pane">
+                                                <a href="#DashboardTransfer" data-toggle="tab" aria-expanded="true">Transfer</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content no-padding">
+                                            <div class="tab-pane active" id="DashboardMap">
+                                                <div class="DisplayTabCommon" tabName="dashboard" tabUrl="AddressMap"></div>
+                                            </div>
+                                            <div class="tab-pane" id="DashboardAssessment">
+                                                <div class="DisplayTab" tabName="dashboard" tabUrl="RealEstateAssessmentRecords"></div>
+                                            </div>
+                                            <div class="tab-pane" id="DashboardBuildingPermit">
+                                                <div class="DisplayTab" tabName="dashboard" tabUrl="RealEstateBuildingPermitRecords"></div>
+                                            </div>
+                                            <div class="tab-pane" id="DashboardFieldInspection">
+                                                <div class="DisplayTab" tabName="dashboard" tabUrl="RealEstateFieldInspectionRecords"></div>
+                                            </div>
+                                            <div class="tab-pane" id="DashboardTransfer">
+                                                <div class="DisplayTab" tabName="dashboard" tabUrl="RealEstateTransferRecords"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTabCommon" tabName="dashboard" tabUrl="SearchRealEstate"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="RealEstateTax">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="DisplayTabCommon" tabName="RealEstateTax" tabUrl="RealEstateTaxProfile"></div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTabCommon" tabName="RealEstateTax" tabUrl="SearchRealEstateTax"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="BuildingPermit">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Building Permit</h3>
+                                        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+                                            <button type="button" class="btn btn-info btnSaveRealEstateBuildingPermit">Save Building Permit</button>
+                                            <button type="button" class="btn btn-default RealEstateBuildingPermitUI_btnNewRealEstate"><i
+                                                    class="fa fa-plus"></i> New Building Permit</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="DisplayTab" tabName="RealEstateBuildingPermit" tabUrl="RealEstateBuildingPermitProfileMain"></div>
+                                        <div class="nav-tabs-custom" style="margin-top: 5px;">
+                                            <ul class="nav nav-tabs">
+                                                <li class="tab-pane active">
+                                                    <a href="#BuildingPermitBox1" data-toggle="tab" aria-expanded="false">Box 1 (Engr)</a>
+                                                </li>
+                                                <li class="tab-pane">
+                                                    <a href="#BuildingPermitBox2" data-toggle="tab" aria-expanded="true">Box 2 (Recording)</a>
+                                                </li>
+                                                <li class="tab-pane">
+                                                    <a href="#BuildingPermitBox3" data-toggle="tab" aria-expanded="true">Box 3 (Engr/Section)</a>
+                                                </li>
+                                                <li class="tab-pane">
+                                                    <a href="#BuildingPermitBox4" data-toggle="tab" aria-expanded="true">Box 4 (Section)</a>
+                                                </li>
+                                                <li class="tab-pane">
+                                                    <a href="#BuildingPermitBox5" data-toggle="tab" aria-expanded="true">Box 5 (Section)</a>
+                                                </li>
+                                                <li class="tab-pane">
+                                                    <a href="#BuildingPermitBox6" data-toggle="tab" aria-expanded="true">Box 6 (Architect/Civil/Applicant/Owner)</a>
+                                                </li>
+                                                <li class="tab-pane">
+                                                    <a href="#BuildingPermitPayment" data-toggle="tab" aria-expanded="true">Payment</a>
+                                                </li>
+                                                <li class="tab-pane">
+                                                    <a href="#BuildingPermitBoxAttachment" data-toggle="tab" aria-expanded="true">Attachment</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content no-padding">
+                                                <div class="tab-pane active" id="BuildingPermitBox1">
+                                                    <div class="DisplayTab" tabName="RealEstateBuildingPermit" tabUrl="RealEstateBuildingPermitProfileBox1"></div>
+                                                </div>
+                                                <div class="tab-pane" id="BuildingPermitBox2">
+                                                    <div class="DisplayTab" tabName="RealEstateBuildingPermit" tabUrl="RealEstateBuildingPermitProfileBox2"></div>
+                                                </div>
+                                                <div class="tab-pane" id="BuildingPermitBox3">
+                                                    <div class="DisplayTab" tabName="RealEstateBuildingPermit" tabUrl="RealEstateBuildingPermitProfileBox3"></div>
+                                                </div>
+                                                <div class="tab-pane" id="BuildingPermitBox4">
+                                                    <div class="DisplayTab" tabName="RealEstateBuildingPermit" tabUrl="RealEstateBuildingPermitProfileBox4"></div>
+                                                </div>
+                                                <div class="tab-pane" id="BuildingPermitBox5">
+                                                    <div class="DisplayTab" tabName="RealEstateBuildingPermit" tabUrl="RealEstateBuildingPermitProfileBox5"></div>
+                                                </div>
+                                                <div class="tab-pane" id="BuildingPermitBox6">
+                                                    <div class="DisplayTab" tabName="RealEstateBuildingPermit" tabUrl="RealEstateBuildingPermitProfileBox6"></div>
+                                                </div>
+                                                <div class="tab-pane" id="BuildingPermitPayment">
+                                                    <div class="DisplayTab" tabName="RealEstateBuildingPermit" tabUrl="RealEstateBuildingPermitProfilePayment"></div>
+                                                </div>
+                                                <div class="tab-pane" id="BuildingPermitBoxAttachment">
+                                                    <div class="DisplayTab" tabName="RealEstateBuildingPermit" tabUrl="RealEstateBuildingPermitProfileBoxAttachment"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-body -->
+                                    <div class="box-footer">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-info pull-right btnSaveRealEstateBuildingPermit">Save Building Permit</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTabCommon" tabName="RealEstateBuildingPermit" tabUrl="SearchRealEstateBuildingPermit"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="ElectricalPermit">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Electrical Permit</h3>
+                                        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+                                            <button type="button" class="btn btn-info btnSaveRealEstateElectricalPermit">Save Electrical Permit</button>
+                                            <button type="button" class="btn btn-default RealEstateElectricalPermitUI_btnNewRealEstate"><i
+                                                    class="fa fa-plus"></i> New Electrical Permit</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="DisplayTab" tabName="ElectricalPermit" tabUrl="RealEstateElectricalPermitProfileMain"></div>
+                                        <div class="nav-tabs-custom" style="margin-top: 5px;">
+                                            <ul class="nav nav-tabs">
+                                                <li class="tab-pane active">
+                                                    <a href="#ElectricalPermitBox1" data-toggle="tab" aria-expanded="false">Box 1 (Owner/Applicant)</a>
+                                                </li>
+                                                <li class="tab-pane">
+                                                    <a href="#ElectricalPermitBox2" data-toggle="tab" aria-expanded="true">Box 2 (Design Professional and In Charge of Electrical Works)</a>
+                                                </li>
+                                                <li class="tab-pane">
+                                                    <a href="#ElectricalPermitBox3" data-toggle="tab" aria-expanded="true">Box 3 (Building and Lot Owner)</a>
+                                                </li>
+                                                <li class="tab-pane">
+                                                    <a href="#ElectricalPermitBox4" data-toggle="tab" aria-expanded="true">Box 4 (Processing and Evaluation Division)</a>
+                                                </li>
+                                                <li class="tab-pane">
+                                                    <a href="#ElectricalPermitPayment" data-toggle="tab" aria-expanded="true">Payment</a>
+                                                </li>
+                                                <li class="tab-pane">
+                                                    <a href="#ElectricalPermitBoxAttachment" data-toggle="tab" aria-expanded="true">Attachment</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content no-padding">
+                                                <div class="tab-pane active" id="ElectricalPermitBox1">
+                                                    <div class="DisplayTab" tabName="RealEstateElectricalPermit" tabUrl="RealEstateElectricalPermitProfileBox1"></div>
+                                                </div>
+                                                <div class="tab-pane" id="ElectricalPermitBox2">
+                                                    <div class="DisplayTab" tabName="RealEstateElectricalPermit" tabUrl="RealEstateElectricalPermitProfileBox2"></div>
+                                                </div>
+                                                <div class="tab-pane" id="ElectricalPermitBox3">
+                                                    <div class="DisplayTab" tabName="RealEstateElectricalPermit" tabUrl="RealEstateElectricalPermitProfileBox3"></div>
+                                                </div>
+                                                <div class="tab-pane" id="ElectricalPermitBox4">
+                                                    <div class="DisplayTab" tabName="RealEstateElectricalPermit" tabUrl="RealEstateElectricalPermitProfileBox4"></div>
+                                                </div>
+                                                <div class="tab-pane" id="ElectricalPermitPayment">
+                                                    <div class="DisplayTab" tabName="RealEstateElectricalPermit" tabUrl="RealEstateElectricalPermitProfilePayment"></div>
+                                                </div>
+                                                <div class="tab-pane" id="ElectricalPermitBoxAttachment">
+                                                    <div class="DisplayTab" tabName="RealEstateElectricalPermit" tabUrl="RealEstateElectricalPermitProfileBoxAttachment"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-body -->
+                                    <div class="box-footer">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-info pull-right btnSaveRealEstateElectricalPermit">Save Electrical Permit</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTabCommon" tabName="RealEstateElectricalPermit" tabUrl="SearchRealEstateElectricalPermit"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="PlumbingPermit">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Plumbing Permit</h3>
+                                        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+                                            <button type="button" class="btn btn-info btnSaveRealEstatePlumbingPermit">Save Plumbing Permit</button>
+                                            <button type="button" class="btn btn-default RealEstatePlumbingPermitUI_btnNewRealEstate"><i
+                                                    class="fa fa-plus"></i> New Plumbing Permit</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="DisplayTab" tabName="PlumbingPermit" tabUrl="RealEstatePlumbingPermitProfileMain"></div>
+                                        <div class="nav-tabs-custom" style="margin-top: 5px;">
+                                            <ul class="nav nav-tabs">
+                                                <li class="tab-pane active">
+                                                    <a href="#PlumbingPermitBox1" data-toggle="tab" aria-expanded="false">Box 1 (Owner/Applicant)</a>
+                                                </li>
+                                                <li class="tab-pane">
+                                                    <a href="#PlumbingPermitBox2" data-toggle="tab" aria-expanded="true">Box 2 (Design Professional and In Charge of Electrical Works)</a>
+                                                </li>
+                                                <li class="tab-pane">
+                                                    <a href="#PlumbingPermitBox3" data-toggle="tab" aria-expanded="true">Box 3 (Building and Lot Owner)</a>
+                                                </li>
+                                                <li class="tab-pane">
+                                                    <a href="#PlumbingPermitBox4" data-toggle="tab" aria-expanded="true">Box 4 (Processing and Evaluation Division)</a>
+                                                </li>
+                                                <li class="tab-pane">
+                                                    <a href="#PlumbingPermitPayment" data-toggle="tab" aria-expanded="true">Payment</a>
+                                                </li>
+                                                <li class="tab-pane">
+                                                    <a href="#PlumbingPermitBoxAttachment" data-toggle="tab" aria-expanded="true">Attachment</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content no-padding">
+                                                <div class="tab-pane active" id="PlumbingPermitBox1">
+                                                    <div class="DisplayTab" tabName="RealEstatePlumbingPermit" tabUrl="RealEstatePlumbingPermitProfileBox1"></div>
+                                                </div>
+                                                <div class="tab-pane" id="PlumbingPermitBox2">
+                                                    <div class="DisplayTab" tabName="RealEstatePlumbingPermit" tabUrl="RealEstatePlumbingPermitProfileBox2"></div>
+                                                </div>
+                                                <div class="tab-pane" id="PlumbingPermitBox3">
+                                                    <div class="DisplayTab" tabName="RealEstatePlumbingPermit" tabUrl="RealEstatePlumbingPermitProfileBox3"></div>
+                                                </div>
+                                                <div class="tab-pane" id="PlumbingPermitBox4">
+                                                    <div class="DisplayTab" tabName="RealEstatePlumbingPermit" tabUrl="RealEstatePlumbingPermitProfileBox4"></div>
+                                                </div>
+                                                <div class="tab-pane" id="PlumbingPermitPayment">
+                                                    <div class="DisplayTab" tabName="RealEstatePlumbingPermit" tabUrl="RealEstatePlumbingPermitProfilePayment"></div>
+                                                </div>
+                                                <div class="tab-pane" id="PlumbingPermitBoxAttachment">
+                                                    <div class="DisplayTab" tabName="RealEstatePlumbingPermit" tabUrl="RealEstatePlumbingPermitProfileBoxAttachment"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-body -->
+                                    <div class="box-footer">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-info pull-right btnSaveRealEstatePlumbingPermit">Save Plumbing Permit</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTabCommon" tabName="RealEstatePlumbingPermit" tabUrl="SearchRealEstatePlumbingPermit"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="RealEstateTransferTax">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="DisplayTab" tabName="RealEstateTransferTax" tabUrl="RealEstateTransferTaxProfile"></div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTabCommon" tabName="RealEstateTransferTax" tabUrl="SearchRealEstateTransferTax"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="CommunityTaxCertificate">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="DisplayTabCommon" tabName="CommunityTaxCertificate" tabUrl="CommunityTaxCertificateProfile"></div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTabCommon" tabName="CommunityTaxCertificate" tabUrl="SearchCommunityTaxCertificate"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="BusinessPermit">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="DisplayTabCommon" tabName="BusinessPermit" tabUrl="BusinessPermitProfile"></div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTabCommon" tabName="BusinessPermit" tabUrl="SearchBusinessPermit"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="GovernmentCashier">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="DisplayTabCommon" tabName="GovernmentCashier" tabUrl="GovernmentCashierProfile"></div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTabCommon" tabName="GovernmentCashier" tabUrl="SearchGovernmentCashier"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="GovernmentPrinting">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="DisplayTabCommon" tabName="GovernmentPrinting" tabUrl="GovernmentPrintingProfile"></div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTabCommon" tabName="GovernmentPrinting" tabUrl="SearchGovernmentPrinting"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="GovernmentReports">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 100%; margin: 15px 0px;">
+                                <div class="DisplayTab" tabName="GovernmentReports" tabUrl="GovernmentReport"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

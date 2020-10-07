@@ -1,0 +1,45 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<div class="box box-default myChildTab" th:attr="submodule=${CODEMODEL.entityUI},cache=${CHILD_RECORD_ANNOTATION.cache()}">
+    <div class="box-header with-border">
+        <h3 class="box-title">Activities and Applicants</h3>
+        <a href="#" class="pull-right btn-box-tool formLinker" linkModule="HrApplicantUI"><i class="fa fa-plus"></i> Register Applicant</a>
+    </div> 
+
+    <div class="box-body displayTabHtmlArrange row" th:attr="submodule=${CODEMODEL.entityUI}" style="min-height:500px; max-height:850px; overflow-y: auto; margin:5px;">
+        <div class="col-md-4 text-center" applicationStage="NEW" ondrop="hrRequisitionUI.dropApplicant(this, event)" ondragover="hrRequisitionUI.allowDrop(event)">
+            <div class="box box-primary" style="background: #e1f0fb;">
+                <div class="box-header">
+                    <h3 class="box-title">New</h3>
+                    <a href="#" class="quickUpdaterTarget pull-right btn-box-tool" updater="autoComplete" module="HrRequisitionUI" recordId="0" fieldName="lookForEmployeeCode"><i class="fa fa-plus"></i> Add Applicant</a>
+                </div>
+                <div class="box-body">
+                    <div class="newApplicant">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 text-center" applicationStage="INTERVIEW" ondrop="hrRequisitionUI.dropApplicant(this, event)" ondragover="hrRequisitionUI.allowDrop(event)">
+            <div class="box box-primary" style="background: #bbdcf5;">
+                <div class="box-header">
+                    <h3 class="box-title">On-Going</h3>
+                </div>
+                <div class="box-body">
+                    <div class="interviewApplicant">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 text-center" applicationStage="OFFER" ondrop="hrRequisitionUI.dropApplicant(this, event)" ondragover="hrRequisitionUI.allowDrop(event)">
+            <div class="box box-primary" style="background:#a0d0f5;">
+                <div class="box-header">
+                    <h3 class="box-title">Offer</h3>
+                </div>
+                <div class="box-body">
+                    <div class="offerApplicant">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

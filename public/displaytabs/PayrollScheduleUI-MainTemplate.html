@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<section class="content-header">
+    <div class="DisplayTab" tabUrl="Header"></div>
+</section>
+<section class="content">
+    <div style="display: flex;">
+        <div id="dynamikoMainContent" style="flex: 70%; padding-right: 10px; margin-left: 0px;" class="row">
+            <div class="nav-tabs-custom" style="margin-top: 5px;">
+                <ul class="nav nav-tabs">
+                    <li class="tab-pane active">
+                        <a href="#UpdatePayroll" data-toggle="tab" aria-expanded="true">Update Payroll</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#RunPayroll" data-toggle="tab" aria-expanded="false">Run Payroll</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#Others" data-toggle="tab" aria-expanded="false">Others</a>
+                    </li>
+                </ul>
+                <div class="tab-content no-padding">
+                    <div class="tab-pane active" id="UpdatePayroll">
+                        <div class="DisplayTab" tabUrl="UpdatePayroll"></div>
+                    </div>
+                    <div class="tab-pane" id="RunPayroll">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 70%; margin: 15px 0px;">
+                                <div class="DisplayTab" tabUrl="RunPayroll"></div>
+                            </div>
+                            <div style="flex: 30%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabUrl="PayrollTotals"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Others">
+                        <div class="DisplayTab" tabUrl="Others"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

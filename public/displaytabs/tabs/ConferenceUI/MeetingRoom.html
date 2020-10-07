@@ -1,0 +1,89 @@
+<div id="meetingScreen" style="display: flex; flex-direction: column; margin-bottom: 40px;">
+    <div style="display: flex; flex: 1; background: black;">
+        <div style="flex: 5;">
+            <video id="activeVideo" style="width: 100%;; height: 700px;" autoplay playsinline></video>
+            <div style="position: absolute; bottom: 41px; left: 10px;" class="row">
+                <div class="col-md-1">
+                    <video id="myVideo" class="miniVideoStream"
+                        style="min-height: 100px; max-height: 100px;; margin-bottom: 5px;" autoplay playsinline muted="muted"></video>
+                </div>
+                <div class="col-md-1" style="margin-left: 100px;">
+                    <video id="screenVideo" class="miniVideoStream"
+                        style="min-height: 100px; max-height: 100px; margin-bottom: 5px;" autoplay playsinline muted="muted"></video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popBox" style="position: absolute; bottom: 0; right: 20px; margin-top: 15px; display: flex; flex-direction: column;">
+        <div style="display: flex;">
+            <div style="display: flex; flex-direction: column; flex-wrap: wrap; overflow-y: auto; margin-top: 10px;" class="videoBoxList"></div>
+            <div class="box box-success" id="myChatBox" style="width: 300px; margin-left: 10px; display: none;">
+                <div class="box-header ui-sortable-handle" style="cursor: move;">
+                    <i class="fa fa-comments-o"></i>
+
+                    <h3 class="box-title">Chat</h3>
+                </div>
+                <div class="box-body chat" id="chat-box" style="overflow-y: auto; width: auto; height: 250px; display: flex; flex-direction: column;">
+                </div>
+                <!-- /.chat -->
+                <div class="box-footer">
+                    <div style="display: flex; flex-direction: column;">
+                        <div style="flex: 1; display: flex;"> 
+                            <div style="flex: 1;">
+                                <label style="margin-top: 5px;">Send&nbsp;To:&nbsp;</label>
+                            </div>
+                            <div style="flex: 5;">
+                                <select id="sendChatMessageTo" style="margin-bottom: 5px;" class="selectChatTo form-control"></select>
+                            </div>
+                        </div>
+                        <div class="input-group" style="flex: 1;">
+                            <input id="txtChatMessage" class="form-control" placeholder="Type message...">
+    
+                            <div class="input-group-btn"> 
+                                <button id="btnSendChatMessage" type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="flex: 1">
+            <div class="btn-group pull-right">
+                <a class="btn btn-social-icon btn-dropbox btnToggleChat" title="Chat"
+                    style="z-index: 100000; margin-left: 10px;"><i class="fa fa-fw fa-wechat"></i></a>
+                <a class="btn btn-social-icon btn-dropbox btnToggleOtherUsers" title="Other Users"
+                    style="z-index: 100001; margin-left: 10px;"><i class="fa fa-fw fa-users"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="errorMsg" style="flex: 1; height: 35px;"></div>
+
+    <div class="blue text-center" style="position: absolute; bottom: 0; width: 100%; flex: 1; margin-top: 15px;">
+        <a class="btn btn-social-icon btn-bitbucket btnFullScreenAny" title="Full Screen"
+            forFullScreen="#meetingScreen"><i class="fa fa-expand"></i></a>
+        <a class="btn btn-social-icon btn-bitbucket btnMinimizeToRight" title="Minimize"
+            forFullScreen="#meetingScreen"><i class="fa fa-compress"></i></a>
+
+        <a class="btn btn-social-icon btn-bitbucket btnShareVideo" title="Video"><i
+                class="glyphicon glyphicon-facetime-video"></i></a>
+        <a class="btn btn-social-icon btn-bitbucket btnUnShareVideo" title="Stop Video"><i
+                class="glyphicon glyphicon-facetime-video icon-slashed" style="background: black;"></i></a>
+
+        <a class="btn btn-social-icon btn-dropbox btnShareAudio" title="Audio"><i
+                class="fa fa-fw fa-microphone"></i></a>
+        <a class="btn btn-social-icon btn-dropbox btnUnShareAudio" title="Mute"><i
+                class="fa fa-fw fa-microphone icon-slashed" style="background: black;"></i></a>
+
+        <a class="btn btn-social-icon btn-dropbox btnShareContent" title="Share Content"><i
+                class="fa fa-fw fa-slideshare"></i></a>
+        <a class="btn btn-social-icon btn-dropbox btnUnShareContent" title="Unshare Content"><i
+                class="fa fa-fw fa-slideshare icon-slashed" style="background: black;"></i></a>
+
+        <a class="btn btn-social-icon btn-flickr btnMeetingSignOut" title="Sign Out" style="margin-left: 50px;"><i
+                class="fa fa-fw fa-sign-out"></i></a>
+        <a class="btn btn-social-icon btn-foursquare btnEndMeeting" title="End Meeting"><i
+                class="fa fa-fw fa-power-off"></i></a>
+    </div>
+</div>

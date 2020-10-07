@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<section class="content-header">
+    <h1>
+        Cashier
+    </h1>
+</section>
+<section class="content">
+    <div style="display: flex;">
+        <div id="dynamikoMainContent" style="flex: 70%; padding-right: 10px; margin-left: 0px;" class="row">
+            <div class="nav-tabs-custom" style="margin-top: 5px;">
+                <ul class="nav nav-tabs">
+                    <li class="tab-pane active">
+                        <a href="#Cashier" data-toggle="tab" aria-expanded="true">Cashier</a>
+                    </li>
+                    <li class="tab-pane" style="display: none;">
+                        <a href="#Reports" data-toggle="tab" aria-expanded="false">Reports</a>
+                    </li>
+                </ul>
+                <div class="tab-content no-padding">
+                    <div class="tab-pane active" id="Cashier">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="DisplayTabCommon" tabName="GovernmentCashier"
+                                    tabUrl="GovernmentCashierProfile"></div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTabCommon" tabName="GovernmentCashier"
+                                    tabUrl="SearchGovernmentCashier"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Reports">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div class="DisplayTab" tabName="SchoolCashier" module2="SchoolUI" tabUrl="SchoolReport">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

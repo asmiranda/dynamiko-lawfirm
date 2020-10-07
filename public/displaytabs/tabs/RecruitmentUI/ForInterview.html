@@ -1,0 +1,73 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<div class="box box-default">
+    <div class="box-header ui-sortable-handle" style="cursor: move;">
+        <i class="fa fa-comments-o"></i>
+        <h3 class="box-title">For Interview</h3>
+        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+            <button type="button" class="btn btn-default pull-right HrRequisitionUI_btnAddInterviewSchedule" data-toggle="modal" data-target="#HrRequisitionUI_AddInterviewScheduleDialog"><i class="fa fa-plus"></i> New Interview Schedule</button>
+        </div>
+    </div>
+    <div class="box-body box-profile HrRequisitionUI_InterviewScheduleList">
+        <b>No Interview Schedule Found!</b>
+    </div>
+    <div class="modal fade" id="HrRequisitionUI_AddInterviewScheduleDialog" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title">New Interview Schedule</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label">Job Posting</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control autocomplete displayEdit HrRequisitionUI_NewInterviewSchedule" name="HrRequisitionUI_NewInterviewScheduleJobCode" placeholder="Job Posting" module="HrRequisitionUI" mainmodule="HrRequisitionUI" autoname="jobCode" helptitle="JobCode">
+                            <input class="form-control HiddenAutoComplete" name="HrRequisitionUI_NewInterviewScheduleJobCode" type="hidden" module="HrRequisitionUI" mainmodule="HrRequisitionUI" autoNameField="jobCode" value="">
+                            <span class="input-group-addon displayEdit"><i class="fa fa-search"></i></span>
+                            <div class="autocomplete-items" module="HrRequisitionUI" mainmodule="HrRequisitionUI" autoname="jobCode">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Applicant</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control autocomplete displayEdit HrRequisitionUI_NewInterviewSchedule" name="HrRequisitionUI_NewInterviewScheduleApplicantCode" placeholder="Applicant" module="HrRequisitionUI" mainmodule="HrRequisitionUI" autoname="applicantCode" helptitle="applicantCode">
+                            <input class="form-control HiddenAutoComplete" name="HrRequisitionUI_NewInterviewScheduleApplicantCode" type="hidden" module="HrRequisitionUI" mainmodule="HrRequisitionUI" autoNameField="applicantCode" value="">
+                            <span class="input-group-addon displayEdit"><i class="fa fa-search"></i></span>
+                            <div class="autocomplete-items" module="HrRequisitionUI" mainmodule="HrRequisitionUI" autoname="applicantCode">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Look For</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control autocomplete displayEdit HrRequisitionUI_NewInterviewSchedule" name="HrRequisitionUI_NewInterviewScheduleLookForCode" placeholder="Look For" module="HrRequisitionUI" mainmodule="HrRequisitionUI" autoname="lookForCode" helptitle="lookForCode">
+                            <input class="form-control HiddenAutoComplete" name="HrRequisitionUI_NewInterviewScheduleLookForCode" type="hidden" module="HrRequisitionUI" mainmodule="HrRequisitionUI" autoNameField="lookForCode" value="">
+                            <span class="input-group-addon displayEdit"><i class="fa fa-search"></i></span>
+                            <div class="autocomplete-items" module="HrRequisitionUI" mainmodule="HrRequisitionUI" autoname="lookForCode">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Date</label>
+                        <div class="input-group date">
+                            <input type="text" name="HrRequisitionUI_NewInterviewScheduleInterviewDate" placeholder="Interview Date" class="form-control calendar displayEdit HrRequisitionUI_NewInterviewSchedule" module="HrRequisitionUI" mainmodule="HrRequisition">
+                            <div class="input-group-addon displayEdit">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Remarks</label>
+                        <input type="text" name="HrRequisitionUI_NewInterviewScheduleInterviewRemarks" placeholder="Remarks" class="form-control displayEdit HrRequisitionUI_NewInterviewSchedule" module="HrRequisitionUI" mainmodule="HrRequisition">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary HrRequisitionUI_btnAddInterviewScheduleClose">Save And Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

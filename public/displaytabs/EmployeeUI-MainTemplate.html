@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<section class="content-header">
+    <div class="DisplayTab" tabUrl="Header"></div>
+</section>
+<section class="content">
+    <div style="display: flex;">
+        <div id="dynamikoMainContent" style="flex: 70%; padding-right: 10px; margin-left: 0px;" class="row">
+            <div class="nav-tabs-custom" style="margin-top: 5px;">
+                <ul class="nav nav-tabs">
+                    <!-- <li class="tab-pane active">
+                        <a href="#Dashboard" data-toggle="tab" aria-expanded="true">Dashboard</a>
+                    </li> -->
+                    <li class="tab-pane">
+                        <a href="#Profile" data-toggle="tab" aria-expanded="true">Profile</a>
+                    </li>
+                    <!-- <li class="tab-pane">
+                        <a href="#Finance" data-toggle="tab" aria-expanded="false">Finance</a>
+                    </li> -->
+                    <!-- <li class="tab-pane">
+                        <a href="#Performance" data-toggle="tab" aria-expanded="false">Performance</a>
+                    </li> -->
+                </ul>
+                <div class="tab-content no-padding">
+                    <div class="tab-pane" id="Dashboard">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 25%; margin: 15px 0px;">
+                                <div class="DisplayTabCommon" tabUrl="ToDoList"></div>
+                                <!-- <div class="DisplayTab" tabUrl="Leave"></div> -->
+                                <!-- <div class="DisplayTab" tabUrl="NewHires"></div> -->
+                            </div>
+                            <div style="flex: 50%; margin: 15px 0px; margin-left: 15px;">
+                                <div style="display: flex;">
+                                    <div style="flex: 40%">
+                                        <div class="DisplayTab" tabUrl="TimeSheet"></div>
+                                    </div>
+                                    <div style="flex: 60%; margin-left: 15px;">
+                                        <div class="DisplayTab" tabUrl="TeamMember"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTabCommon" tabName="dashboard" tabUrl="SearchEmployee"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane active" id="Profile">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 30%; margin: 15px 0px;">
+                                <div class="DisplayTabCommon" tabName="Employee360Profile" tabUrl="EmployeeProfile"></div>
+                                <div class="DisplayTab" tabName="Employee360Profile" tabUrl="EmployeeReference"></div>
+                            </div>
+                            <div style="flex: 50%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabUrl="Experience"></div>
+                            </div>
+                            <div style="flex: 20%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTabCommon" tabName="profile" tabUrl="SearchEmployee"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Finance">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 25%; margin: 15px 0px;">
+                                <div class="DisplayTab" tabUrl="TaxDetail"></div>
+                                <div class="DisplayTab" tabUrl="Allowance"></div>
+                                <div class="DisplayTab" tabUrl="Loans"></div>
+                            </div>
+                            <div style="flex: 50%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabUrl="Payroll"></div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTabCommon" tabName="finance" tabUrl="SearchEmployee"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Performance">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 25%; margin: 15px 0px;">
+                                <div class="DisplayTab" tabUrl="PerformanceDetail"></div>
+                            </div>
+                            <div style="flex: 50%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabUrl="Performance"></div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTabCommon" tabName="performance" tabUrl="SearchEmployee"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

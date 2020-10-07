@@ -1,0 +1,11 @@
+sudo docker image build -t niq77avie/dynamiko-ui .
+sudo docker run -p 7777:7777 niq77avie/dynamiko-ui
+
+sudo docker run -p 7777:7777 -v /home/alex/innovation/dynamiko/ui/dynamiko-ui:/usr/share/nginx/html niq77avie/dynamiko-ui
+
+docker run -p 7777:7777 -v C:/Work/innovation/dynamiko/ui/dynamiko-ui:/usr/share/nginx/html niq77avie/dynamiko-ui
+
+
+docker run --name=mysql -e MYSQL_ROOT_PASSWORD=Miran!11 -p 3306:3306 -d mysql/mysql-server 
+docker run --name=dynamiko-ui -p 7777:7777 -v C:/Work/innovation/dynamiko/ui/dynamiko-ui:/usr/share/nginx/html -v C:/Work/innovation/dynamiko/ui/dynamiko-ui/certs:/etc/nginx/certs niq77avie/dynamiko-ui
+docker run --name=dynamiko-ui -p 7777:443 -v C:/Work/innovation/dynamiko/ui/dynamiko-ui:/usr/share/nginx/html niq77avie/dynamiko-ui

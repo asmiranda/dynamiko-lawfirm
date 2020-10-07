@@ -1,0 +1,43 @@
+<div style="display: flex; flex: 100%;">
+    <input rowIndex="0" type="hidden" class="form-control editRecord mainRecordId" module="BankingUI" name="BankingId">
+    <input rowIndex="0" type="hidden" class="form-control editRecord" module="BankingUI" name="code">
+    <div class="form-group" style="flex: 3; margin-left: 10px;">
+        <label class="control-label">Bank</label>
+        <div class="input-group" style="width: 100%;">
+            <input rowIndex="0" type="text" class="form-control autocomplete" name="bankCode" placeholder="Payee" module="BankingUI" autoname="bankCode" helptitle="bankCode">
+            <input rowIndex="0" class="form-control editRecord HiddenAutoComplete" name="bankCode" type="hidden" module="BankingUI" autoNameField="bankCode" value="">
+            <div class="autocomplete-items" rowIndex="0" module="BankingUI" autoname="bankCode">
+            </div>
+        </div> 
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Account #</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="BankingUI"
+            name="bankAccountNumber" tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Corporate ID</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="BankingUI"
+            name="corporateId" tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>User Id</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="BankingUI"
+            name="userId" tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Password</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="BankingUI"
+            name="password" tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Sync Date</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="BankingUI"
+            name="syncDate" tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Balance</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="BankingUI"
+            name="bankBalance" tabName="_TABNAME_">
+    </div>
+</div>

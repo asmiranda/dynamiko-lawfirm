@@ -1,0 +1,70 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<div class="box box-default myChildTab">
+    <div class="box-header with-border">
+        <h3 class="box-title">Run Payroll</h3>
+    </div>
+
+    <div class="box box-info" style="width: 97%; margin: 0px auto;">
+        <div class="box-header with-border">
+            <h3 class="box-title">1. Payroll Details</h3>
+        </div>
+        <div class="box-body" style="margin:5px;">
+            <div style="display: flex;">
+                <div class="form-group" style="flex: 2; margin: 2px;">
+                    <label for="runPayrollName" class="control-label">Payroll Name</label>
+                    <input type="text" class="form-control displayEdit" name="runPayrollName" placeholder="Title" module="PayrollScheduleUI" mainmodule="PayrollScheduleUI">
+                </div>
+                <div class="form-group" style="flex: 1; margin: 2px;">
+                    <label for="startDate" class="control-label">Start Date</label>
+                    <div class="input-group date">
+                        <input type="text" name="startDate" placeholder="Start Date" class="form-control calendar displayEdit" module="PayrollScheduleUI" submodule="PayrollScheduleUI">
+                        <div class="input-group-addon displayEdit">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" style="flex: 1; margin: 2px;">
+                    <label for="endDate" class="control-label">End Date</label>
+                    <div class="input-group date">
+                        <input type="text" name="endDate" placeholder="Start Date" class="form-control calendar displayEdit" module="PayrollScheduleUI" submodule="PayrollScheduleUI">
+                        <div class="input-group-addon displayEdit">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box box-primary" style="width: 97%; margin: 0px auto;">
+        <div class="box-header with-border">
+            <h3 class="box-title">2. Choose Payroll Type</h3>
+        </div>
+        <div class="box-body" style="margin:5px;">
+            <div class="PayrollScheduleUI_EmployeePayrollTypes" style="display: flex;">
+                <div class="checkbox" style="flex: 1;">
+                    <label>
+                        <input type="checkbox">
+                        <b>Checkbox 1</b>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box box-success" style="width: 97%; margin: 0px auto;">
+        <div class="box-header with-border">
+            <h3 class="box-title">3. Validate Payroll per Employee (optional)</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body row PayrollScheduleUI_EmployeePayrollList">
+            <strong style="flex: 1;">Education</strong>
+            <strong style="flex: 1;">Notes</strong>
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer text-center">
+            <button type="button" class="btn btn-primary btnSavePayroll">Save Payroll</button>
+        </div>
+    </div>
+</div>

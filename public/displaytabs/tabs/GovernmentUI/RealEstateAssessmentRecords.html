@@ -1,0 +1,65 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<div class="box box-default">
+    <div class="box-header ui-sortable-handle" style="cursor: move;">
+        <i class="fa fa-comments-o"></i>
+        <h3 class="box-title">Assessment Records</h3>
+        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+            <button type="button" class="btn btn-default pull-right RealEstateUI_btnAddRealEstateAssessment" data-toggle="modal" data-target="#RealEstateUI_AddRealEstateAssessmentDialog"><i class="fa fa-plus"></i> New Assessment</button>
+        </div>
+    </div>
+    <div class="box-body box-profile RealEstateUI_AssessmentRecords" tabName="_TABNAME_">
+        <b>No Assessment Record Found!</b>
+    </div>
+    <div class="modal fade" id="RealEstateUI_AddRealEstateAssessmentDialog" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title">New Assessment</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label">Date</label>
+                        <div class="input-group date">
+                            <input type="text" name="RealEstateUI_NewRealEstateAssessmentDate" placeholder="Assessment Date" class="form-control calendar displayEdit RealEstateUI_NewRealEstateAssessment" module="RealEstateUI" mainmodule="RealEstateUI">
+                            <div class="input-group-addon displayEdit">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Assessor</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control autocomplete displayEdit RealEstateUI_NewRealEstateAssessment" name="RealEstateUI_NewRealEstateAssessmentAssessorCode" placeholder="Assessor" module="RealEstateUI" mainmodule="RealEstateUI" autoname="assessorCode" helptitle="AssessorCode">
+                            <input class="form-control HiddenAutoComplete" name="RealEstateUI_NewRealEstateAssessmentAssessorCode" type="hidden" module="RealEstateUI" mainmodule="RealEstateUI" autoNameField="assessorCode" value="">
+                            <span class="input-group-addon displayEdit"><i class="fa fa-search"></i></span>
+                            <div class="autocomplete-items" module="RealEstateUI" mainmodule="RealEstateUI" autoname="assessorCode">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Amount Paid</label>
+                        <input type="text" name="RealEstateUI_NewRealEstateAssessmentAmountPaid" placeholder="Amount Paid" class="form-control displayEdit RealEstateUI_NewRealEstateAssessment" module="RealEstateUI" mainmodule="RealEstateUI">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Zonal Value</label>
+                        <input type="text" name="RealEstateUI_NewRealEstateAssessmentZonalValue" placeholder="Zonal Value" class="form-control displayEdit RealEstateUI_NewRealEstateAssessment" module="RealEstateUI" mainmodule="RealEstateUI">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Market Value</label>
+                        <input type="text" name="RealEstateUI_NewRealEstateAssessmentMarketValue" placeholder="Market Value" class="form-control displayEdit RealEstateUI_NewRealEstateAssessment" module="RealEstateUI" mainmodule="RealEstateUI">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Remarks</label>
+                        <input type="text" name="RealEstateUI_NewRealEstateAssessmentRemarks" placeholder="Remarks" class="form-control displayEdit RealEstateUI_NewRealEstateAssessment" module="RealEstateUI" mainmodule="RealEstateUI">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary RealEstateUI_btnAddRealEstateAssessmentClose">Save And Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

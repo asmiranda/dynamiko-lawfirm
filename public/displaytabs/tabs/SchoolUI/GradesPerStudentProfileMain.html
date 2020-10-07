@@ -1,0 +1,154 @@
+<div style="display: flex; flex: 100%; flex-wrap: wrap;">
+    <input rowIndex="0" type="hidden" class="form-control editRecord mainRecordId" module="EnrollmentUI" name="AdmissionId">
+    <input rowIndex="0" type="hidden" class="form-control editRecord" module="EnrollmentUI" name="code">
+
+    <div class="form-group" style="flex: 3; margin-left: 15px;">
+        <label class="control-label">Enrolled By</label>
+        <div class="input-group" style="width: 100%;">
+            <input rowIndex="0" type="text" class="form-control autocomplete" name="enrolledByCode" placeholder="Enrolled By" module="EnrollmentUI" autoname="enrolledByCode" helptitle="enrolledByCode" disabled>
+            <input rowIndex="0" class="form-control editRecord HiddenAutoComplete" name="enrolledByCode" type="hidden" module="EnrollmentUI" autoNameField="enrolledByCode" value="">
+            <div class="autocomplete-items" rowIndex="0" module="EnrollmentUI" autoname="enrolledByCode">
+            </div>
+        </div> 
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Invoice #</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="EnrollmentUI"
+            name="invoiceId" tabName="_TABNAME_" disabled>
+    </div>
+    <div class="flex-break"></div>
+    <div class="form-group" style="flex: 3; margin-left: 15px;">
+        <label class="control-label">1. Choose Student</label>
+        <div class="input-group" style="width: 100%;">
+            <input rowIndex="0" type="text" class="form-control autocomplete" name="studentCode" placeholder="Student" module="EnrollmentUI" autoname="studentCode" helptitle="studentCode">
+            <input rowIndex="0" class="form-control editRecord HiddenAutoComplete" name="studentCode" type="hidden" module="EnrollmentUI" autoNameField="studentCode" value="">
+            <div class="autocomplete-items" rowIndex="0" module="EnrollmentUI" autoname="studentCode">
+            </div>
+        </div> 
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Grade Level</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="EnrollmentUI"
+            name="gradeLevel" tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Course</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="EnrollmentUI"
+            name="course" tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Enroll Date</label>
+        <input type="text" rowIndex="0" class="form-control editRecord calendar" module="EnrollmentUI"
+            name="dateEnrolled" tabName="_TABNAME_">
+    </div>
+    <div class="flex-break"></div>
+    <div class="form-group" style="flex: 3; margin-left: 15px;">
+        <label class="control-label">2. Choose Section/Block</label>
+        <div class="input-group" style="width: 100%;">
+            <input rowIndex="0" type="text" class="form-control autocomplete" name="sectionCode" placeholder="Section/Block" module="EnrollmentUI" autoname="sectionCode" helptitle="sectionCode">
+            <input rowIndex="0" class="form-control editRecord HiddenAutoComplete" name="sectionCode" type="hidden" module="EnrollmentUI" autoNameField="sectionCode" value="">
+            <div class="autocomplete-items" rowIndex="0" module="EnrollmentUI" autoname="sectionCode">
+            </div>
+        </div> 
+    </div>
+    <div class="flex-break"></div>
+    <div class="box box-default" style="margin: 15px;">
+        <div class="box-header with-border">
+            <label class="control-label">3. Choose Subjects/Schedules</label>
+        </div>
+        <div class="box-body">
+            <div style="display: flex; flex-wrap: wrap;">
+                <div class="input-group" style="flex: 44%; margin: 2px;">
+                    <input rowIndex="1" type="text" class="form-control autocomplete" name="schoolScheduleCode" placeholder="Schedule" module="EnrollmentUI" autoname="schoolScheduleCode" helptitle="schoolScheduleCode">
+                    <input rowIndex="1" class="form-control editRecord HiddenAutoComplete" name="schoolScheduleCode" type="hidden" module="EnrollmentUI" autoNameField="schoolScheduleCode" value="">
+                    <div rowIndex="1" class="autocomplete-items" module="EnrollmentUI" autoname="schoolScheduleCode">
+                    </div>
+                </div> 
+                <div class="input-group" style="flex: 44%; margin: 2px;">
+                    <input rowIndex="2" type="text" class="form-control autocomplete" name="schoolScheduleCode" placeholder="Schedule" module="EnrollmentUI" autoname="schoolScheduleCode" helptitle="schoolScheduleCode">
+                    <input rowIndex="2" class="form-control editRecord HiddenAutoComplete" name="schoolScheduleCode" type="hidden" module="EnrollmentUI" autoNameField="schoolScheduleCode" value="">
+                    <div rowIndex="2" class="autocomplete-items" module="EnrollmentUI" autoname="schoolScheduleCode">
+                    </div>
+                </div> 
+                <div class="input-group" style="flex: 44%; margin: 2px;">
+                    <input rowIndex="3" type="text" class="form-control autocomplete" name="schoolScheduleCode" placeholder="Schedule" module="EnrollmentUI" autoname="schoolScheduleCode" helptitle="schoolScheduleCode">
+                    <input rowIndex="3" class="form-control editRecord HiddenAutoComplete" name="schoolScheduleCode" type="hidden" module="EnrollmentUI" autoNameField="schoolScheduleCode" value="">
+                    <div rowIndex="3" class="autocomplete-items" module="EnrollmentUI" autoname="schoolScheduleCode">
+                    </div>
+                </div> 
+                <div class="input-group" style="flex: 44%; margin: 2px;">
+                    <input rowIndex="4" type="text" class="form-control autocomplete" name="schoolScheduleCode" placeholder="Schedule" module="EnrollmentUI" autoname="schoolScheduleCode" helptitle="schoolScheduleCode">
+                    <input rowIndex="4" class="form-control editRecord HiddenAutoComplete" name="schoolScheduleCode" type="hidden" module="EnrollmentUI" autoNameField="schoolScheduleCode" value="">
+                    <div rowIndex="4" class="autocomplete-items" module="EnrollmentUI" autoname="schoolScheduleCode">
+                    </div>
+                </div> 
+                <div class="input-group" style="flex: 44%; margin: 2px;">
+                    <input rowIndex="5" type="text" class="form-control autocomplete" name="schoolScheduleCode" placeholder="Schedule" module="EnrollmentUI" autoname="schoolScheduleCode" helptitle="schoolScheduleCode">
+                    <input rowIndex="5" class="form-control editRecord HiddenAutoComplete" name="schoolScheduleCode" type="hidden" module="EnrollmentUI" autoNameField="schoolScheduleCode" value="">
+                    <div rowIndex="5" class="autocomplete-items" module="EnrollmentUI" autoname="schoolScheduleCode">
+                    </div>
+                </div> 
+                <div class="input-group" style="flex: 44%; margin: 2px;">
+                    <input rowIndex="6" type="text" class="form-control autocomplete" name="schoolScheduleCode" placeholder="Schedule" module="EnrollmentUI" autoname="schoolScheduleCode" helptitle="schoolScheduleCode">
+                    <input rowIndex="6" class="form-control editRecord HiddenAutoComplete" name="schoolScheduleCode" type="hidden" module="EnrollmentUI" autoNameField="schoolScheduleCode" value="">
+                    <div rowIndex="6" class="autocomplete-items" module="EnrollmentUI" autoname="schoolScheduleCode">
+                    </div>
+                </div> 
+                <div class="input-group" style="flex: 44%; margin: 2px;">
+                    <input rowIndex="7" type="text" class="form-control autocomplete" name="schoolScheduleCode" placeholder="Schedule" module="EnrollmentUI" autoname="schoolScheduleCode" helptitle="schoolScheduleCode">
+                    <input rowIndex="7" class="form-control editRecord HiddenAutoComplete" name="schoolScheduleCode" type="hidden" module="EnrollmentUI" autoNameField="schoolScheduleCode" value="">
+                    <div rowIndex="7" class="autocomplete-items" module="EnrollmentUI" autoname="schoolScheduleCode">
+                    </div>
+                </div> 
+                <div class="input-group" style="flex: 44%; margin: 2px;">
+                    <input rowIndex="8" type="text" class="form-control autocomplete" name="schoolScheduleCode" placeholder="Schedule" module="EnrollmentUI" autoname="schoolScheduleCode" helptitle="schoolScheduleCode">
+                    <input rowIndex="8" class="form-control editRecord HiddenAutoComplete" name="schoolScheduleCode" type="hidden" module="EnrollmentUI" autoNameField="schoolScheduleCode" value="">
+                    <div rowIndex="8" class="autocomplete-items" module="EnrollmentUI" autoname="schoolScheduleCode">
+                    </div>
+                </div> 
+                <div class="input-group" style="flex: 44%; margin: 2px;">
+                    <input rowIndex="9" type="text" class="form-control autocomplete" name="schoolScheduleCode" placeholder="Schedule" module="EnrollmentUI" autoname="schoolScheduleCode" helptitle="schoolScheduleCode">
+                    <input rowIndex="9" class="form-control editRecord HiddenAutoComplete" name="schoolScheduleCode" type="hidden" module="EnrollmentUI" autoNameField="schoolScheduleCode" value="">
+                    <div rowIndex="9" class="autocomplete-items" module="EnrollmentUI" autoname="schoolScheduleCode">
+                    </div>
+                </div> 
+                <div class="input-group" style="flex: 44%; margin: 2px;">
+                    <input rowIndex="10" type="text" class="form-control autocomplete" name="schoolScheduleCode" placeholder="Schedule" module="EnrollmentUI" autoname="schoolScheduleCode" helptitle="schoolScheduleCode">
+                    <input rowIndex="10" class="form-control editRecord HiddenAutoComplete" name="schoolScheduleCode" type="hidden" module="EnrollmentUI" autoNameField="schoolScheduleCode" value="">
+                    <div rowIndex="10" class="autocomplete-items" module="EnrollmentUI" autoname="schoolScheduleCode">
+                    </div>
+                </div> 
+                <div class="input-group" style="flex: 44%; margin: 2px;">
+                    <input rowIndex="11" type="text" class="form-control autocomplete" name="schoolScheduleCode" placeholder="Schedule" module="EnrollmentUI" autoname="schoolScheduleCode" helptitle="schoolScheduleCode">
+                    <input rowIndex="11" class="form-control editRecord HiddenAutoComplete" name="schoolScheduleCode" type="hidden" module="EnrollmentUI" autoNameField="schoolScheduleCode" value="">
+                    <div rowIndex="11" class="autocomplete-items" module="EnrollmentUI" autoname="schoolScheduleCode">
+                    </div>
+                </div> 
+                <div class="input-group" style="flex: 44%; margin: 2px;">
+                    <input rowIndex="12" type="text" class="form-control autocomplete" name="schoolScheduleCode" placeholder="Schedule" module="EnrollmentUI" autoname="schoolScheduleCode" helptitle="schoolScheduleCode">
+                    <input rowIndex="12" class="form-control editRecord HiddenAutoComplete" name="schoolScheduleCode" type="hidden" module="EnrollmentUI" autoNameField="schoolScheduleCode" value="">
+                    <div rowIndex="12" class="autocomplete-items" module="EnrollmentUI" autoname="schoolScheduleCode">
+                    </div>
+                </div> 
+                <div class="input-group" style="flex: 44%; margin: 2px;">
+                    <input rowIndex="13" type="text" class="form-control autocomplete" name="schoolScheduleCode" placeholder="Schedule" module="EnrollmentUI" autoname="schoolScheduleCode" helptitle="schoolScheduleCode">
+                    <input rowIndex="13" class="form-control editRecord HiddenAutoComplete" name="schoolScheduleCode" type="hidden" module="EnrollmentUI" autoNameField="schoolScheduleCode" value="">
+                    <div rowIndex="13" class="autocomplete-items" module="EnrollmentUI" autoname="schoolScheduleCode">
+                    </div>
+                </div> 
+                <div class="input-group" style="flex: 44%; margin: 2px;">
+                    <input rowIndex="14" type="text" class="form-control autocomplete" name="schoolScheduleCode" placeholder="Schedule" module="EnrollmentUI" autoname="schoolScheduleCode" helptitle="schoolScheduleCode">
+                    <input rowIndex="14" class="form-control editRecord HiddenAutoComplete" name="schoolScheduleCode" type="hidden" module="EnrollmentUI" autoNameField="schoolScheduleCode" value="">
+                    <div rowIndex="14" class="autocomplete-items" module="EnrollmentUI" autoname="schoolScheduleCode">
+                    </div>
+                </div> 
+                <div class="input-group" style="flex: 44%; margin: 2px;">
+                    <input rowIndex="15" type="text" class="form-control autocomplete" name="schoolScheduleCode" placeholder="Schedule" module="EnrollmentUI" autoname="schoolScheduleCode" helptitle="schoolScheduleCode">
+                    <input rowIndex="15" class="form-control editRecord HiddenAutoComplete" name="schoolScheduleCode" type="hidden" module="EnrollmentUI" autoNameField="schoolScheduleCode" value="">
+                    <div rowIndex="15" class="autocomplete-items" module="EnrollmentUI" autoname="schoolScheduleCode">
+                    </div>
+                </div> 
+            </div>
+        </div>
+      </div>
+</div>

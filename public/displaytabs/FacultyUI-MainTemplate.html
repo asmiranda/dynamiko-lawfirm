@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<section class="content-header">
+    <h1>
+        Faculty
+    </h1>
+</section>
+<section class="content">
+    <div style="display: flex;">
+        <div id="dynamikoMainContent" style="flex: 70%; padding-right: 10px; margin-left: 0px;" class="row">
+            <div class="nav-tabs-custom" style="margin-top: 5px;">
+                <ul class="nav nav-tabs" style="padding-top: 5px; padding-bottom: 10px;">
+                    <li class="tab-pane active">
+                        <a href="#Faculty" data-toggle="tab" aria-expanded="true">Faculty</a>
+                    </li>
+                    <li class="tab-pane" style="display: none;">
+                        <a href="#Reports" data-toggle="tab" aria-expanded="false">Reports</a>
+                    </li>
+                </ul>
+                <div class="tab-content no-padding">
+                    <div class="tab-pane active" id="Faculty">
+                        <div style="display: flex; background: #ecf0f5; flex-wrap: wrap;">
+                            <div style="flex: 3; min-width: 400px;">
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Faculty</h3>
+                                        <div class="box-tools pull-right" data-toggle="tooltip" title=""
+                                            data-original-title="Status">
+                                            <button type="button" class="btn btn-success btnSaveRecord"
+                                                module="FacultyUI">Save Faculty</button>
+                                            <button type="button" class="btn btn-info btnNewRecord" module="FacultyUI">
+                                                <i class="fa fa-plus"></i> New Faculty</button>
+                                            <button type="button" class="btn btn-info btnReport" MainMenu="SchoolUI"
+                                                module="FacultyUI" style="margin-left: 10px; display: none;">
+                                                <i class="fa fa-file-text-o"></i> Report</button>
+                                        </div>
+                                    </div>
+                                    <div class="box-body">
+                                        <div class="DisplayTab" tabName="Faculty" module2="SchoolUI"
+                                            tabUrl="FacultyProfileMain"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="flex: 1; min-width: 300px;" class="main-search">
+                                <div class="DisplayTab" tabName="Faculty" module2="SchoolUI" tabUrl="FacultySearch">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Reports">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div class="DisplayTab" tabName="Faculty" module2="SchoolUI" tabUrl="SchoolReport"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Dynamiko</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/node_modules/chart.js/dist/Chart.min.css">
+  <link rel="stylesheet" href="/node_modules/bootstrap-daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="/node_modules/jquery-confirm/dist/jquery-confirm.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/start/theme.min.css">
+
+  <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css">
+  <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="/node_modules/@icon/ionicons/ionicons.css">
+  <link rel="stylesheet" href="/node_modules/dropzone/dist/dropzone.css">
+  <link rel="stylesheet" href="/node_modules/jquery-toast-plugin/dist/jquery.toast.min.css">
+
+
+  <link rel="stylesheet" href="plugins/printjs/print.min.css">
+  <link rel="stylesheet" href="plugins/spinner/jquery-spinner.css" />
+
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+
+  <link rel="stylesheet" href="css/google.fonts.css">
+  <link rel="stylesheet" href="css/slim-scroll.css">
+
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/home.responsive.css">
+  <link rel="stylesheet" href="css/autocomplete.css">
+  <link rel="stylesheet" href="css/wordpress-hook.css">
+  <link rel="stylesheet" href="css/home-center.css">
+  <link rel="stylesheet" href="css/school-hook.css">
+
+  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="/node_modules/jquery-confirm/dist/jquery-confirm.min.js"></script>
+  <script src="/node_modules/socket.io-client/dist/socket.io.js"></script>
+  <script src="/node_modules/dropzone/dist/dropzone.js"></script>
+  <script src="/node_modules/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix@2.0"></script>
+  <script src="dist/js/adminlte.min.js"></script>
+
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/alertConfirm.js"></script>
+  <script src="js/ajaxCaller.js"></script>
+  <script src="js/mainObj.js"></script>
+  <script src="js/leftMenu.js"></script>
+  <script src="js/uiService.js"></script>
+
+  <script src="js/meetingroom/socketioMediaStream.js"></script>
+  <script src="js/meetingroom/socketioMeetingRoom.js"></script>
+  <script src="js/meetingroom/socketioMessageHandler.js"></script>
+  <script src="js/meetingroom/myP2P.js"></script>
+  <script src="js/meetingroom/socketioP2P.js"></script>
+  <script src="js/meetingroom/quickCall.js"></script>
+  <script src="js/meetingroom/screenShare.js"></script>
+
+  <script src="js/initializer/student-home.js"></script>
+  <script src="js/initializer/school-hook.js"></script>
+  <script src="js/main-initializer.js"></script>
+  <script>
+    $(function () {
+      studentHome.init();
+    });
+  </script>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+    <header class="main-header" style="position: fixed; top: 0; left: 0; width: 100%">
+      <a href="#" class="logo">
+        <span class="logo-mini"><b>D</b></span>
+        <span class="logo-lg"><b>Dynamiko</b></span>
+      </a>
+      <nav class="navbar navbar-static-top">
+        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button" style="padding: 0;">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav" style="flex-direction: row;">
+            <li class="dropdown waiting-menu">
+              <div id="waitingContainer" style="margin-top: 5px; display: none;">
+                <i style="color: aliceblue;">Loading</i> <img src="images/ajax-loader.gif" />
+              </div>
+            </li>
+            <li class="dropdown user user-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="dist/img/user2-160x160.jpg" class="user-image userProfile" alt="User Image">
+              </a>
+              <ul class="dropdown-menu">
+                <li class="user-header">
+                  <img src="dist/img/user2-160x160.jpg" class="img-circle userProfile" alt="User Image">
+                  <p class="hidden-xs profileName">User</p>
+                </li>
+                <li class="user-footer">
+                  <div class="pull-left">
+                    <button href="#" class="btn btn-block btn-success btnUploadProfilePic">Upload Profile Pic</button>
+                  </div>
+                  <div class="pull-right">
+                    <button href="#" class="btn btn-block btn-danger btnLogout">Sign out</button>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div style="display: flex; flex-direction: row; height: 100vh;">
+      <div class="main-sidebar" style="flex: 1; height: 100vh;">
+        <section class="sidebar">
+          <ul class="sidebar-menu">
+            <li class="header">MAIN NAVIGATION</li>
+            <ul class="sidebar-menu mysidemenu" data-widget="tree" style="max-height:700px; overflow-y:auto;">
+            </ul>
+          </ul>
+        </section>
+      </div>
+      <div style="flex: 1;">
+        <div class="body content-wrapper"
+          style="display: flex; flex-direction: column; height: 100vh; padding-top: 100px; background-color: white;">
+          <div id="moduleHeader" style="flex: 0;" class="box-header with-border text-center"
+            style="padding:0; padding-top: 12px;">
+            <div><a href="#" id="moduleProfile" style="font-weight: bold; font-size: 15px;">Module</a></div>
+          </div>
+
+          <div id="meetingScreen" style="display: none;">
+            <div style="display: flex; flex-direction: column; flex-wrap: nowrap;">
+              <div style="height: 75px; display: flex; flex-direction: row-reverse; background-color:black;">
+                <div>
+                  <video id="myVideo" class="miniVideoStream" autoplay playsinline muted="muted"
+                    style="width: 70px; height: 70px; border-radius: 50%;">
+                  </video>
+                </div>
+                <div>
+                  <video id="activeScreenShare" class="miniVideoStream" autoplay playsinline muted="muted"
+                    style="width: 70px; height: 70px;">
+                  </video>
+                </div>
+              </div>
+              <div id="remoteVideos" class="videoBoxList"
+                style="height: 75px; display: flex; flex-direction: row; background-color: #1b1919; justify-content: center;">
+              </div>
+            </div>
+          </div>
+
+          <div id="chatScreen" style="display: none; flex: 1; margin: 50px; margin-top:70px; background-color: white;">
+            <div class="box box-success">
+              <div class="box-header ui-sortable-handle" style="cursor: move;">
+                <i class="fa fa-comments-o"></i>
+
+                <h3 class="box-title">Chat</h3>
+                <div class="pull-right">
+                  <i class="fa fa-eye-slash btnHideChatScreen"> Hide</i>
+                </div>
+              </div>
+              <div class="box-body chat" id="chatBox" style="overflow-y: auto; width: auto; height: 250px;">
+              </div>
+              <div class="box-footer">
+                <select class="form-control" id="selectChatUser">
+                  <option value="all">Message to Everyone</option>
+                </select>
+                <div class="input-group" style="margin-top: 5px;">
+                  <input id="txtChatMessage" class="form-control" placeholder="Type message...">
+
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-success btnSendChatMessage"><i class="fa fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="activities" style="background-color: white; flex: 1;">
+            <div class="box-header with-border">
+              <span>Activities</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; margin: 0 20px;" id="ActivityList">
+            </div>
+          </div>
+
+          <div id="studentList" style="display: none; flex: 1; background-color: white;">
+            <div class="box-header with-border">
+              <span>List of Students</span>
+            </div>
+            <ul class="users-list clearfix" id="studentImageRoster">
+            </ul>
+            <div style="height: 100px;">
+            </div>
+          </div>
+
+          <div id="activeVideoScreen" style="display: none; flex: 1; background-color: #1b1919;" class="text-center">
+            <div style="display: flex; flex-direction: column; flex-wrap: nowrap;">
+              <div style="flex-grow: 1;">
+                <video id="activeVideo" autoplay playsinline style="background-color:  #1b1919;" muted="muted"></video>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <footer class="main-footer" style="position: fixed; bottom: 0; left: 0; width:100%">
+          <div class="bottomButtons" style="display: flex; flex-direction: row; justify-content: center;">
+            <div class="text-center" style="margin: 0 10px;">
+              <a class="btnCall"><i class="fas fa-phone" style="font-size: 14px;"></i></a>
+            </div>
+            <div class="btnEndCall text-center" style="display: none; margin: 0 10px;">
+              <a class="btnEndCall" style="padding-left: 15px; padding-right: 15px; border-radius: 40%;"><i
+                  class="fas fa-phone-slash" style="color: #b43434; font-size: 14px;"></i></a>
+            </div>
+            <div class="btnAddVideo text-center" style="display: none; margin: 0 10px;">
+              <a class="btnAddVideo" style="padding-left: 15px; padding-right: 15px; border-radius: 40%;"><i
+                  class="fas fa-video" style="font-size: 17px;"></i></a>
+            </div>
+            <div class="btnRemoveVideo text-center" style="display: none; margin: 0 10px;">
+              <a class="btnRemoveVideo" style="padding-left: 15px; padding-right: 15px; border-radius: 40%;"><i
+                  class="fas fa-video-slash" style="color: #b43434; font-size: 17px;"></i></a>
+            </div>
+            <div class="btnUnmute text-center" style="display: none; margin: 0 10px;">
+              <a class="btnUnmute" style="padding-left: 15px; padding-right: 15px; border-radius: 40%;"><i
+                  class="fas fa-microphone" style="font-size: 17px;"></i></a>
+            </div>
+            <div class="btnMute text-center" style="display: none; margin: 0 10px;">
+              <a class="btnMute" style="padding-left: 15px; padding-right: 15px; border-radius: 40%;"><i
+                  class="fas fa-microphone-slash" style="color: #b43434; font-size: 17px;"></i></a>
+            </div>
+            <div class="text-center" style="margin: 0 10px;">
+              <a class="btnActivities"><i class="fa fa-fw fa-pencil" style="font-size: 17px;"></i></a>
+            </div>
+            <div class="text-center" style="margin: 0 5px;">
+              <a class="btnFacultyAndStudents"><i class="fa fa-fw fa-users" style="font-size: 17px;"></i></a>
+            </div>
+            <div class="btnChat text-center" style="display: none; margin: 0 10px;">
+              <a class="btnChat" style="padding-left: 15px; padding-right: 15px; border-radius: 40%;">
+                <i class="fa fa-fw fa-wechat" style="font-size: 17px;" aria-hidden="true"><span
+                    class="label label-danger newChatIndicator" style="font-size: 4px;">✓</span></i>
+              </a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <!-- modals -->
+  <div style="display: none;">
+
+    <div id="allSubmissionsModal" title="Files by Students">
+      <span style="font-size: x-small;">Click to download file</span>
+      <div id="studentSubmissionList"
+        style="display: flex; max-height: 200px; overflow-y: auto; flex-direction: column;">
+      </div>
+    </div>
+
+    <div id="profileDropZoneModal" title="Upload/Capture Profile Pic">
+      <div id="profileDropZone"
+        style="height: 200px; width: 100%; border-style: dotted; background-color: lightgray; vertical-align: middle;">
+        Click or Drag pics here!
+      </div>
+    </div>
+
+    <div id="uploadFileDropZoneModal" title="Upload File">
+      <div id="uploadFileDropZone"
+        style="height: 200px; width: 100%; border-style: dotted; background-color: lightgray; vertical-align: middle;">
+        Click or Drag file here!
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

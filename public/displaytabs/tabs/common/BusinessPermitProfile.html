@@ -1,0 +1,124 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<div class="box box-warning">
+    <div class="box-header with-border">
+        <h3 class="box-title">Business Permit</h3>
+        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+            <button type="button" class="btn btn-default pull-right BusinessPermitUI_btnNewBusinessPermit"><i class="fa fa-plus"></i> New Business Permit</button>
+        </div>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        <form role="form">
+            <div style="display: flex; flex-wrap: wrap;">
+                <input type="hidden" class="form-control editBusinessPermit" module="BusinessPermitUI" name="businessPermitId" disabled="">
+                <div class="form-group" style="flex: 18%; margin-left: 15px;">
+                    <label>Business ID</label>
+                    <input type="text" class="form-control editBusinessPermit" module="BusinessPermitUI" name="businessId" disabled="">
+                </div>
+                <div class="form-group" style="flex: 18%; margin-left: 15px;">
+                    <label>Invoiced Number</label>
+                    <input type="text" class="form-control editBusinessPermit" module="BusinessPermitUI" name="invoiceNumber" disabled="">
+                </div>
+                <div class="form-group" style="flex: 18%; margin-left: 15px;">
+                    <label>Issuer</label>
+                    <input type="text" class="form-control editBusinessPermit" module="BusinessPermitUI" name="issuerCode" disabled="">
+                </div>
+                <div class="form-group" style="flex: 18%; margin-left: 15px;">
+                    <label>Date</label>
+                    <input type="text" class="form-control editBusinessPermit" module="BusinessPermitUI" name="permitDate" disabled="">
+                </div>
+
+                <div style="flex: 100%; display: flex;">
+                    <div style="flex: 1; display: flex; flex-direction: column;">
+                        <div class="form-group" style="margin-left: 15px;">
+                            <label>Nature of Business</label>
+                            <input type="text" class="form-control editBusinessPermit" module="BusinessPermitUI" name="natureOfBusiness" placeholder="Enter ...">
+                        </div>
+                        <div class="form-group" style="margin-left: 15px;">
+                            <label>Business Name</label>
+                            <input type="text" class="form-control editBusinessPermit" module="BusinessPermitUI" name="businessName" placeholder="Enter ...">
+                        </div>
+                        <div class="form-group" style="margin-left: 15px;">
+                            <label>Business Address</label>
+                            <input type="text" class="form-control editBusinessPermit" module="BusinessPermitUI" name="businessAddress" placeholder="Enter ...">
+                        </div>
+                        <div class="form-group" style="margin-left: 15px;">
+                            <label>Tax Payer Name</label>
+                            <input type="text" class="form-control editBusinessPermit" module="BusinessPermitUI" name="taxPayerName" placeholder="Enter ...">
+                        </div>
+                        <div class="form-group" style="margin-left: 15px;">
+                            <label>Tax Payer Address</label>
+                            <input type="text" class="form-control editBusinessPermit" module="BusinessPermitUI" name="taxPayerAddress" placeholder="Enter ...">
+                        </div>
+                        <div style="flex: 1; display: flex;">
+                            <div class="form-group" style="flex:1; margin-left: 15px;">
+                                <label>Barangay</label>
+                                <input type="text" class="form-control editBusinessPermit" module="BusinessPermitUI" name="barangayNumber" placeholder="Enter ...">
+                            </div>
+                            <div class="form-group" style="flex:1; margin-left: 15px;">
+                                <label>Telephone Number</label>
+                                <input type="text" class="form-control editBusinessPermit" module="BusinessPermitUI" name="telephoneNumber" placeholder="Enter ...">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="flex: 1; display: flex; flex-wrap: wrap;">
+                        <div class="form-group" style="flex: 40%; margin-left: 15px;">
+                            <label>Sanitary Permit Fee</label>
+                            <input type="text" class="form-control editBusinessPermit" module="BusinessPermitUI" name="sanitaryPermitFee" placeholder="Enter ...">
+                        </div>
+                        <div class="form-group" style="flex: 40%; margin-left: 15px;">
+                            <label>Fire Inspection Fee</label>
+                            <input type="text" class="form-control editBusinessPermit" module="BusinessPermitUI" name="fireInspectionFee" placeholder="Enter ..."">
+                        </div>
+                        <div class=" form-group" style="flex: 40%; margin-left: 15px;">
+                            <label>Medical Certificate Fee</label>
+                            <input type="text" class="form-control editBusinessPermit" module="BusinessPermitUI" name="medicalCertificateFee" placeholder="Enter ...">
+                        </div>
+                        <div class="form-group" style="flex: 40%; margin-left: 15px;">
+                            <label>Solid Water Fee</label>
+                            <input type="text" class="form-control editBusinessPermit" module="BusinessPermitUI" name="solidWaterFee" placeholder="Enter ...">
+                        </div>
+                        <div class="form-group" style="flex: 40%; margin-left: 15px;">
+                            <label>Franchise Fee</label>
+                            <input type="text" class="form-control editBusinessPermit" module="BusinessPermitUI" name="franchiseFee" placeholder="Enter ...">
+                        </div>
+                        <div class="form-group" style="flex: 40%; margin-left: 15px;">
+                            <label>Health Certificate Fee</label>
+                            <input type="text" class="form-control editBusinessPermit" module="BusinessPermitUI" name="healthCertificateFee" placeholder="Enter ...">
+                        </div>
+                        <div class="form-group" style="flex: 40%; margin-left: 15px;">
+                            <label>Occupational Tax</label>
+                            <input type="text" class="form-control editBusinessPermit" module="BusinessPermitUI" name="occupationalTax" placeholder="Enter ...">
+                        </div>
+                        <div class="form-group" style="flex: 40%; margin-left: 15px;">
+                            <label>Miscellaneous Fee</label>
+                            <input type="text" class="form-control editBusinessPermit" module="BusinessPermitUI" name="miscellaneousFee" placeholder="Enter ...">
+                        </div>
+                        <div class="form-group" style="flex: 40%; margin-left: 15px;">
+                            <label>Business Permit Plate</label>
+                            <input type="text" class="form-control editBusinessPermit" module="BusinessPermitUI" name="businessPermitPlate" placeholder="Enter ...">
+                        </div>
+                        <div class="form-group" style="flex: 40%; margin-left: 15px;">
+                            <label>Professional Tax</label>
+                            <input type="text" class="form-control editBusinessPermit" module="BusinessPermitUI" name="professionalTax" placeholder="Enter ...">
+                        </div>
+                        <div class="form-group" style="flex: 40%; margin-left: 15px;">
+                            <label>Business Permit Plate Sticker</label>
+                            <input type="text" class="form-control editBusinessPermit" module="BusinessPermitUI" name="businessPermitPlateSticker" placeholder="Enter ...">
+                        </div>
+                        <div class="form-group" style="flex: 100%; margin-left: 15px;">
+                            <label>Total Amount</label>
+                            <input type="text" class="form-control editBusinessPermit" module="BusinessPermitUI" name="totalAmount" disabled="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer">
+        <button type="button" class="btn btn-default">Cancel</button>
+        <button type="button" class="btn btn-info pull-right btnSaveBusinessPermitForCashier">Save and Submit to Cashier</button>
+    </div>
+</div>

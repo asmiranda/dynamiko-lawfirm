@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<section class="content-header">
+    <h1>
+        Grades
+    </h1>
+</section>
+<section class="content">
+    <div style="display: flex;">
+        <div id="dynamikoMainContent" style="flex: 70%; padding-right: 10px; margin-left: 0px;" class="row">
+            <div class="nav-tabs-custom" style="margin-top: 5px;">
+                <ul class="nav nav-tabs">
+                    <li class="tab-pane active">
+                        <a href="#GradesPerSchedule" data-toggle="tab" aria-expanded="true">Grades Per Schedule</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#GradesPerStudent" data-toggle="tab" aria-expanded="false">Grades Per Student</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#Reports" data-toggle="tab" aria-expanded="false">Reports</a>
+                    </li>
+                </ul>
+                <div class="tab-content no-padding"> 
+                    <div class="tab-pane active" id="GradesPerSchedule">
+                        <div style="background: #ecf0f5;">
+                            <div style="margin: 15px 0px;">
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Grades Per Schedule</h3>
+                                        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+                                        </div>
+                                    </div>
+                                    <div class="box-body">
+                                        <div class="DisplayTab" tabName="Grades" module2="SchoolUI" tabUrl="GradesPerScheduleProfileMain"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="GradesPerStudent">
+                        <div style="background: #ecf0f5;">
+                            <div style="margin: 15px 0px;">
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Grades Per Student</h3>
+                                        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+                                        </div>
+                                    </div>
+                                    <div class="box-body">
+                                        <div class="DisplayTab" tabName="Grades" module2="SchoolUI" tabUrl="GradesPerStudentProfileMain"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Reports">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div class="DisplayTab" tabName="Grades" module2="SchoolUI" tabUrl="SchoolReport"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<section class="content-header">
+    <div class="DisplayTab" tabUrl="Header">Sales</div>
+</section>
+<section class="content">
+    <div style="display: flex;">
+        <div id="dynamikoMainContent" style="flex: 70%; padding-right: 10px; margin-left: 0px;" class="row">
+            <div class="nav-tabs-custom" style="margin-top: 5px;">
+                <ul class="nav nav-tabs">
+                    <li class="tab-pane active">
+                        <a href="#Dashboard" data-toggle="tab" aria-expanded="true">Dashboard</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#Estimates" data-toggle="tab" aria-expanded="true">Estimates</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#Invoices" data-toggle="tab" aria-expanded="false">Invoices</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#Customers" data-toggle="tab" aria-expanded="false">Customers</a>
+                    </li>
+                    <li class="tab-pane">
+                        <a href="#Products" data-toggle="tab" aria-expanded="false">Products</a>
+                    </li>
+                </ul>
+                <div class="tab-content no-padding">
+                    <div class="tab-pane active" id="Dashboard">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 25%; margin: 15px 0px;">
+                                <div class="DisplayTab" tabName="Dashboard" tabUrl="SalesEstimates"></div>
+                            </div>
+                            <div style="flex: 50%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabName="Dashboard" tabUrl="SalesInvoices"></div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTab" tabName="Dashboard" tabUrl="TopSoldProduct"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Estimates">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="DisplayTabCommon" tabName="Estimates" tabUrl="SalesEstimateProfile"></div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTabCommon" tabName="Estimates" tabUrl="SearchSalesEstimates"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Invoices">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="DisplayTabCommon" tabName="Invoices" tabUrl="SalesInvoiceProfile"></div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTabCommon" tabName="Invoices" tabUrl="SearchSalesInvoices"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Customers">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="DisplayTabCommon" tabName="Customers" tabUrl="CustomerProfile"></div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTabCommon" tabName="Customers" tabUrl="SearchCustomers"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Products">
+                        <div style="display: flex; background: #ecf0f5;">
+                            <div style="flex: 75%; margin: 15px 0px;">
+                                <div class="DisplayTabCommon" tabName="Products" tabUrl="ProductProfile"></div>
+                            </div>
+                            <div style="flex: 25%; margin: 15px 0px; margin-left: 15px;">
+                                <div class="DisplayTabCommon" tabName="Products" tabUrl="SearchProducts"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

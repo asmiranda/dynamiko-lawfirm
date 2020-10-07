@@ -1,0 +1,65 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<div class="box box-default">
+    <div class="box-header ui-sortable-handle" style="cursor: move;">
+        <i class="fa fa-comments-o"></i>
+        <h3 class="box-title">Building Permit Record</h3>
+        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+            <button type="button" class="btn btn-default pull-right RealEstateUI_btnAddRealEstateBuildingPermit" data-toggle="modal" data-target="#RealEstateUI_AddRealEstateBuildingPermitDialog"><i class="fa fa-plus"></i> New Building Permit</button>
+        </div>
+    </div>
+    <div class="box-body box-profile RealEstateUI_BuildingPermitRecords" tabName="_TABNAME_">
+        <b>No Building Permit Found!</b>
+    </div>
+    <div class="modal fade" id="RealEstateUI_AddRealEstateBuildingPermitDialog" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title">New Building Permit</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label">Permit Date</label>
+                        <div class="input-group date">
+                            <input type="text" name="RealEstateUI_NewRealEstateBuildingPermitBuilding PermitDate" placeholder="Permit Date" class="form-control calendar displayEdit RealEstateUI_NewRealEstateBuildingPermit" module="RealEstateUI" mainmodule="RealEstate">
+                            <div class="input-group-addon displayEdit">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Permit Issued By:</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control autocomplete displayEdit RealEstateUI_NewRealEstateBuildingPermit" name="RealEstateUI_NewRealEstateBuildingPermitIssuerCode" placeholder="Issuer" module="RealEstateUI" mainmodule="RealEstateUI" autoname="IssuerCode" helptitle="IssuerCode">
+                            <input class="form-control HiddenAutoComplete" name="RealEstateUI_NewRealEstateBuildingPermitIssuerCode" type="hidden" module="RealEstateUI" mainmodule="RealEstateUI" autoNameField="IssuerCode" value="">
+                            <span class="input-group-addon displayEdit"><i class="fa fa-search"></i></span>
+                            <div class="autocomplete-items" module="RealEstateUI" mainmodule="RealEstateUI" autoname="IssuerCode">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Amount Paid</label>
+                        <input type="text" name="RealEstateUI_NewRealEstateBuildingPermitBuilding AmountPaid" placeholder="Amount Paid" class="form-control displayEdit RealEstateUI_NewRealEstateBuildingPermit" module="RealEstateUI" mainmodule="RealEstate">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Floor Area</label>
+                        <input type="text" name="RealEstateUI_NewRealEstateBuildingPermitBuilding FloorArea" placeholder="Floor Area" class="form-control displayEdit RealEstateUI_NewRealEstateBuildingPermit" module="RealEstateUI" mainmodule="RealEstate">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Storey</label>
+                        <input type="text" name="RealEstateUI_NewRealEstateBuildingPermitBuilding Storey" placeholder="Storey" class="form-control displayEdit RealEstateUI_NewRealEstateBuildingPermit" module="RealEstateUI" mainmodule="RealEstate">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Remarks</label>
+                        <input type="text" name="RealEstateUI_NewRealEstateBuildingPermitBuilding PermitRemarks" placeholder="Remarks" class="form-control displayEdit RealEstateUI_NewRealEstateBuildingPermit" module="RealEstateUI" mainmodule="RealEstate">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary RealEstateUI_btnAddRealEstateBuildingPermitClose">Save And Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

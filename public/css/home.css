@@ -1,0 +1,188 @@
+.datepicker-switch {
+    text-align: center;
+}
+.next {
+    float: right!important;
+}
+.year {
+    margin: 10px;
+}
+.popover-title {
+    color: black;
+}
+.bg-payroll-year {
+    background-color: orange;
+}
+.bg-inactive-month {
+    background-color: lightblue;
+}
+.bg-active-month {
+    background-color: blue;
+}
+.bg-before-active-month {
+    background-color: cornflowerblue;
+}
+.bg-after-active-month {
+    background-color: cornflowerblue;
+}
+.bg-active-month h3, .bg-inactive-month h3, .bg-before-active-month h3, .bg-after-active-month h3 {
+    color: white;
+}
+
+.hand {
+    cursor: pointer;
+}
+
+.popover {
+    max-width: 500px;
+}
+
+#dynamikoMainSearch {
+    max-width: 400px;
+}
+.ellipsis {
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.modal-content {
+    width: 800px;
+}
+a.childFormLinker {
+    text-decoration: underline;
+}
+.dz-details, .dz-progress, .dz-error-message, .dz-success-mark, .dz-error-mark {
+    display: none;
+}
+.thumb {
+    height: 300px;
+    border: 1px solid #000;
+    margin: 10px 5px 0 0;
+}
+  
+.thumbnail { 
+    margin: 10px 5px 0 0;
+}
+  
+.thumbnail>img { 
+    display: inline-block; 
+    height: 50px;
+    width: 50px;
+}
+  
+.nav > li > a {
+    padding: 10px 15px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+ul.taskWidgetButton {    
+    display: inline-block;
+}
+
+ul li.taskWidgetButton {
+    display: block;
+    position: relative;
+    float: left;
+    margin-right: 2px;
+}
+
+
+.wdr-toolbar-group-right {
+    padding-right: 10px;
+}
+
+.admin-message-text {
+    font-style: normal;
+    font-size: 22px;
+    color: #004080;
+}
+
+td.highlight {
+    background-color: whitesmoke !important;
+}
+
+/* .form-control {
+    margin: 2px;
+} */
+
+.no-border {
+    border: 0;
+    box-shadow: none;
+    background-color:white;
+}
+
+.ui-autocomplete {
+    max-height: 300px;
+    overflow-y: auto;
+    z-index:2147483647;
+    /* prevent horizontal scrollbar */
+    /*overflow-x: hidden;*/
+}
+  /* IE 6 doesn't support max-height
+   * we use height instead, but this forces the menu to always be this tall
+   */
+* html .ui-autocomplete {
+    height: 300px;
+}
+
+.displayTab th {text-align: center;}
+.mainSearch th {text-align: center;}
+.displayTab td:first-child[readwrite='true'] {
+    text-align: center;
+}​
+
+div.upload {
+    background-color:#fff;
+    border: 1px solid #ddd;
+    border-radius:5px;
+    display:inline-block;
+    height: 30px;
+    padding:3px 40px 3px 3px;
+    position:relative;
+    width: auto;
+}
+
+.displayOnly {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
+    width: 100%;
+    padding: 0px 0px;
+    margin: 0px;
+    height: 18px;
+}
+
+.icon-flipped {
+    transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+}
+
+.icon-slashed:after {
+    position: absolute;
+    content: "|";
+    font-size: 4.7em;
+    left: 7px;
+    top: 0px;
+    left: 6px;
+    -webkit-transform: rotate(-136deg);
+}
+
+.flex-break {
+    width: 100%;
+    height: 0;
+}
+
+.miniVideoStream {
+    /* border-radius: 50%; */
+}
+
+.remoteMiniVideoStream {
+    width: 70px;
+    height: 70px;
+}

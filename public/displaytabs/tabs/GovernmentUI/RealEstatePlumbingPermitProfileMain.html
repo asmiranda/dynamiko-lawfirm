@@ -1,0 +1,50 @@
+<div style="display: flex; flex: 100%;">
+    <input rowIndex="0" type="hidden" class="form-control editRealEstatePlumbingPermit" module="RealEstatePlumbingPermitUI" name="RealEstatePlumbingPermitId">
+    <input rowIndex="0" type="hidden" class="form-control editRealEstatePlumbingPermit" module="RealEstatePlumbingPermitUI" name="code">
+    <div class="form-group" style="flex: 2; margin-left: 10px;">
+        <label class="control-label">Real&nbsp;Estate</label>
+        <div class="input-group">
+            <input rowIndex="0" type="text" style="width: 200px;" class="form-control autocomplete displayEdit" name="realEstateCode" placeholder="Real Estate" module="RealEstatePlumbingPermitUI" mainmodule="RealEstatePlumbingPermitUI" autoname="realEstateCode" helptitle="realEstateCode">
+            <input rowIndex="0" class="form-control editRealEstatePlumbingPermit HiddenAutoComplete" name="realEstateCode" type="hidden" module="RealEstatePlumbingPermitUI" mainmodule="RealEstatePlumbingPermitUI" autoNameField="realEstateCode" value="">
+            <div class="autocomplete-items" module="RealEstatePlumbingPermitUI" mainmodule="RealEstatePlumbingPermitUI" autoname="realEstateCode">
+            </div>
+        </div>
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Permit&nbsp;Type</label>
+        <select class="form-control" rowIndex="0" class="form-control editRealEstatePlumbingPermit" module="RealEstatePlumbingPermitUI"
+        name="permitType" tabName="_TABNAME_"> 
+          <option value="New">New</option>
+          <option value="Renewal">Renewal</option>
+        </select>
+    </div>
+    <div class="form-group" style="flex: 2; margin-left: 15px;">
+        <label>Permit&nbsp;Code</label>
+        <input type="text" rowIndex="0" class="form-control editRealEstatePlumbingPermit" module="RealEstatePlumbingPermitUI"
+            name="permitCode" tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 2; margin-left: 15px;">
+        <label>Appl.&nbsp;No.</label>
+        <input type="text" rowIndex="0" class="form-control editRealEstatePlumbingPermit" module="RealEstatePlumbingPermitUI"
+            name="applicationNumber" tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px; margin-right: 15px;">
+        <label>Appl.&nbsp;Date</label>
+        <input type="text" rowIndex="0" class="form-control calendar editRealEstatePlumbingPermit" module="RealEstatePlumbingPermitUI"
+            name="applicationDate" disabled="" tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px; margin-right: 15px;">
+        <label>Issued&nbsp;Date</label>
+        <input type="text" rowIndex="0" class="form-control calendar editRealEstatePlumbingPermit" module="RealEstatePlumbingPermitUI"
+            name="issueDate" disabled="" tabName="_TABNAME_">
+    </div>
+    <div class="form-group pull-right" style="flex: 1; margin-right: 15px; margin-left: 15px;">
+        <label class="control-label">Issuer</label>
+        <div class="input-group">
+            <input rowIndex="0" type="text" style="width: 200px;" class="form-control autocomplete displayEdit" name="issuerCode" placeholder="Issuer" module="RealEstatePlumbingPermitUI" mainmodule="RealEstatePlumbingPermitUI" autoname="issuerCode" helptitle="issuerCode" disabled="">
+            <input rowIndex="0" class="form-control editRealEstatePlumbingPermit HiddenAutoComplete" name="issuerCode" type="hidden" module="RealEstatePlumbingPermitUI" mainmodule="RealEstatePlumbingPermitUI" autoNameField="issuerCode" value="">
+            <div class="autocomplete-items" module="RealEstatePlumbingPermitUI" mainmodule="RealEstatePlumbingPermitUI" autoname="issuerCode">
+            </div>
+        </div>
+    </div>
+</div>

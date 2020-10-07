@@ -1,0 +1,38 @@
+<div style="display: flex; flex: 100%;">
+    <input rowIndex="0" type="hidden" class="form-control editRecord mainRecordId" module="TaxPeriodUI" name="TaxPeriodId">
+    <input rowIndex="0" type="hidden" class="form-control editRecord" module="TaxPeriodUI" name="code">
+    <div class="form-group" style="flex: 3; margin-left: 15px;">
+        <label>Tax</label>
+        <div class="input-group" style="width: 100%;">
+            <input rowIndex="0" type="text" class="form-control autocomplete" name="taxCode" placeholder="TaxPeriod From" module="TaxPeriodUI" autoname="taxCode">
+            <input rowIndex="0" class="form-control editRecord HiddenAutoComplete" name="taxCode" type="hidden" module="TaxPeriodUI" autoNameField="taxCode" value="">
+            <div class="autocomplete-items" rowIndex="0" module="TaxPeriodUI" autoname="taxCode">
+            </div>
+        </div> 
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Period/Frequency</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="TaxPeriodUI"
+            name="periodCode" tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Start Period</label>
+        <input type="text" rowIndex="0" class="form-control calendar editRecord" module="TaxPeriodUI"
+            name="startPeriod" tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>End Period</label>
+        <input type="text" rowIndex="0" class="form-control calendar editRecord" module="TaxPeriodUI"
+            name="endPeriod" tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>
+            <input type="checkbox" name="adjustments" parentModule="BankingUI" module="BankingTransactionUI" 
+            class="editRecord" rowIndex="0" value="true"> For Adjustments
+        </label>
+        <label>
+            <input type="checkbox" name="collectedOnSales" parentModule="BankingUI" module="BankingTransactionUI" 
+            class="editRecord" rowIndex="0" value="true"> Collected On Sales
+        </label>
+    </div>
+</div>

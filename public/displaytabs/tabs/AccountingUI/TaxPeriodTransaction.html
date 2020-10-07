@@ -1,0 +1,123 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<div class="box box-default">
+    <div class="box-header with-border">
+        <h3 class="box-title">Item Details</h3>
+        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+            <div style="display: flex;">
+                <button class="btn btn-default btnMoreSubRecord" module="TaxPeriodTransactionUI" parentModule="TaxPeriodUI" style="margin-left: 10px;">
+                    <i class="fa fa-plus"></i> More Records
+                </button>
+                <div style="display: flex; margin-top: 5px; margin-left: 10px;" class="hand btnSubRecordDownloadCSV" module="TaxPeriodTransactionUI" parentModule="TaxPeriodUI">
+                    <i class="fa fa-fw fa-download" style="margin-top: 5px;"></i> <i>CSV</i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box-body">
+        <div style="display: flex; flex-direction: column;">
+            <div class="hiddenRecordTemplate" module="TaxPeriodTransactionUI" parentModule="TaxPeriodUI" style="display: none;">
+                <div style="display: flex;" class="subRecord" module="TaxPeriodTransactionUI" rowIndex="----">
+                    <div style="flex: 1; text-align: right;">
+                        <i style="margin-right: 5px;">----</i>
+                    </div>
+                    <div style="flex: 3;">
+                        <div class="input-group" style="width: 100%;">
+                            <input rowIndex="----" type="text" class="form-control autocomplete editRecordAutoComplete" name="taxTransactionAccountCode"
+                                placeholder="" module="TaxPeriodTransactionUI" parentModule="TaxPeriodUI"
+                                autoname="taxTransactionAccountCode" helptitle="taxTransactionAccountCode"/>
+                            <span rowindex="----" autoname="taxTransactionAccountCode" module="TaxPeriodTransactionUI" parentModule="TaxPeriodUI" 
+                                class="btnAutoClearSelected input-group-addon" title="Clear Selected">
+                                <i class="fa fa-remove"></i></span>
+                            <div class="autocomplete-items" rowIndex="----" parentModule="TaxPeriodUI"
+                                module="TaxPeriodTransactionUI" autoname="taxTransactionAccountCode">
+                            </div>
+                            <input rowIndex="----" class="form-control editRecord autoSaveSubRecord HiddenAutoComplete"
+                                name="taxTransactionAccountCode" type="hidden" parentModule="TaxPeriodUI"
+                                module="TaxPeriodTransactionUI" autoNameField="taxTransactionAccountCode" value=""/>
+                        </div>
+                    </div>
+                    <div style="flex: 3;">
+                        <div class="input-group" style="width: 100%;">
+                            <input rowIndex="----" type="text" class="form-control autocomplete editRecordAutoComplete" name="chargeAccountCode"
+                                placeholder="" module="TaxPeriodTransactionUI" parentModule="TaxPeriodUI"
+                                autoname="chargeAccountCode" helptitle="chargeAccountCode"/>
+                            <span rowindex="----" autoname="chargeAccountCode" module="TaxPeriodTransactionUI" parentModule="TaxPeriodUI" 
+                                class="btnAutoClearSelected input-group-addon" title="Clear Selected">
+                                <i class="fa fa-remove"></i></span>
+                            <div class="autocomplete-items" rowIndex="----" parentModule="TaxPeriodUI"
+                                module="TaxPeriodTransactionUI" autoname="chargeAccountCode">
+                            </div>
+                            <input rowIndex="----" class="form-control editRecord autoSaveSubRecord HiddenAutoComplete"
+                                name="chargeAccountCode" type="hidden" parentModule="TaxPeriodUI"
+                                module="TaxPeriodTransactionUI" autoNameField="chargeAccountCode" value=""/>
+                        </div>
+                    </div>
+                    <div style="flex: 1;">
+                        <input rowIndex="----" name="fileDate" module="TaxPeriodTransactionUI" parentModule="TaxPeriodUI" type="text"
+                            class="form-control editRecord calendar autoSaveSubRecord" placeholder="">
+                    </div>
+                    <div style="flex: 1;">
+                        <input rowIndex="----" name="transactionDate" module="TaxPeriodTransactionUI" parentModule="TaxPeriodUI" type="text"
+                            class="form-control editRecord calendar autoSaveSubRecord" placeholder="">
+                    </div>
+                    <div style="flex: 1;">
+                        <input rowIndex="----" name="returnedAmount" module="TaxPeriodTransactionUI" parentModule="TaxPeriodUI" type="text"
+                            class="form-control editRecord autoSaveSubRecord" placeholder="">
+                    </div>
+                    <div style="flex: 1;">
+                        <input rowIndex="----" name="paidAmount" module="TaxPeriodTransactionUI" parentModule="TaxPeriodUI" type="text"
+                            class="form-control editRecord autoSaveSubRecord" placeholder="">
+                    </div>
+                    <div style="flex: 1;">
+                        <input rowIndex="----" name="postingStatus" module="TaxPeriodTransactionUI" parentModule="TaxPeriodUI" type="text"
+                            class="form-control editRecord autoSaveSubRecord" placeholder="">
+                    </div>
+                    <div style="flex: 1; text-align: left; margin-top: 7px;">
+                        <input rowIndex="----" name="TaxPeriodCode" module="TaxPeriodTransactionUI" parentModule="TaxPeriodUI" type="hidden"
+                            class="form-control editRecord subRecordSearchFilter" placeholder=""/>
+                        <input rowIndex="----" name="code" module="TaxPeriodTransactionUI" parentModule="TaxPeriodUI" type="hidden"
+                            class="form-control editRecord" placeholder=""/>
+                        <a href="#" class="btnSaveSubRecord" rowIndex="----" module="TaxPeriodTransactionUI" parentModule="TaxPeriodUI" title="Save #----">
+                            <i class="fa fa-save" style="margin-left: 5px;"></i>
+                        </a>
+                        <a href="#" class="btnDeleteSubRecord" rowIndex="----" module="TaxPeriodTransactionUI" parentModule="TaxPeriodUI" title="Remove #----">
+                            <i class="fa fa-remove" style="margin-left: 5px;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="titleRecordTemplate">
+                <div style="display: flex; width: 100%;">
+                    <div class="text-center" style="flex: 1;">
+                    </div>
+                    <div class="text-center" style="flex: 3;">
+                        <b>Tax Account</b>
+                    </div>
+                    <div class="text-center" style="flex: 3;">
+                        <b>Charge Account</b>
+                    </div>
+                    <div class="text-center" style="flex: 1;">
+                        <b>Filing Date</b>
+                    </div>
+                    <div class="text-center" style="flex: 1;">
+                        <b>Transaction Date</b>
+                    </div>
+                    <div class="text-center" style="flex: 1;">
+                        <b>Returned</b>
+                    </div>
+                    <div class="text-center" style="flex: 1;">
+                        <b>Paid</b>
+                    </div>
+                    <div class="text-center" style="flex: 1;">
+                        <b>Status</b>
+                    </div>
+                    <div class="text-center" style="flex: 1;">
+                    </div>
+                </div>
+            </div>
+            <div class="displayRecordTemplate" module="TaxPeriodTransactionUI">
+            </div>
+        </div>
+    </div>
+</div>

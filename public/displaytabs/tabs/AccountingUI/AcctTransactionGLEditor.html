@@ -1,0 +1,116 @@
+<div style="display: flex; flex: 100%;">
+    <input rowIndex="0" type="hidden" class="form-control editRecord mainRecordId" module="AcctTransactionGLEditorUI" name="AcctTransactionId">
+    <input rowIndex="0" type="hidden" class="form-control editRecord" module="AcctTransactionGLEditorUI" name="code">
+    <div class="form-group" style="flex: 2; margin-left: 15px;">
+        <label>Module Name</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="AcctTransactionGLEditorUI"
+            name="moduleName" tabName="_TABNAME_" disabled>
+    </div>
+    <div class="form-group" style="flex: 2; margin-left: 15px;">
+        <label>Module Code</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="AcctTransactionGLEditorUI"
+            name="moduleCode" tabName="_TABNAME_" disabled>
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>GL Period</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="AcctTransactionGLEditorUI"
+            name="glPeriod" tabName="_TABNAME_" disabled>
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Transaction Date</label>
+        <input type="text" rowIndex="0" class="form-control calendar editRecord" module="AcctTransactionGLEditorUI"
+            name="transactionDate" tabName="_TABNAME_">
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Total Amount</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="AcctTransactionGLEditorUI"
+            name="totalAmount" tabName="_TABNAME_" disabled>
+    </div>
+    <div class="form-group" style="flex: 2; margin-left: 15px;">
+        <label>Description</label>
+        <input type="text" rowIndex="0" class="form-control editRecord" module="AcctTransactionGLEditorUI"
+            name="description" tabName="_TABNAME_">
+    </div>
+</div>
+<div class="box box-default">
+    <div class="box-header with-border">
+        <h3 class="box-title">GL Entries</h3>
+        <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+            <div style="display: flex;">
+                <button class="btn btn-default btnMoreSubRecord" module="GeneralLedgerEditorUI" parentModule="PARENT_MODULE" style="margin-left: 10px;">
+                    <i class="fa fa-plus"></i> More Records
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="box-body">
+        <div style="display: flex; flex-direction: column;">
+            <div class="hiddenRecordTemplate" module="GeneralLedgerEditorUI" parentModule="PARENT_MODULE" style="display: none;">
+                <div style="display: flex; margin-top: 10px;" class="subRecord" module="GeneralLedgerEditorUI" rowIndex="----">
+                    <div style="flex: 1; text-align: right;">
+                        <i style="margin-right: 5px;">----</i>
+                        <input rowIndex="----" name="acctTransactionCode" module="GeneralLedgerEditorUI" parentModule="PARENT_MODULE" type="hidden"
+                            class="form-control editRecord"  placeholder=""/>
+                        <input rowIndex="----" name="generalLedgerId" module="GeneralLedgerEditorUI" parentModule="PARENT_MODULE" type="hidden"
+                            class="form-control editRecord"  placeholder=""/>
+                    </div>
+                    <div style="flex: 2; text-align: right;">
+                        <div class="input-group" style="width: 100%;">
+                            <input rowIndex="----" type="text" class="form-control autocomplete editRecordAutoComplete" name="accountCode"
+                                placeholder="" module="GeneralLedgerEditorUI" parentModule="PARENT_MODULE"
+                                autoname="accountCode" helptitle="accountCode"/>
+                            <span rowindex="----" autoname="accountCode" module="GeneralLedgerEditorUI" parentModule="PARENT_MODULE" 
+                                class="btnAutoClearSelected input-group-addon" title="Clear Selected">
+                                <i class="fa fa-remove"></i></span>
+                            <div class="autocomplete-items" rowIndex="----" parentModule="PARENT_MODULE"
+                                module="GeneralLedgerEditorUI" autoname="accountCode">
+                            </div>
+                        </div>
+                        <input rowIndex="----" class="form-control editRecord HiddenAutoComplete"
+                            name="accountCode" type="hidden" parentModule="PARENT_MODULE"
+                            module="GeneralLedgerEditorUI" autoNameField="accountCode" value=""/>
+                    </div>
+                    <div style="flex: 1; text-align: right; margin-left: 10px;">
+                        <input rowIndex="----" name="debit" module="GeneralLedgerEditorUI" parentModule="PARENT_MODULE" type="text"
+                            class="form-control editRecord"  placeholder=""/>
+                    </div>
+                    <div style="flex: 1; text-align: right;">
+                        <input rowIndex="----" name="credit" module="GeneralLedgerEditorUI" parentModule="PARENT_MODULE" type="text"
+                            class="form-control editRecord"  placeholder=""/>
+                    </div>
+                    <div style="flex: 1; text-align: left; margin-top: 7px;">
+                        <input rowIndex="----" name="AccountChartCode" module="GeneralLedgerEditorUI" parentModule="PARENT_MODULE" type="hidden"
+                            class="form-control editRecord subRecordSearchFilter" placeholder=""/>
+                        <input rowIndex="----" name="code" module="GeneralLedgerEditorUI" parentModule="PARENT_MODULE" type="hidden"
+                            class="form-control editRecord" placeholder=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="titleRecordTemplate">
+                <div style="display: flex; width: 100%;">
+                    <div class="text-center" style="flex: 1;">
+                    </div>
+                    <div class="text-center" style="flex: 2;">
+                        <b>Account</b>
+                    </div>
+                    <div class="text-center" style="flex: 1;">
+                        <b>Debit</b>
+                    </div>
+                    <div class="text-center" style="flex: 1;">
+                        <b>Credit</b>
+                    </div>
+                    <div class="text-center" style="flex: 1;">
+                    </div>
+                </div>
+            </div>
+            <div class="displayRecordTemplate" module="GeneralLedgerEditorUI">
+            </div>
+        </div>
+    </div>
+    <div class="box-footer text-center">
+        <button class="btn btn-success updateAcctTransaction" module="GeneralLedgerEditorUI" parentModule="PARENT_MODULE" style="margin-left: 10px;">
+            <i class="fa fa-save"></i> Update Transaction and GL Entries
+        </button>
+    </div>
+</div>
+

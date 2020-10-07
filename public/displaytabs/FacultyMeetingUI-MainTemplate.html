@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<section class="content-header">
+  <div style="display: none;">
+    <div class="DisplayTab" tabUrl="Dummy"></div>
+  </div>
+  <h1>
+    My Meetings (Faculty)
+    <small style="margin-left: 50px; vertical-align: text-bottom;">
+      <div class="btn-group myMeetingButtonGroup">
+        <button type="button" class="btn btn-info">Choose Meeting Room</button>
+        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+          <span class="caret"></span>
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu" role="menu" id="myMeetings" style="overflow-y: auto; max-height: 300px;">
+        </ul>
+      </div>
+    </small>
+  </h1>
+</section>
+<section class="content">
+  <div class="box box-warning">
+    <div class="box-header">
+      <h2 class="box-title">Room <span id="roomNameDisplay"></span><small id="messageAlert"
+          style="color: orangered;"></small></h2>
+      <div class="box-tools pull-right" data-toggle="tooltip" title="" data-original-title="Status">
+        <div style="display: flex;">
+          <div style="flex: 1; text-align: center; margin: 15px;" class="hand btnShareVideo">
+            <i class="glyphicon glyphicon-facetime-video "></i>
+            <div>Video</div>
+          </div>
+          <div style="flex: 1; text-align: center; margin: 15px;" class="hand btnShareAudio">
+            <i class="fa fa-fw fa-microphone "></i>
+            <div>Audio</div>
+          </div>
+          <div style="flex: 1; text-align: center; margin: 15px;" class="hand btnInviteUser">
+            <i class="fa fa-fw fa-users "></i>
+            <div>Invite</div>
+          </div>
+          <div style="flex: 1; text-align: center; margin: 15px;" class="hand btnRecordMeeting">
+            <i class="glyphicon glyphicon-record "></i>
+            <div>Record</div>
+          </div>
+          <div style="flex: 1; text-align: center; margin: 15px; margin-left: 30px;" class="hand btnMeetingSignOut">
+            <i class="fa fa-fw fa-sign-out "></i>
+            <div>Sign&nbsp;Out</div>
+          </div>
+          <div style="flex: 1; text-align: center; margin: 15px; margin-left: 30px;" class="hand btnEndMeeting">
+            <i class="fa fa-fw fa-sign-out "></i>
+            <div>End&nbsp;Meeting</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body" style="margin-top: 25px;">
+      <div style="display: flex;">
+        <div style="flex: 3; display: flex; flex-direction: column;">
+          <video id="activeVideo" style="width: 100%; background-color: lightseagreen; max-height: 500px;" autoplay
+            playsinline></video>
+          <div style="display: flex; height: 150px; flex-wrap: wrap; overflow-x: auto; margin-top: 10px;"
+            class="videoBoxList">
+          </div>
+        </div>
+        <div style="flex: 1; margin-left: 10px; display: flex; flex-direction: column;">
+          <div style="display: flex;">
+            <div style="flex: 1;">
+              <video id="myVideo" class="miniVideoStream"
+                style="min-height: 100px; max-height: 100px; width: 100%; background-color: lightseagreen; margin-bottom: 5px;"
+                autoplay playsinline></video>
+            </div>
+            <div style="flex: 1;">
+              <video id="screenVideo" class="miniVideoStream"
+                style="min-height: 100px; max-height: 100px; width: 100%; background-color: lightseagreen; margin-bottom: 5px;"
+                autoplay playsinline></video>
+            </div>
+          </div>
+          <div style="flex: 1">
+            <textarea id="allChatMessages" rows="15" style="width: 100%;"></textarea>
+          </div>
+          <div style="flex: 1">
+            <select class="form-control selectChatTo">
+              <option>All</option>
+            </select>
+          </div>
+          <div style="flex: 1">
+            <textarea id="chatMessageTxt" rows="3" style="width: 100%;"></textarea>
+          </div>
+          <div style="flex: 1" class="text-center">
+            <button type="button" class="btn btn-info btnSendChat" style="margin-left: 10px;">
+              <i class="fa fa-file-text-o"></i> Send Message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box-footer">
+      <div class="btn-group-fab" role="group" aria-label="FAB Menu">
+        <div>
+          <button type="button" class="btn btn-main btn-primary has-tooltip" data-placement="left" title="Menu"> <i
+              class="fa fa-bars"></i> </button>
+
+          <button type="button" class="btn btn-sub btn-info has-tooltip btnFullscreen" data-placement="left"
+            title="Fullscreen"> <i class="fa fa-arrows-alt"></i> </button>
+          <button type="button" class="btn btn-sub btn-info has-tooltip btnShareVideo" data-placement="left"
+            title="Share Video"> <i class="glyphicon glyphicon-facetime-video"></i> </button>
+          <button type="button" class="btn btn-sub btn-info has-tooltip btnShareAudio" data-placement="left"
+            title="Unmute"> <i class="fa fa-fw fa-microphone"></i> </button>
+          <button type="button" class="btn btn-sub btn-info has-tooltip btnInviteUser" data-placement="left"
+            title="Invite User"> <i class="fa fa-fw fa-users"></i> </button>
+          <button type="button" class="btn btn-sub btn-info has-tooltip btnMeetingSignOut" data-placement="left"
+            title="Sign Out"> <i class="fa fa-fw fa-sign-out"></i> </button>
+          <button type="button" class="btn btn-sub btn-info has-tooltip btnEndMeeting" data-placement="left"
+            title="End Meeting"> <i class="fa fa-fw fa-sign-out"></i> </button>
+        </div>
+      </div>
+
+      <div id="errorMsg"></div>
+    </div>
+  </div>
+</section>

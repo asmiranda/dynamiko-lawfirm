@@ -1,0 +1,28 @@
+@media only screen and (min-height: 901px) and (max-height: 1080px) {
+    #reportFrame {
+        height: 700px;
+    }
+    .displayRecordTemplate {
+        overflow-y: auto;
+        height: 450px;
+    }
+    .searchRecords {
+        overflow-y: auto;
+        height: 580px;
+    }
+}
+  
+@media only screen and (max-height: 900px) {
+    #reportFrame {
+        height: 500px;
+    }
+    .displayRecordTemplate {
+        overflow-y: auto;
+        height: 350px;
+    }
+    .searchRecords {
+        overflow-y: auto;
+        height: 480px;
+    }
+}
+

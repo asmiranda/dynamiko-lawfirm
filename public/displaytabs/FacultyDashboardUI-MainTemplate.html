@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<section class="content-header">
+  <h1>
+    My Dashboard (Faculty)
+  </h1>
+</section>
+<section class="content">
+  <div style="display: flex;">
+    <div style="flex: 1; display: flex; flex-direction: column; min-width: 400px;">
+      <div class="box box-primary">
+        <div class="box-body box-profile">
+          <img class="profile-user-img img-responsive img-circle hostProfile" src="" alt="User profile picture">
+
+          <h3 class="profile-username text-center">Nina Mcintire</h3>
+          <p class="text-muted text-center">Faculty</p>
+        </div>
+      </div>
+      <div class="box box-success with-border" style="flex: 1;">
+        <div class="box-header ui-sortable-handle" style="cursor: move;">
+          <i class="ion ion-clipboard"></i>
+          <h3 class="box-title">To Do List</h3>
+          <button type="button" class="btn btn-default pull-right PersonTaskUI_btnShowAddTask" data-toggle="modal"
+            data-target="#PersonTaskUI_TaskDialog"><i class="fa fa-plus"></i> Add Task</button>
+        </div>
+        <div class="box-body">
+          <ul class="todo-list ui-sortable divToDoList">
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div style="flex: 3; display: flex; flex-direction: column; margin-left: 15px;">
+      <div class="box box-warning">
+        <div class="box-header with-border">
+          <h3 class="box-title">Announcements</h3>
+        </div>
+        <div class="box-body" style="margin:0px;padding:0px;overflow:hidden">
+          <iframe height="100%" width="100%" frameborder="0" src="#" id="announcementContent" scrolling="no"></iframe>
+        </div>
+        <div class="box-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

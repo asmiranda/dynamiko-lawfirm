@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<div class="box box-default">
+    <div class="box-header with-border">
+        <h3 class="box-title">New Job</h3>
+    </div>
+    <div class="box-body">
+        <div class="form-group">
+            <label class="control-label">Title</label>
+            <input type="text" class="form-control displayEdit" name="createJobRequisitionTitle" placeholder="Title" module="HrRequisitionUI" mainmodule="HrRequisitionUI">
+        </div>
+        <div class="form-group">
+            <label class="control-label">Recruiter</label>
+            <span class="pull-right"><a href="#" class="chooseMeRecruiter" field="createJobRecruiterCode">Choose me</a></span>
+            <div class="input-group">
+                <input type="text" class="form-control autocomplete displayEdit" placeholder="Recruiter" module="HrRequisitionUI" mainmodule="HrRequisitionUI" autoname="createJobRecruiterCode" helptitle="Recruiter">
+                <span class="input-group-addon displayEdit"><i class="fa fa-search"></i></span>
+                <div class="autocomplete-items" module="HrRequisitionUI" mainmodule="HrRequisitionUI" autoname="createJobRecruiterCode">
+                </div>
+            </div>
+            <input class="form-control HiddenAutoComplete" name="createJobRecruiterCode" type="hidden" module="HrRequisitionUI" mainmodule="HrRequisitionUI" autoname="createJobRecruiterCode" autoNameField="createJobRecruiterCode" value="">
+            <div name="createJobRecruiterCode" class="DivAutoCompleteDefault" style="margin-left: 20px; display:none" module="HrRequisitionUI" mainmodule="HrRequisitionUI" autoname="createJobRecruiterCode"></div>
+            <div name="createJobRecruiterCode" class="DivAutoComplete" style="margin-left: 20px; display:none" module="HrRequisitionUI" mainmodule="HrRequisitionUI" autoname="createJobRecruiterCode">HR, HR</div>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Manager</label>
+            <span class="pull-right"><a href="#" class="chooseMeManager" field="createJobManagerCode">Choose me</a></span>
+            <div class="input-group">
+                <input type="text" class="form-control autocomplete displayEdit" placeholder="Manager" module="HrRequisitionUI" mainmodule="HrRequisitionUI" autoname="createJobManagerCode" helptitle="Manager">
+                <span class="input-group-addon displayEdit"><i class="fa fa-search"></i></span>
+                <div class="autocomplete-items" module="HrRequisitionUI" mainmodule="HrRequisitionUI" autoname="createJobManagerCode">
+                </div>
+            </div>
+            <input class="form-control HiddenAutoComplete" name="createJobManagerCode" type="hidden" module="HrRequisitionUI" mainmodule="HrRequisitionUI" autoname="createJobManagerCode" autoNameField="createJobManagerCode" value="">
+            <div name="createJobManagerCode" class="DivAutoCompleteDefault" style="margin-left: 20px; display:none" module="HrRequisitionUI" mainmodule="HrRequisitionUI" autoname="createJobManagerCode"></div>
+            <div name="createJobManagerCode" class="DivAutoComplete" style="margin-left: 20px; display:none" module="HrRequisitionUI" mainmodule="HrRequisitionUI" autoname="createJobManagerCode">Tirrell, Osbourne</div>
+        </div>
+        <div class="form-group">
+            <label class="control-label"># Of Opening</label>
+            <div class="input-group">
+                <input type="number" name="createJobNumberOfOpening" min="0" step="1" data-number-to-fixed="0" data-number-stepfactor="100" class="form-control displayEdit" module="HrRequisitionUI" mainmodule="HrRequisition">
+            </div>
+        </div>
+    </div>
+    <div class="box-footer">
+        <button type="button" class="btn btn-primary btnCreateJob">Create New Job</button>
+    </div>
+</div>

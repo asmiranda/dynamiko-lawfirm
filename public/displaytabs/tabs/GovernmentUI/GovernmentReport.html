@@ -1,0 +1,53 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<div class="box box-default">
+    <div class="box-header ui-sortable-handle" style="cursor: move;">
+        <i class="fa fa-comments-o"></i>
+        <h3 class="box-title">Government Reports</h3>
+    </div>
+    <div class="box-body box-profile">
+        <div style="display: flex; flex-direction: column;">
+            <div style="display: flex; flex-wrap: wrap;">
+                <div class="form-group" style="margin-left: 15px; flex: 30%;">
+                    <label>Report</label>
+                    <select class="form-control chooseGovernmentReport" module="GovernmentReportsUI">
+                        <option value="CashierCollectionReport">Cashier Collection</option>
+                        <option value="CommunityTaxCertificateCollectionReport">Community Tax Certificate Collection</option>
+                        <option value="BusinessPermitReport">Business Permit Collection</option>
+                        <option value="RealEstateAssessmentReport">Real Estate Assessment Collection</option>
+                        <option value="RealEstateBuildingPermitReport">Real Estate Building Permit Collection</option>
+                        <option value="RealEstateFieldInspectionReport">Real Estate Field Inspection Collection</option>
+                        <option value="RealEstateTransferReport">Real Estate Transfer Collection</option>
+                    </select>
+                </div>
+                <div class="form-group" style="margin-left: 15px; flex: 30%;">
+                    <label class="control-label">Date<span>[Choose: this 
+                        <a href="#" class="btnChooseThisDay" module="GovernmentReportsUI">Day</a> | 
+                        <a href="#" class="btnChooseThisWeek" module="GovernmentReportsUI">Week</a> | 
+                        <a href="#" class="btnChooseThisMonth" module="GovernmentReportsUI">Month</a> | 
+                        <a href="#" class="btnChooseThisYear" module="GovernmentReportsUI">Year</a></span></label>
+                    <div style="display: flex;">
+                        <div class="input-group date">
+                            <input type="text" name="chooseStartDate" module="GovernmentReportsUI" placeholder="Start Date" class="form-control calendar displayEdit chooseStartDate">
+                            <div class="input-group-addon displayEdit">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                        </div>
+                        <div class="input-group date" style="margin-left: 10px;">
+                            <input type="text" name="chooseEndDate" module="GovernmentReportsUI" placeholder="End Date" class="form-control calendar displayEdit chooseEndDate">
+                            <div class="input-group-addon displayEdit">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-left: 15px; flex: 30%;">
+                    <button type="submit" class="btn btn-info btnShowGovernmentReport" module="GovernmentReportsUI" style="margin-top: 25px;">Show</button>
+                </div>
+            </div>
+            <div>
+                <iframe class="customReportViewerFrame" style="width: 100%; height:470px;" report="ForGovernmentReport" webkitAllowFullScreen mozAllowFullScreen allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>

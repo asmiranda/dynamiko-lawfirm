@@ -1,0 +1,48 @@
+<div style="display: flex; flex: 100%; flex-wrap: wrap;">
+    <input rowIndex="0" type="hidden" class="form-control editRecord mainRecordId" module="EnrollmentUI" name="id">
+    <input rowIndex="0" type="hidden" class="form-control editRecord" module="EnrollmentUI" name="code">
+
+    <div class="form-group" style="flex: 3; margin-left: 15px;">
+        <label class="control-label">1. Choose Student</label>
+        <div class="input-group" style="width: 100%;">
+            <input rowIndex="0" type="text" class="form-control autocomplete" name="studentEmail" placeholder="Student"
+                module="EnrollmentUI" autoname="studentEmail" helptitle="studentEmail">
+            <input rowIndex="0" class="form-control editRecord HiddenAutoComplete" name="studentEmail" type="hidden"
+                module="EnrollmentUI" autoNameField="studentEmail" value="">
+            <div class="autocomplete-items" rowIndex="0" module="EnrollmentUI" autoname="studentEmail">
+            </div>
+        </div>
+    </div>
+    <div class="form-group" style="flex: 1; margin-left: 15px;">
+        <label>Enroll Date</label>
+        <input type="text" rowIndex="0" class="form-control editRecord calendar" module="EnrollmentUI"
+            name="dateEnrolled" tabName="_TABNAME_">
+    </div>
+    <div class="flex-break"></div>
+    <div class="box box-default" style="margin: 15px;">
+        <div class="box-header with-border">
+            <label class="control-label">2. Choose Subjects/Schedules</label>
+        </div>
+        <div class="box-body">
+            <div class="hiddenRecordTemplate" module="EnrollmentScheduleUI" parentModule="EnrollmentUI"
+                style="display: none;">
+                <div class="input-group" style="width: 90%; margin: 10px;">
+                    <input rowIndex="----" type="text" class="form-control autocomplete editRecordAutoComplete"
+                        name="schoolScheduleCode" placeholder="Schedule" module="EnrollmentScheduleUI" value=""
+                        parentModule="EnrollmentUI" autoname="schoolScheduleCode" helptitle="schoolScheduleCode">
+                    <span rowIndex="----" class="input-group-addon btnRemoveSchedule" name="schoolScheduleCode"
+                        parentModule="EnrollmentUI" placeholder="Schedule" module="EnrollmentScheduleUI""><i class=" fa
+                        fa-trash"></i></span>
+                    <div rowIndex="----" class="autocomplete-items" module="EnrollmentScheduleUI"
+                        parentModule="EnrollmentUI" autoname="schoolScheduleCode">
+                    </div>
+                    <input rowIndex="----" class="editRecord autoSaveSubRecord HiddenAutoComplete"
+                        name="schoolScheduleCode" type="hidden" module="EnrollmentScheduleUI"
+                        parentModule="EnrollmentUI" autoNameField="schoolScheduleCode" value="" style="display: none;">
+                </div>
+            </div>
+            <div class="displayRecordTemplate" style="height: 500px;" module="EnrollmentScheduleUI">
+            </div>
+        </div>
+    </div>
+</div>
